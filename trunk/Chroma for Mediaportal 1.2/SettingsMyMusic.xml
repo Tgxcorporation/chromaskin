@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>14</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:2</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="0,1080" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>337</posX>
+				<posY>580</posY>
+				<width>1246</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>460</posX>
+				<posY>680</posY>
+				<label>2</label>
+				<width>820</width>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Shuffle Playlist on load</description>
+				<type>checkmark</type>
+				<id>2</id>
+				<posX>460</posX>
+				<posY>780</posY>
+				<label>228</label>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>21</onup>
+				<ondown>8</ondown>
+				<align>right</align>
+			</control>
+			<control>
+				<description>Reorganize My Music Database label</description>
+				<type>label</type>
+				<id>7</id>
+				<posX>460</posX>
+				<posY>880</posY>
+				<label>334</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Reorganize My Music Database button</description>
+				<type>button</type>
+				<id>8</id>
+				<label>335</label>
+				<posX>810</posX>
+				<posY>880</posY>
+				<textYOff>0</textYOff>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<onleft>8</onleft>
+				<onright>8</onright>
+				<onup>2</onup>
+				<ondown>13</ondown>
+				<textalign>right</textalign>
+			</control>
+			<control>
+				<description>delete album label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>930</posY>
+				<label>485</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>delete album button</description>
+				<type>button</type>
+				<id>13</id>
+				<label>424</label>
+				<posX>810</posX>
+				<posY>930</posY>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<onup>8</onup>
+				<ondown>10</ondown>
+				<onleft>13</onleft>
+				<onright>13</onright>
+				<textalign>right</textalign>
+			</control>
+			<control>
+				<description>Delete Album Info</description>
+				<type>label</type>
+				<id>9</id>
+				<posX>460</posX>
+				<posY>980</posY>
+				<label>422</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Delete Album Info</description>
+				<type>button</type>
+				<id>10</id>
+				<label>424</label>
+				<posX>810</posX>
+				<posY>980</posY>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>13</onup>
+				<ondown>99</ondown>
+				<textalign>right</textalign>
+			</control>
+		</control>
+	</controls>
+</window>

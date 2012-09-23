@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>6666</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:40001</define>
+	<define>#header.subtitle:-</define>
+	<define>#header.background:-</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<posX>213</posX>
+			<posY>280</posY>
+			<type>label</type>
+			<id>2</id>
+			<label>40002</label>
+			<font>font12</font>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<posX>213</posX>
+			<posY>375</posY>
+			<type>label</type>
+			<id>2</id>
+			<label>40003</label>
+			<font>font12</font>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+	</controls>
+</window>

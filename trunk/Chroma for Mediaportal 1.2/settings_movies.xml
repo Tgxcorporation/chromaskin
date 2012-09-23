@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>703</id>
+	<defaultcontrol>24</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:3</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>380</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>483</posY>
+				<label>3</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>580</posY>
+				<control>
+					<description>MPEG-2 Video Codecs</description>
+					<type>button</type>
+					<id>24</id>
+					<label>6000</label>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>H.264 Video Codecs</description>
+					<type>button</type>
+					<id>29</id>
+					<label>6036</label>
+				</control>
+				<control>
+					<description>Audio Codecs</description>
+					<type>button</type>
+					<id>25</id>
+					<label>6001</label>
+				</control>
+				<control>
+					<description>AAC Audio Codecs</description>
+					<type>button</type>
+					<id>30</id>
+					<label>6039</label>
+				</control>
+				<control>
+					<description>Audio Renderer</description>
+					<type>button</type>
+					<id>27</id>
+					<label>6002</label>
+				</control>
+				<control>
+					<description>Apect Ratio</description>
+					<type>button</type>
+					<id>28</id>
+					<label>6004</label>
+				</control>
+				<control>
+					<description>Subtitles On/Off</description>
+					<type>togglebutton</type>
+					<id>31</id>
+					<label>1196</label>
+				</control>
+				<control>
+					<description>Subtitle Language</description>
+					<type>button</type>
+					<id>32</id>
+					<label>1029</label>
+				</control>
+				<control>
+					<description>Audio Language</description>
+					<type>button</type>
+					<id>33</id>
+					<label>492</label>
+					<ondown>99</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

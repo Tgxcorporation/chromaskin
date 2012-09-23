@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>3011</id>
+	<defaultcontrol>8</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>540</posY>
+			<width>1920</width>
+			<height>540</height>
+			<texture>overlay_bottom.png</texture>
+			<colordiffuse>#ColorMainUnfocusedOsd</colordiffuse>
+			<!-- <visible>!control.isvisible(157986)</visible> -->
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+<!-- 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>!control.isvisible(157986)</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control> -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>388</posX>
+			<posY>530</posY>
+			<width>1144</width>
+			<height>1080</height>
+			<texture>background_menu.png</texture>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>dialog Heading</description>
+			<type>fadelabel</type>
+			<id>4</id>
+			<posX>510</posX>
+			<posY>630</posY>
+			<width>900</width>
+			<font>font20</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>11000</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Crop label top</description>
+			<type>label</type>
+			<id>6</id>
+			<posX>950</posX>
+			<posY>730</posY>
+			<font>font16</font>
+			<align>right</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>11001</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Cropselect top</description>
+			<type>spincontrol</type>
+			<id>8</id>
+			<posX>970</posX>
+			<posY>731</posY>
+			<onup>12</onup>
+			<ondown>12</ondown>
+			<onleft>16</onleft>
+			<onright>20</onright>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Crop label bottom</description>
+			<type>label</type>
+			<id>10</id>
+			<posX>950</posX>
+			<posY>780</posY>
+			<font>font16</font>
+			<align>right</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>11002</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Cropselect bottom</description>
+			<type>spincontrol</type>
+			<id>12</id>
+			<posX>970</posX>
+			<posY>781</posY>
+			<onup>8</onup>
+			<ondown>2</ondown>
+			<onleft>16</onleft>
+			<onright>20</onright>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Crop label left</description>
+			<type>label</type>
+			<id>14</id>
+			<posX>950</posX>
+			<posY>830</posY>
+			<font>font16</font>
+			<align>right</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>11003</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Cropselect left</description>
+			<type>spincontrol</type>
+			<id>16</id>
+			<posX>970</posX>
+			<posY>831</posY>
+			<onup>8</onup>
+			<ondown>12</ondown>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Crop label right</description>
+			<type>label</type>
+			<id>18</id>
+			<posX>950</posX>
+			<posY>880</posY>
+			<font>font16</font>
+			<align>right</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>11004</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Cropselect right</description>
+			<type>spincontrol</type>
+			<id>20</id>
+			<posX>970</posX>
+			<posY>881</posY>
+			<onup>8</onup>
+			<ondown>12</ondown>
+			<onleft>16</onleft>
+			<onright>16</onright>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>OK button</description>
+			<type>button</type>
+			<id>2</id>
+			<posX>460</posX>
+			<posY>980</posY>
+			<width>1000</width>
+			<label>186</label>
+			<onleft>16</onleft>
+			<onright>20</onright>
+			<onup>12</onup>
+			<ondown>8</ondown>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+
+		<!-- NOT USED -->
+
+		<control>
+			<description>Capture device text label</description>
+			<type>label</type>
+			<id>5</id>
+			<posX>3250</posX>
+			<posY>735</posY>
+			<width>69</width>
+			<font>font16</font>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+	</controls>
+</window>

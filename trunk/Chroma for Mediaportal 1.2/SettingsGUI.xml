@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>31</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:674</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="0,1080" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>337</posX>
+				<posY>135</posY>
+				<width>1246</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>460</posX>
+				<posY>235</posY>
+				<label>674</label>
+				<width>820</width>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Horizontal Speed label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>335</posY>
+				<label>1442</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Horizontal Speed select</description>
+				<type>spincontrol</type>
+				<id>2</id>
+				<posX>1360</posX>
+				<posY>335</posY>
+				<align>right</align>
+				<onup>17</onup>
+				<ondown>4</ondown>
+				<onleft>2</onleft>
+				<onright>2</onright>
+			</control>
+			<control>
+				<description>Vertical Speed label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>385</posY>
+				<label>1443</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Vertical Speed select</description>
+				<type>spincontrol</type>
+				<id>4</id>
+				<posX>1360</posX>
+				<posY>385</posY>
+				<align>right</align>
+				<onup>2</onup>
+				<ondown>3</ondown>
+				<onleft>4</onleft>
+				<onright>4</onright>
+			</control>
+			<control>
+				<description>FPS label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>435</posY>
+				<label>973</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>FPS select</description>
+				<type>spincontrol</type>
+				<id>3</id>
+				<posX>1360</posX>
+				<posY>435</posY>
+				<align>right</align>
+				<onup>4</onup>
+				<ondown>99</ondown>
+				<onleft>3</onleft>
+				<onright>3</onright>
+			</control>
+			<control>
+				<description>currentFPS count</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1450</posX>
+				<posY>485</posY>
+				<label>#fps</label>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<align>right</align>
+			</control>
+			<control>
+				<description>Example label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>585</posY>
+				<width>1066</width>
+				<label>675</label>
+				<textcolor>#ColorAlternateUnfocused</textcolor>
+			</control>
+			<control>
+				<description>TagLine value</description>
+				<type>fadelabel</type>
+				<id>25</id>
+				<posX>460</posX>
+				<posY>635</posY>
+				<width>980</width>
+				<label>-</label>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>26</id>
+				<posX>460</posX>
+				<posY>685</posY>
+				<width>980</width>
+				<height>320</height>
+				<label>-</label>
+				<font>font14</font>
+				<seperator>··</seperator>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

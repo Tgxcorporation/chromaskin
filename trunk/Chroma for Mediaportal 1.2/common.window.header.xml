@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<description>VideoWallpaper Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1921</width>
+			<height>540</height>
+			<texture>overlay_top.png</texture>
+		</control>
+		<control>
+			<description>VideoWallpaper Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>540</posY>
+			<width>1921</width>
+			<height>540</height>
+			<texture>overlay_bottom.png</texture>
+		</control>
+		<control>
+			<description>Mediaportal Logo</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>50</posX>
+			<posY>50</posY>
+			<width>123</width>
+			<height>92</height>
+			<texture>mediaportal_logo.png</texture>
+		</control>
+		<control>		
+			<description>Header label</description>		
+			<type>fadelabel</type>		
+			<id>0</id>		
+			<posX>190</posX>
+			<posY>38</posY>
+			<label>#header.title</label>		
+			<font>font22</font>
+			<textcolor>#ColorMain</textcolor>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>3</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+		</control>
+		<control>		
+			<description>Info label</description>		
+			<type>fadelabel</type>		
+			<id>0</id>		
+			<posX>190</posX>
+			<posY>109</posY>
+			<width>1100</width>
+			<wrapString> ·· </wrapString>
+			<label>#header.subtitle</label>		
+			<font>font12</font>
+			<textcolor>#ColorMainUnfocusedHeader</textcolor>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>2</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+		</control>
+		<control>		
+			<description>Time label</description>		
+			<type>fadelabel</type>		
+			<id>0</id>		
+			<posX>1870</posX>
+			<posY>38</posY>
+			<label>#time</label>		
+			<font>font22</font>
+			<textcolor>#ColorMain</textcolor>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>3</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+			<align>right</align>
+		</control>
+		<control>		
+			<description>Date label</description>		
+			<type>fadelabel</type>		
+			<id>0</id>		
+			<posX>1870</posX>
+			<posY>109</posY>
+			<label>#date</label>		
+			<font>font12</font>
+			<textcolor>#ColorMainUnfocusedHeader</textcolor>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>2</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+			<align>right</align>
+			<visible>!plugin.isenabled(World Weather)</visible>
+		</control>
+		<control>		
+			<description>Date label</description>		
+			<type>fadelabel</type>		
+			<id>0</id>		
+			<posX>1870</posX>
+			<posY>109</posY>
+			<label>#date / #WorldWeather.TodayTemperature</label>
+			<font>font12</font>
+			<textcolor>#ColorMainUnfocusedHeader</textcolor>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>2</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+			<align>right</align>
+			<visible>plugin.isenabled(World Weather)</visible>
+		</control>
+	</controls>
+</window>
