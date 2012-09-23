@@ -63,7 +63,7 @@
 			<posY>0</posY>
 			<width>1920</width>
 			<height>1080</height>
-			<texture>hover_my weather.png</texture>
+			<texture>hover_worldweather.png</texture>
 			<visible>control.hasfocus(104)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
