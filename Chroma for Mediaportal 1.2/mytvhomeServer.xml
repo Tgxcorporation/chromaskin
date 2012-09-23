@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>1</id>
+	<defaultcontrol>2</defaultcontrol>
+	<!-- <rememberLastFocusedControl>yes</rememberLastFocusedControl> -->
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:605</define>
+	<define>#header.subtitle:100000</define>
+	<define>#header.background:hover_my tv.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>280</posY>
+				<texture>background_strip_horizontal_listcontrol.png</texture>
+				<width>1920</width>
+				<height>800</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_left.png</texture>
+				<width>50</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1440</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+			<control>
+				<description>video window</description>
+				<type>videowindow</type>
+				<id>99</id>
+				<posX>212</posX>
+				<posY>380</posY>
+				<width>1066</width>
+				<height>600</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<action>18</action>
+				<textureFocus>background_strip_horizontal_mini_focus.png</textureFocus>
+				<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+				<animation effect="fade" time="250" delay="0">WindowClose</animation>
+				<animation effect="fade" time="250" delay="200">visible</animation>
+				<visible>![control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(1313)]</visible>
+			</control>
+			<control>
+				<type>group</type>
+				<dimColor>ffffffff</dimColor>
+				<animation effect="fade" time="150" start="100" end="65" condition="!control.hasfocus(99)">conditional</animation>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>212</posX>
+					<posY>380</posY>
+					<texture>tv_strip.png</texture>
+					<width>153</width>
+					<height>600</height>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>365</posX>
+					<posY>380</posY>
+					<texture>tv_strip.png</texture>
+					<width>153</width>
+					<height>600</height>
+					<colordiffuse>ffede100</colordiffuse>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>518</posX>
+					<posY>380</posY>
+					<texture>tv_strip.png</texture>
+					<width>152</width>
+					<height>600</height>
+					<colordiffuse>ff00aeed</colordiffuse>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>670</posX>
+					<posY>380</posY>
+					<texture>tv_strip.png</texture>
+					<width>152</width>
+					<height>600</height>
+					<colordiffuse>ff8cc63e</colordiffuse>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>822</posX>
+					<posY>380</posY>
+					<texture>tv_strip.png</texture>
+					<width>152</width>
+					<height>600</height>
+					<colordiffuse>ffed008c</colordiffuse>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>974</posX>
+					<posY>380</posY>
+					<texture>tv_strip.png</texture>
+					<width>152</width>
+					<height>600</height>
+					<colordiffuse>ffee1c25</colordiffuse>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>1126</posX>
+					<posY>380</posY>
+					<texture>tv_strip.png</texture>
+					<width>152</width>
+					<height>600</height>
+					<colordiffuse>ff223f9b</colordiffuse>
+				</control>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>212</posX>
+				<posY>380</posY>
+				<width>1066</width>
+				<height>600</height>
+				<texture>background_strip_horizontal_mini_focus.png</texture>
+				<visible>control.hasfocus(99)</visible>
+				<animation effect="fade" time="150">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>REAL Current program title</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1490</posX>
+				<posY>370</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#TV.View.title</label>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<description>Current channel</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1490</posX>
+				<posY>420</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>#TV.View.channel</label>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1490</posX>
+				<posY>470</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#TV.View.start / #TV.View.stop</label>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<description>genre</description>
+				<type>label</type>
+				<id>17</id>
+				<posX>1490</posX>
+				<posY>520</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>#TV.Search.Genre</label>
+			</control>
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>15</id>
+				<posX>1490</posX>
+				<posY>570</posY>
+				<width>380</width>
+				<height>410</height>
+				<label>#TV.View.description</label>
+				<font>font13</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<seperator>··</seperator>
+				<lineSpacing>0.945</lineSpacing>
+			</control>
+
+
+			<control>
+				<type>group</type>
+				<dimColor>ffffffff</dimColor>
+				<animation effect="fade" time="150" start="100" end="65" condition="!control.hasfocus(99)">conditional</animation>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<width>1066</width>
+					<height>106</height>
+					<posX>212</posX>
+					<posY>874</posY>
+					<texture>background_strip_horizontal_mini.png</texture>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<width>27</width>
+					<height>50</height>
+					<posX>212</posX>
+					<posY>902</posY>
+					<texture>background_strip_horizontal_mini_left.png</texture>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<width>278</width>
+					<height>50</height>
+					<posX>1000</posX>
+					<posY>902</posY>
+					<texture>background_strip_horizontal_mini_right.png</texture>
+				</control>
+
+				<control>
+					<description>progress bar</description>
+					<type>progress</type>
+					<id>20</id>
+					<posX>239</posX>
+					<posY>902</posY>
+					<width>761</width>
+					<height>50</height>
+					<label>#TV.View.Percentage</label>
+					<lefttexture>-</lefttexture>
+					<midtexture>osd_progress.png</midtexture>
+					<righttexture>-</righttexture>
+					<onlymidtexture>yes</onlymidtexture>
+					<midheight>50</midheight>
+					<midwidth>761</midwidth>
+					<midoffsetX>0</midoffsetX>
+					<midoffsetY>0</midoffsetY>
+					<innerheight>50</innerheight>
+				</control>
+				<control>
+					<description>Current program time</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>1027</posX>
+					<posY>928</posY>
+					<width>224</width>
+					<label>#TV.View.start / #TV.View.stop</label>
+					<font>font8</font>
+					<align>center</align>
+					<textcolor>#ColorAlternate</textcolor>
+				</control>
+				<control>
+					<description>time</description>
+					<type>image</type>
+					<id>1</id>
+					<posX>963</posX>
+					<posY>914</posY>
+					<width>27</width>
+					<height>27</height>
+					<texture>time.png</texture>
+				</control>
+
+				<control>
+					<description>Channel Image</description>
+					<type>image</type>
+					<id>1</id>
+					<posX>1051</posX>
+					<posY>407</posY>
+					<width>200</width>
+					<height>150</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<centered>yes</centered>
+					<texture>#TV.View.thumb</texture>
+				</control>
+
+				<control>
+					<description>time</description>
+					<type>fadelabel</type>
+					<id>1</id>
+					<posX>962</posX>
+					<posY>915</posY>
+					<width>500</width>
+					<label>#time</label>
+					<font>font8</font>
+					<align>right</align>
+					<textcolor>#ColorAlternate</textcolor>
+				</control>
+				<control>
+					<description>Current program name</description>
+					<type>fadelabel</type>
+					<id>1</id>
+					<posX>323</posX>
+					<posY>915</posY>
+					<width>500</width>
+					<label>#TV.View.title</label>
+					<font>font8</font>
+					<textcolor>#ColorAlternate</textcolor>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>[control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(1313)]</visible> 
+			<animation effect="fade" time="200">visible</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>99</onexit>
+			<buttonX>560</buttonX>
+			<buttonY>1030</buttonY>
+			<buttonwidth>800</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>800</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(1313)]</visible> 
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="in" time="200" end="0,1080" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="0,600" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>380</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>483</posY>
+				<label>924</label>
+				<width>800</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>580</posY>
+				<control>
+					<description>TVGuide</description>
+					<type>button</type>
+					<id>2</id>
+					<label>600</label>
+					<hyperlink>600</hyperlink>
+					<onup>17</onup>
+					<ondown>11</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>Recordings</description>
+					<type>button</type>
+					<id>11</id>
+					<label>604</label>
+					<hyperlink>603</hyperlink>
+					<onup>2</onup>
+					<ondown>10</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>Scheduler</description>
+					<type>button</type>
+					<id>10</id>
+					<label>603</label>
+					<hyperlink>601</hyperlink>
+					<onup>11</onup>
+					<ondown>12</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>Search</description>
+					<type>button</type>
+					<id>12</id>
+					<label>137</label>
+					<hyperlink>604</hyperlink>
+					<onup>10</onup>
+					<ondown>8</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>TV On/Off button</description>
+					<type>togglebutton</type>
+					<id>8</id>
+					<label>707</label>
+					<onup>12</onup>
+					<ondown>9</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>Active Streams</description>
+					<type>button</type>
+					<id>9</id>
+					<label>692</label>
+					<onup>8</onup>
+					<ondown>3</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>Record Now</description>
+					<type>button</type>
+					<id>3</id>
+					<label>601</label>
+					<onup>9</onup>
+					<ondown>14</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>Active Recordings</description>
+					<type>button</type>
+					<id>14</id>
+					<label>200052</label>
+					<onup>3</onup>
+					<ondown>13</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>Teletext</description>
+					<type>button</type>
+					<id>13</id>
+					<label>1441</label>
+					<onup>14</onup>
+					<ondown>2</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>52</id>
+			<posX>1270</posX>
+			<posY>0</posY>
+			<width>650</width>
+			<height>1080</height>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+		<!-- NOT USED -->
+		<control>
+			<description>record pin</description>
+			<type>image</type>
+			<id>24</id>
+			<posX>729</posX>
+			<posY>2466</posY>
+			<width>37</width>
+			<height>37</height>
+			<texture>tvguide_record_button.png</texture>
+			<visible>no</visible>
+		</control>
+		<control>
+			<description>Channel button</description>
+			<type>button</type>
+			<id>7</id>
+			<posX>3729</posX>
+			<onup>12</onup>
+			<ondown>8</ondown>
+			<onright>99</onright>
+			<onleft>99</onleft>
+		</control>
+	</controls>
+</window>

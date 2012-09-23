@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>2901</id>
+	<defaultcontrol>220</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#play.progressbar.percentage:#percentage</define>
+	<define>#play.progressbar.currentplaytime:#currentplaytime</define>
+	<define>#play.progressbar.currentremaining:#currentremaining</define>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>999100</id>
+			<posX>0</posX>
+			<posY>477</posY>
+			<texture>background_strip_horizontal_listcontrol.png</texture>
+			<width>1920</width>
+			<height>441</height>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>999101</id>
+			<posX>0</posX>
+			<posY>505</posY>
+			<texture>background_strip_horizontal_left.png</texture>
+			<width>50</width>
+			<height>385</height>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>999102</id>
+			<posX>1440</posX>
+			<posY>505</posY>
+			<texture>background_strip_horizontal_right.png</texture>
+			<width>480</width>
+			<height>385</height>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>102</id>
+			<posX>1490</posX>
+			<posY>555</posY>
+			<width>380</width>
+			<height>285</height>
+			<texture>#Play.Current.Thumb</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>no</zoom>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>Plot</description>
+			<type>textboxscrollup</type>
+			<id>104</id>
+			<posX>190</posX>
+			<posY>565</posY>
+			<width>1200</width>
+			<height>260</height>
+			<label>#Play.Current.Plot</label>
+			<font>font16</font>
+			<seperator>··</seperator>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+
+		<import>videoOSD_mediainfo.xml</import>
+		<import>common.play.osd.xml</import>
+
+
+		<!-- NOT USED -->
+		<control>
+      			<description>Movie Name</description>
+      			<id>36</id>
+      			<type>fadelabel</type>
+      			<posX>70</posX>
+      			<posY>2520</posY>
+      			<label>-</label>
+      			<label>#Play.Current.Title</label>
+    		</control>
+	</controls>
+</window>

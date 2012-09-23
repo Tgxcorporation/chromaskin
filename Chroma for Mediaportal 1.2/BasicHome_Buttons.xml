@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<controls>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation> -->
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>329</posY>
+				<texture>background_strip_horizontal.png</texture>
+				<width>1920</width>
+				<height>752</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>50</posX>
+				<posY>432</posY>
+				<texture>black.png</texture>
+				<colordiffuse>aaffffff</colordiffuse>
+				<width>1820</width>
+				<height>408</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>835</posY>
+				<texture>background_strip_horizontal_text.png</texture>
+				<width>1920</width>
+				<height>250</height>
+			</control>
+			
+
+			<!-- ID 100 -->
+			<control>
+				<description>100 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>2</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(100)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+				<animation effect="slide" tween="sine" easing="in" time="200" end="0,-23" condition="[control.isvisible(10000)|control.isvisible(10001)|control.isvisible(10002)]">conditional</animation>
+			</control>
+			<control>
+				<description>100 button</description>
+				<type>button</type>
+				<id>100</id>
+				<posX>50</posX>
+				<posY>636</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>2</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>501</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>104</onleft>
+				<onright>101</onright>
+				<onup>105</onup>
+				<ondown>1111</ondown>
+				<textureFocus>basichome_100_focus.png</textureFocus>
+				<textureNoFocus>basichome_100_nofocus.png</textureNoFocus>
+			</control>
+			<!-- <control>
+				<description>10000 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.music.latest3.dateAdded:     #latestMediaHandler.music.latest3.artist     #latestMediaHandler.music.latest3.album     #latestMediaHandler.music.latest3.genre</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10000)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Music)+control.hasfocus(100)+!string.equals(#latestMediaHandler.music.latest3.album,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<description>10001 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.music.latest2.dateAdded:     #latestMediaHandler.music.latest2.artist     #latestMediaHandler.music.latest2.album     #latestMediaHandler.music.latest2.genre</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10001)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Music)+control.hasfocus(100)+!string.equals(#latestMediaHandler.music.latest2.album,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<description>10002 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.music.latest1.dateAdded:     #latestMediaHandler.music.latest1.artist     #latestMediaHandler.music.latest1.album     #latestMediaHandler.music.latest1.genre</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10002)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Music)+control.hasfocus(100)+!string.equals(#latestMediaHandler.music.latest1.album,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control> -->
+
+			<!-- ID 101 -->
+			<control>
+				<description>101 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>Moving Pictures</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(101)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+				<animation effect="slide" tween="sine" easing="in" time="200" end="0,-23" condition="[control.isvisible(10100)|control.isvisible(10101)|control.isvisible(10102)]">conditional</animation>
+			</control>
+			<control>
+				<description>101 button</description>
+				<type>button</type>
+				<id>101</id>
+				<posX>414</posX>
+				<posY>636</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>Moving Pictures</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>96742</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>100</onleft>
+				<onright>102</onright>
+				<onup>106</onup>
+				<ondown>1111</ondown>
+				<textureFocus>basichome_101_focus.png</textureFocus>
+				<textureNoFocus>basichome_101_nofocus.png</textureNoFocus>
+			</control>
+			<!-- <control>
+				<description>10100 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.movingpicture.latest3.dateAdded:     #latestMediaHandler.movingpicture.latest3.title     #latestMediaHandler.movingpicture.latest3.runtime mins     #latestMediaHandler.movingpicture.latest3.genre     #latestMediaHandler.movingpicture.latest3.year</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10100)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Moving Pictures)+control.hasfocus(101)+!string.equals(#latestMediaHandler.movingpicture.latest3.title,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<description>10101 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.movingpicture.latest2.dateAdded:     #latestMediaHandler.movingpicture.latest2.title     #latestMediaHandler.movingpicture.latest2.runtime mins     #latestMediaHandler.movingpicture.latest2.genre     #latestMediaHandler.movingpicture.latest2.year</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10101)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Moving Pictures)+control.hasfocus(101)+!string.equals(#latestMediaHandler.movingpicture.latest2.title,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<description>10102 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.movingpicture.latest1.dateAdded:     #latestMediaHandler.movingpicture.latest1.title     #latestMediaHandler.movingpicture.latest1.runtime mins     #latestMediaHandler.movingpicture.latest1.genre     #latestMediaHandler.movingpicture.latest1.year</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10102)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Moving Pictures)+control.hasfocus(101)+!string.equals(#latestMediaHandler.movingpicture.latest1.title,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control> -->
+
+
+			<!-- ID 102 -->
+			<control>
+				<description>102 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>605</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(102)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+				<animation effect="slide" tween="sine" easing="in" time="200" end="0,-23" condition="[control.isvisible(10200)]">conditional</animation>
+			</control>
+			<control>
+				<description>102 button</description>
+				<type>button</type>
+				<id>102</id>
+				<posX>778</posX>
+				<posY>636</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>605</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>1</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>101</onleft>
+				<onright>103</onright>
+				<onup>107</onup>
+				<ondown>1111</ondown>
+				<textureFocus>basichome_102_focus.png</textureFocus>
+				<textureNoFocus>basichome_102_nofocus.png</textureNoFocus>
+			</control>
+			<!-- <control>
+				<description>10200 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.tvrecordings.latest1.dateAdded:     #latestMediaHandler.tvrecordings.latest1.title     #latestMediaHandler.tvrecordings.latest1.genre</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10200)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(TV)+control.hasfocus(102)+!string.equals(#latestMediaHandler.tvrecordings.latest1.title,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control> -->
+
+
+			<!-- ID 103 -->
+			<control>
+				<description>103 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>TV Series</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(103)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+				<animation effect="slide" tween="sine" easing="in" time="200" end="0,-23" condition="[control.isvisible(10300)|control.isvisible(10301)|control.isvisible(10302)]">conditional</animation>
+			</control>
+			<control>
+				<description>103 button</description>
+				<type>button</type>
+				<id>103</id>
+				<posX>1142</posX>
+				<posY>636</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>TV Series</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>9811</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>102</onleft>
+				<onright>104</onright>
+				<onup>108</onup>
+				<ondown>1111</ondown>
+				<textureFocus>basichome_103_focus.png</textureFocus>
+				<textureNoFocus>basichome_103_nofocus.png</textureNoFocus>
+			</control>
+			<!-- <control>
+				<description>10300 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.tvseries.latest3.dateAdded:     #latestMediaHandler.tvseries.latest3.serieName     #latestMediaHandler.tvseries.latest3.seasonIndexx#latestMediaHandler.tvseries.latest3.episodeIndex - #latestMediaHandler.tvseries.latest3.episodeName     #latestMediaHandler.tvseries.latest3.runtime mins</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10300)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(103)+!string.equals(#latestMediaHandler.tvseries.latest3.episodeName,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<description>10301 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.tvseries.latest2.dateAdded:     #latestMediaHandler.tvseries.latest2.serieName     #latestMediaHandler.tvseries.latest2.seasonIndexx#latestMediaHandler.tvseries.latest2.episodeIndex - #latestMediaHandler.tvseries.latest2.episodeName     #latestMediaHandler.tvseries.latest2.runtime mins</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10301)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(103)+!string.equals(#latestMediaHandler.tvseries.latest2.episodeName,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<description>10302 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#latestMediaHandler.tvseries.latest1.dateAdded:     #latestMediaHandler.tvseries.latest1.serieName     #latestMediaHandler.tvseries.latest1.seasonIndexx#latestMediaHandler.tvseries.latest1.episodeIndex - #latestMediaHandler.tvseries.latest1.episodeName     #latestMediaHandler.tvseries.latest1.runtime mins</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10302)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(103)+!string.equals(#latestMediaHandler.tvseries.latest1.episodeName,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control> -->
+
+			<!-- ID 104 -->
+			<control>
+				<description>104 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>8</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(104)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+				<animation effect="slide" tween="sine" easing="in" time="200" end="0,-23" condition="[control.isvisible(10400)|control.isvisible(10401)]">conditional</animation>
+			</control>
+			<control>
+				<description>104 button</description>
+				<type>button</type>
+				<id>104</id>
+				<posX>1506</posX>
+				<posY>636</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>8</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>7977</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>103</onleft>
+				<onright>100</onright>
+				<onup>109</onup>
+				<ondown>1111</ondown>
+				<textureFocus>basichome_104_focus.png</textureFocus>
+				<textureNoFocus>basichome_104_nofocus.png</textureNoFocus>
+			</control>
+			<!-- <control>
+				<description>10400 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#WorldWeather.ForecastDay0Day     #WorldWeather.Location     #WorldWeather.ForecastDay0Condition     #WorldWeather.ForecastDay0Low     #WorldWeather.ForecastDay0High</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10400)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(World Weather)+control.hasfocus(104)+!string.equals(#WorldWeather.ForecastDay0Condition,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<description>10401 fanart text</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>999</posY>
+				<width>1920</width>
+				<label>#WorldWeather.RefreshTime     #WorldWeather.Location     #WorldWeather.TodayCondition     #WorldWeather.TodayTemperature     #WorldWeather.TodayWind     #WorldWeather.TodayHumidity</label>
+				<align>center</align>
+				<font>font11</font>
+				<visible>control.isvisible(10401)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(World Weather)+control.hasfocus(104)+!string.equals(#WorldWeather.TodayCondition,)</visible>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<animation effect="fade" time="150">visible</animation>
+			</control> -->
+
+			<!-- ID 105 -->
+			<control>
+				<description>105 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>913</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(105)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+			</control> 
+			<control>
+				<description>105 button</description>
+				<type>button</type>
+				<id>105</id>
+				<posX>50</posX>
+				<posY>432</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>913</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>34</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>109</onleft>
+				<onright>106</onright>
+				<onup>110</onup>
+				<ondown>100</ondown>
+				<textureFocus>basichome_105_focus.png</textureFocus>
+				<textureNoFocus>basichome_105_nofocus.png</textureNoFocus>
+			</control>
+
+
+			<!-- ID 106 -->
+			<control>
+				<description>106 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>Online Videos</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(106)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+			</control> 
+			<control>
+				<description>106 button</description>
+				<type>button</type>
+				<id>106</id>
+				<posX>414</posX>
+				<posY>432</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>Online Videos</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>4755</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>105</onleft>
+				<onright>107</onright>
+				<onup>111</onup>
+				<ondown>101</ondown>
+				<textureFocus>basichome_106_focus.png</textureFocus>
+				<textureNoFocus>basichome_106_nofocus.png</textureNoFocus>
+			</control>
+
+
+			<!-- ID 107 -->
+			<control>
+				<description>107 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>3</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(107)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+			</control> 
+			<control>
+				<description>107 button</description>
+				<type>button</type>
+				<id>107</id>
+				<posX>778</posX>
+				<posY>432</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>3</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>6</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>106</onleft>
+				<onright>108</onright>
+				<onup>112</onup>
+				<ondown>102</ondown>
+				<textureFocus>basichome_107_focus.png</textureFocus>
+				<textureNoFocus>basichome_107_nofocus.png</textureNoFocus>
+			</control>
+
+			<!-- ID 108 -->
+			<control>
+				<description>108 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>1</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(108)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+			</control> 
+			<control>
+				<description>108 button</description>
+				<type>button</type>
+				<id>108</id>
+				<posX>1142</posX>
+				<posY>432</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>1</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>2</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>107</onleft>
+				<onright>109</onright>
+				<onup>113</onup>
+				<ondown>103</ondown>
+				<textureFocus>basichome_108_focus.png</textureFocus>
+				<textureNoFocus>basichome_108_nofocus.png</textureNoFocus>
+			</control>
+
+			<!-- ID 109 -->
+			<control>
+				<description>109 hover label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>965</posY>
+				<width>1920</width>
+				<label>5</label>
+				<font>font22</font>
+				<align>center</align>
+				<visible>control.hasfocus(109)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+			</control> 
+			<control>
+				<description>109 button</description>
+				<type>button</type>
+				<id>109</id>
+				<posX>1506</posX>
+				<posY>432</posY>
+				<width>364</width>
+				<height>204</height>
+				<label>5</label>
+				<textXOff>4500</textXOff>
+				<hyperlink>4</hyperlink>
+				<hyperlinkParameter/> 
+				<onleft>108</onleft>
+				<onright>105</onright>
+				<onup>114</onup>
+				<ondown>104</ondown>
+				<textureFocus>basichome_109_focus.png</textureFocus>
+				<textureNoFocus>basichome_109_nofocus.png</textureNoFocus>
+			</control>
+		</control>
+	</controls>
+</window>

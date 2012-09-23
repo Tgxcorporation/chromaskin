@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>2004</id>
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<width>1920</width>
+			<height>190</height>
+			<posX>0</posX>
+			<posY>890</posY>
+			<texture>background_strip_horizontal_mini.png</texture>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<width>50</width>
+			<height>90</height>
+			<posX>0</posX>
+			<posY>940</posY>
+			<texture>background_strip_horizontal_mini_left.png</texture>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<width>480</width>
+			<height>90</height>
+			<posX>1440</posX>
+			<posY>940</posY>
+			<texture>background_strip_horizontal_mini_right.png</texture>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>progress</type>
+			<description>track progress</description>
+			<id>0</id>
+			<posX>50</posX>
+			<posY>940</posY>
+			<width>1390</width>
+			<height>90</height>
+			<label>#percentage</label>
+			<lefttexture>-</lefttexture>
+			<midtexture>osd_progress.png</midtexture>
+			<righttexture>-</righttexture>
+			<onlymidtexture>yes</onlymidtexture>
+			<midheight>90</midheight>
+			<midwidth>1390</midwidth>
+			<midoffsetX>0</midoffsetX>
+			<midoffsetY>0</midoffsetY>
+			<innerheight>90</innerheight>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+
+
+
+		<control>
+			<description>Info</description>
+			<type>fadelabel</type>
+			<id>5</id>
+			<width>1200</width>
+			<posX>190</posX>
+			<posY>964</posY>
+			<font>font14</font>
+			<label>#Play.Current.Title / #Play.Current.Artist / #Play.Current.Album</label>
+			<wrapString> ·· </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+
+
+		<control>
+			<description>play time label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1490</posX>
+			<posY>986</posY>
+			<label>#currentplaytime / #currentremaining</label>
+			<align>center</align>
+			<font>font14</font>
+			<width>380</width>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>Pause logo</description>
+			<type>image</type>
+			<id>4</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_pause.png</texture>
+			<animation effect="fade" time="100">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>FF logo</description>
+			<type>image</type>
+			<id>7</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_forward.png</texture>
+			<animation effect="fade" time="100">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>RW logo</description>
+			<type>image</type>
+			<id>8</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_rew.png</texture>
+			<animation effect="fade" time="100">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+
+		<!-- NOT USED -->
+		<control>
+			<description>play logo</description>
+			<type>image</type>
+			<id>3</id>
+			<posX>4951</posX>
+			<posY>885</posY>
+			<width>78</width>
+			<height>78</height>
+			<texture>logo_play.png</texture>
+		</control>
+		<control>
+			<description>Gap / Normal Icon</description>
+			<type>image</type>
+			<id>10</id>
+			<posX>4951</posX>
+			<posY>972</posY>
+			<width>64</width>
+			<height>40</height>
+			<texture>logo_gap.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+		</control>
+		<control>
+			<description>Gapless Icon</description>
+			<type>image</type>
+			<id>11</id>
+			<posX>4951</posX>
+			<posY>972</posY>
+			<width>64</width>
+			<height>40</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>logo_gapless.png</texture>
+		</control>
+		<control>
+			<description>Crossfade Icon</description>
+			<type>image</type>
+			<id>12</id>
+			<posX>4951</posX>
+			<posY>972</posY>
+			<width>64</width>
+			<height>40</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>logo_crossfade.png</texture>
+		</control>
+		<control>
+			<description>music logo</description>
+			<type>image</type>
+			<id>87</id>
+			<posX>345</posX>
+			<posY>1885</posY>
+			<width>150</width>
+			<height>150</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<texture>#Play.Current.Thumb</texture>
+		</control>
+		<control>
+			<description>music logo</description>
+			<type>image</type>
+			<id>86</id>
+			<posX>45</posX>
+			<posY>1885</posY>
+			<width>150</width>
+			<height>150</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<texture>#Play.Current.ArtistThumb</texture>
+			<visible>!control.hasthumb(87)</visible>
+		</control>
+		<control>
+			<description>video preview window</description>
+			<type>videowindow</type>
+			<id>9</id>
+			<posX>-140</posX>
+			<posY>1890</posY>
+			<width>190</width>
+			<height>190</height>
+			<action>18</action>
+			<keepaspectratio>no</keepaspectratio>
+			<textureFocus>background_strip_horizontal_mini_focus.png</textureFocus>
+		</control>
+		<control>
+			<description>play time label</description>
+			<type>label</type>
+			<id>2</id>
+			<posX>210</posX>
+			<posY>1867</posY>
+			<label>#currentplaytime</label>
+			<align>left</align>
+			<font>font32</font>
+			<textcolor>60ffffff</textcolor>
+		</control>
+
+	</controls>
+</window>

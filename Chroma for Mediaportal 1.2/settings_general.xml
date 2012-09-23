@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>705</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:128</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>580</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>683</posY>
+				<label>128</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>780</posY>
+				<control>
+					<description>Skin</description>
+					<type>button</type>
+					<id>10</id>
+					<posX>148</posX>
+					<posY>282</posY>
+					<label>166</label>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Language</description>
+					<type>button</type>
+					<id>11</id>
+					<posX>148</posX>
+					<posY>349</posY>
+					<label>248</label>
+				</control>
+				<control>
+					<description>Start in fullscreen mode</description>
+					<type>togglebutton</type>
+					<id>12</id>
+					<posX>148</posX>
+					<posY>417</posY>
+					<label>1047</label>
+				</control>
+				<control>
+					<description>Screensaver</description>
+					<type>togglebutton</type>
+					<id>13</id>
+					<posX>148</posX>
+					<posY>484</posY>
+					<label>360</label>
+				</control>
+				<control>
+					<description>Skip steps screen button</description>
+					<type>button</type>
+					<id>21</id>
+					<posX>148</posX>
+					<posY>552</posY>
+					<label>6024</label>
+					<hyperlink>708</hyperlink>
+					<ondown>99</ondown>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>Skin Preview</description>
+			<type>image</type>
+			<id>20</id>
+			<posX>748</posX>
+			<posY>3244</posY>
+			<width>1050</width>
+			<height>591</height>
+			<texture />
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>709</id>
+	<defaultcontrol>24</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:605</define>
+	<define>#header.subtitle:8013</define>
+	<define>#header.background:hover_my tv.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>540</posY>
+			<width>1920</width>
+			<height>540</height>
+			<texture>overlay_bottom.png</texture>
+			<colordiffuse>#ColorMainUnfocusedOsd</colordiffuse>
+			<!-- <visible>control.isvisible(157988)</visible> -->
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>![control.isvisible(157988)|control.isvisible(157986)]</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>388</posX>
+			<posY>480</posY>
+			<width>1144</width>
+			<height>1080</height>
+			<texture>background_menu.png</texture>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<posX>510</posX>
+			<posY>580</posY>
+			<label>100709</label>
+			<width>900</width>
+			<font>font20</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Please specify the IP address or hostname</description>
+			<id>1</id>
+			<posX>510</posX>
+			<posY>680</posY>
+			<font>font16</font>
+			<textcolor>#ColorMainUnfocused</textcolor>
+			<label>6026</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>of the master TV-Server</description>
+			<id>1</id>
+			<posX>510</posX>
+			<posY>730</posY>
+			<font>font16</font>
+			<textcolor>#ColorMainUnfocused</textcolor>
+			<label>6027</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Current setting:</description>
+			<id>1</id>
+			<posX>510</posX>
+			<posY>780</posY>
+			<font>font16</font>
+			<textcolor>#ColorMainUnfocused</textcolor>
+			<label>6028</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>:</description>
+			<id>30</id>
+			<posX>510</posX>
+			<posY>830</posY>
+			<font>font16</font>
+			<textcolor>#ColorMainUnfocused</textcolor>
+			<label>-</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<layout>StackLayout(0, Vertical, true)</layout>
+			<posX>460</posX>
+			<posY>930</posY>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>button</type>
+				<id>24</id>
+				<label>6029</label>
+			</control>
+			<control>
+				<type>button</type>
+				<id>25</id>
+				<label>8008</label>
+			</control>
+		</control>
+	</controls>
+</window>

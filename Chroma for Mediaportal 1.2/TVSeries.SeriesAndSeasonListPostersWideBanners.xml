@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<control>
+				<type>image</type>
+				<description>season poster</description>
+				<id>62</id>
+				<posX>1490</posX>
+				<posY>480</posY>
+				<width>380</width>
+				<height>500</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>no</centered>
+				<texture>#TVSeries.SeasonPoster</texture>
+				<visible>control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>series poster</description>
+				<id>61</id>
+				<posX>1490</posX>
+				<posY>480</posY>
+				<width>380</width>
+				<height>500</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>no</centered>
+				<texture>#TVSeries.SeriesPoster</texture>
+				<visible>control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<label>#selecteditem</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<label>#TVSeries.Subtitle</label>
+				<textcolor>#ColorMain</textcolor>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			
+			
+			<control>
+				<type>imagelist</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>438</posY>
+				<width>453</width>
+				<height>60</height>
+				<textureWidth>33</textureWidth>
+				<textureHeight>33</textureHeight>
+				<subitems>
+					<subitem>star_nofocus_alternate.png</subitem>
+					<subitem>star_focus_alternate.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#TVSeries.Series.Rating</percentage>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>481</posY>
+				<width>380</width>
+				<label>#TVSeries.Series.RuntimeMin</label>
+				<textcolor>#ColorMain</textcolor>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>533</posY>
+				<width>390</width>
+				<height>455</height>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font14</font>
+				<label>#TVSeries.Series.Summary</label>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<seperator>··</seperator>
+			</control>
+		</control>
+	</controls>
+</window>

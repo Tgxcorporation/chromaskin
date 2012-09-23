@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>87274</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:Trakt</define>
+	<define>#header.subtitle:#Trakt.Translation.GeneralSettings.Label</define>
+	<define>#header.background:hover_trakt.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>580</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>683</posY>
+				<label>924</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>780</posY>
+				<control>
+					<description>Download Fanart</description>
+					<type>togglebutton</type>
+					<id>2</id>
+					<label>#Trakt.Translation.DownloadFanart.Label</label>
+					<onleft>2</onleft>
+					<onup>17</onup>
+					<ondown>3</ondown>
+				</control>
+				<control>
+					<description>Download FullSize Fanart</description>
+					<type>togglebutton</type>
+					<id>3</id>
+					<label>#Trakt.Translation.DownloadFullSizeFanart.Label</label>
+					<onleft>3</onleft>
+					<onup>2</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<description>Get Friend Requests on startup</description>
+					<type>togglebutton</type>
+					<id>4</id>
+					<label>#Trakt.Translation.GetFriendRequestsOnStartup.Label</label>
+					<onleft>4</onleft>
+					<onup>3</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>Create Moving Pictures Categories</description>
+					<type>togglebutton</type>
+					<id>5</id>
+					<label>#Trakt.Translation.CreateMovingPicturesCategories.Label</label>
+					<onleft>5</onleft>
+					<onup>4</onup>
+					<ondown>6</ondown>
+				</control>
+				<control>
+					<description>Create Moving Pictures Filters</description>
+					<type>togglebutton</type>
+					<id>6</id>
+					<label>#Trakt.Translation.CreateMovingPicturesFilters.Label</label>
+					<onleft>6</onleft>
+					<onup>5</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
