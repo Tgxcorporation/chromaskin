@@ -123,7 +123,7 @@
 				<posX>0</posX>
 				<posY>965</posY>
 				<width>1920</width>
-				<label>Moving Pictures</label>
+				<label>#MovingPictures.Settings.HomeScreenName</label>
 				<font>font22</font>
 				<align>center</align>
 				<visible>control.hasfocus(101)</visible>
@@ -138,7 +138,7 @@
 				<posY>636</posY>
 				<width>364</width>
 				<height>204</height>
-				<label>Moving Pictures</label>
+				<label>#MovingPictures.Settings.HomeScreenName</label>
 				<textXOff>4500</textXOff>
 				<hyperlink>96742</hyperlink>
 				<hyperlinkParameter/> 
