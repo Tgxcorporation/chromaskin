@@ -43,7 +43,7 @@
 				<posX>1490</posX>
 				<posY>381</posY>
 				<width>380</width>
-				<label>#selecteditem</label>
+				<label>#TVSeries.Title</label>
 				<textcolor>#ColorAlternate</textcolor>
 				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
 				<animation effect="fade" time="200">visible</animation>
