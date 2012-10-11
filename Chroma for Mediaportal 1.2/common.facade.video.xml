@@ -73,8 +73,6 @@
 					<id>50</id>
 					<onleft>2</onleft>
 					<onright>2</onright>
-					<ondown>50</ondown>
-					<onup>50</onup>
 					<!--<visible>control.isvisible(745381)</visible>
 					<animation effect="fade" time="200">visible</animation>-->
 				</control>
@@ -84,8 +82,6 @@
 					<id>50</id>
 					<onleft>2</onleft>
 					<onright>2</onright>
-					<ondown>2</ondown>
-					<onup>2</onup>
 					<posX>115</posX>
 					<posY>380</posY>
 					<width>1270</width>
@@ -116,8 +112,6 @@
 					<id>50</id>
 					<ondown>2</ondown>
 					<onup>2</onup>
-					<onleft>50</onleft>
-					<onright>50</onright>
 					<posX>50</posX>
 					<posY>470</posY>
 					<height>370</height>
@@ -137,8 +131,6 @@
 					<type>coverflow</type>
 					<ondown>2</ondown>
 					<onup>2</onup>
-					<onleft>50</onleft>
-					<onright>50</onright>
 					<posY>510</posY>
 					<cardWidth>260</cardWidth>
 					<cardHeight>370</cardHeight>

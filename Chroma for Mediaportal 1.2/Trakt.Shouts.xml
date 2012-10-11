@@ -77,8 +77,6 @@
 					<id>50</id>
 					<onleft>2</onleft>
 					<onright>2</onright>
-					<ondown>50</ondown>
-					<onup>50</onup>
 					<width>910</width>
 					<scrollbarXOff>-990</scrollbarXOff>
 				</control>
