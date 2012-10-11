@@ -65,8 +65,6 @@
 				<posX>503</posX>
 				<posY>430</posY>
 				<width>914</width>
-				<onup>3</onup>
-				<ondown>3</ondown>
 				<onleft>3</onleft>
 				<onright>3</onright>
 				<font>font16</font>
