@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>87271</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:Trakt</define>
+	<define>#header.subtitle:#Trakt.Translation.Settings.Label</define>
+	<define>#header.background:hover_trakt.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>630</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>733</posY>
+				<label>924</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>830</posY>
+				<control>
+					<type>button</type>
+					<description>Account Setup</description>
+					<id>2</id>
+					<onup>17</onup>
+					<label>#Trakt.Translation.AccountSetup.Label</label>
+					<hyperlink>87272</hyperlink>
+					<onleft>2</onleft>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Plugin Setup</description>
+					<id>3</id>
+					<label>#Trakt.Translation.Plugins.Label</label>
+					<hyperlink>87273</hyperlink>
+					<onleft>3</onleft>
+				</control>
+				<control>
+					<type>button</type>
+					<description>General Settings</description>
+					<id>4</id>
+					<label>#Trakt.Translation.General.Label</label>
+					<hyperlink>87274</hyperlink>
+					<onleft>4</onleft>
+					<ondown>1000</ondown>
+				</control>
+				<!-- <control>
+					<type>button</type>
+					<description>MPEICONFIGURE:a9c3845a_8718_4712_85cc_26f56520bb9a</description>
+					<id>1000</id>
+					<label>#Trakt.Translation.AdvancedSettings.Label</label>
+					<onleft>1000</onleft>
+					<ondown>2</ondown>
+					<visible>string.equals(#mpei.a9c3845a_8718_4712_85cc_26f56520bb9a.isinstalled, true)</visible>
+				</control> -->
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>1008</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:300011</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="0,1080" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>97</posX>
+				<posY>330</posY>
+				<width>1726</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>960</posX>
+				<posY>380</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>800</height>
+			</control>
+
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>255</posX>
+				<posY>430</posY>
+				<label>#header.subtitle</label>
+				<width>820</width>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<!-- Startup resume-->
+			<control>
+				<description>buttons</description>
+				<type>group</type>
+				<posX>960</posX>
+				<posY>430</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>Enable dynamic refresh rate</description>
+					<type>checkbutton</type>
+					<id>2</id>
+					<onleft>6</onleft>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<align>right</align>
+					<label>300084</label>
+					<width>755</width>
+				</control>
+				<control>
+					<description>Notify</description>
+					<type>checkbutton</type>
+					<id>3</id>
+					<onleft>6</onleft>
+					<onup>2</onup>
+					<ondown>4</ondown>
+					<align>right</align>
+					<label>300085</label>
+					<width>755</width>
+				</control>
+				<control>
+					<description>Use device reset</description>
+					<type>checkbutton</type>
+					<id>4</id>
+					<onleft>6</onleft>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<align>right</align>
+					<label>300086</label>
+					<width>755</width>
+				</control>
+				<control>
+					<description>Force refreshrate</description>
+					<type>checkbutton</type>
+					<id>5</id>
+					<onleft>6</onleft>
+					<onup>4</onup>
+					<ondown>10</ondown>
+					<align>right</align>
+					<label>300087</label>
+					<width>755</width>
+				</control>
+				<control>
+					<description>Enable default refresh rate</description>
+					<type>checkbutton</type>
+					<id>10</id>
+					<onleft>6</onleft>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<align>right</align>
+					<label>300089</label>
+					<width>755</width>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<texture>blank.png</texture>
+					<width>755</width>
+					<height>50</height>
+				</control>
+				<control>
+					<description>Add</description>
+					<type>button</type>
+					<id>7</id>
+					<onleft>6</onleft>
+					<onup>10</onup>
+					<ondown>8</ondown>
+					<label>300063</label>
+					<width>755</width>
+				</control>
+				<control>
+					<description>Remove</description>
+					<type>button</type>
+					<id>8</id>
+					<onleft>6</onleft>
+					<onup>7</onup>
+					<ondown>12</ondown>
+					<label>300064</label>
+					<width>755</width>
+				</control>
+				<control>
+					<description>Edit</description>
+					<type>button</type>
+					<id>12</id>
+					<onleft>6</onleft>
+					<onup>8</onup>
+					<ondown>9</ondown>
+					<label>2076</label>
+					<width>755</width>
+				</control>
+				<control>
+					<description>Default</description>
+					<type>button</type>
+					<id>9</id>
+					<onleft>6</onleft>
+					<onup>12</onup>
+					<ondown>11</ondown>
+					<label>886</label>
+					<width>755</width>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<texture>blank.png</texture>
+					<width>755</width>
+					<height>50</height>
+				</control>
+				<control>
+					<description>Select default refresh rate</description>
+					<type>button</type>
+					<id>11</id>
+					<onleft>6</onleft>
+					<onup>9</onup>
+					<label>424</label>
+					<width>755</width>
+				</control>
+			</control>
+
+
+			<control>
+				<description>Def rate value label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1685</posX>
+				<posY>980</posY>
+				<width>367</width>
+				<align>right</align>
+				<label>#defaultrate</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>control.isvisible(11)</visible>
+			</control>
+
+
+
+
+			<control>
+				<description>buttons</description>
+				<type>group</type>
+				<control>
+					<description>Refresh rate list</description>
+					<type>listcontrol</type>
+					<id>6</id>
+					<posX>205</posX>
+					<posY>530</posY>
+					<height>280</height>
+					<width>755</width>
+					<onleft>7</onleft>
+					<onright>7</onright>
+					<textXOff>-15</textXOff>
+					<scrollbarXOff>-832</scrollbarXOff>
+				</control>
+			</control>
+
+			<!--Values-->
+
+			<control>
+				<description>Refresh rate values Label</description>
+				<type>group</type>
+				<posX>255</posX>
+				<posY>830</posY>
+				<layout>StackLayout(50, Vertical, true)</layout>
+				<control>
+					<description>Rate Name label</description>
+					<type>label</type>
+					<id>1</id>
+					<width>367</width>
+					<label>#name</label>
+					<font>font13</font>
+					<textcolor>#ColorAlternate</textcolor>
+				</control>
+				<control>
+					<description>FPS label</description>
+					<type>fadelabel</type>
+					<id>1</id>
+					<width>367</width>
+					<label>#fps</label>
+					<font>font13</font>
+					<textcolor>#ColorAlternate</textcolor>
+				</control>
+				<control>
+					<description>Rate value label</description>
+					<type>label</type>
+					<id>1</id>
+					<width>367</width>
+					<label>#rate</label>
+					<font>font13</font>
+					<textcolor>#ColorAlternate</textcolor>
+				</control>
+				<control>
+					<description>Action</description>
+					<type>label</type>
+					<id>1</id>
+					<width>367</width>
+					<label>#action</label>
+					<font>font13</font>
+					<textcolor>#ColorAlternate</textcolor>
+				</control>
+			</control>
+
+
+
+
+		</control>
+	</controls>
+</window>
+

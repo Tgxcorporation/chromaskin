@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>749</id>
+	<defaultcontrol>1</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>540</posY>
+			<width>1920</width>
+			<height>540</height>
+			<texture>overlay_bottom.png</texture>
+			<colordiffuse>#ColorMainUnfocusedOsd</colordiffuse>
+			<!-- <visible>control.isvisible(157988)</visible> -->
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>![control.isvisible(157988)|control.isvisible(157986)]</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>388</posX>
+			<posY>730</posY>
+			<width>1144</width>
+			<height>1080</height>
+			<texture>background_menu.png</texture>
+		</control>
+		<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+		<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>1150</posX>
+			<posY>780</posY>
+			<texture>background_strip_horizontal_right.png</texture>
+			<width>310</width>
+			<height>1030</height>
+		</control>
+		<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+		<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		<control>
+			<description>logo</description>
+			<type>image</type>
+			<id>10</id>
+			<posX>1200</posX>
+			<posY>780</posY>
+			<width>210</width>
+			<height>300</height>
+			<texture>#TV.View.thumb</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>dialog Heading</description>
+			<id>0</id>
+			<type>fadelabel</type>
+			<posX>510</posX>
+			<posY>830</posY>
+			<label>181</label>
+			<width>600</width>
+			<font>font20</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>notify</description>
+			<type>fadelabel</type>
+			<id>102</id>
+			<posX>510</posX>
+			<posY>930</posY>
+			<width>600</width>
+			<label>-</label>
+			<textcolor>#ColorMainUnfocused</textcolor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Quality</description>
+			<type>fadelabel</type>
+			<id>101</id>
+			<posX>510</posX>
+			<posY>980</posY>
+			<width>600</width>
+			<label>-</label>
+			<textcolor>#ColorMainUnfocused</textcolor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+
+		<control>
+			<id>1</id>
+			<description>progress control</description>
+			<type>progress</type>
+			<posX>460</posX>
+			<posY>2880</posY>
+			<width>1000</width>
+			<height>50</height>
+			<midheight>50</midheight>
+			<innerheight>50</innerheight>
+			<midwidth>1000</midwidth>
+			<texturebg>osd_progress_background.png</texturebg>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>9</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:131</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>680</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>780</posY>
+				<label>#header.subtitle</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>880</posY>
+				<control>
+					<description>UI Calibration button</description>
+					<type>button</type>
+					<id>2</id>
+					<label>213</label>
+					<hyperlink>10</hyperlink>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Screen Calibration button</description>
+					<type>button</type>
+					<id>3</id>
+					<label>214</label>
+					<hyperlink>11</hyperlink>
+				</control>
+				<control>
+					<description>Scroll speed button</description>
+					<type>button</type>
+					<id>4</id>
+					<label>673</label>
+					<hyperlink>31</hyperlink>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
+

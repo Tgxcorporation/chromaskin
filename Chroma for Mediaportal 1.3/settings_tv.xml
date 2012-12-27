@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<window>
+	<id>700</id>
+	<defaultcontrol>30</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:605</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>230</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>330</posY>
+				<label>#header.subtitle</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>430</posY>
+				<control>
+					<description>Automatically turn TV on</description>
+					<type>button</type>
+					<id>30</id>
+					<label>6006</label>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>De-interlacing</description>
+					<type>button</type>
+					<id>27</id>
+					<label>6003</label>
+				</control>
+				<control>
+					<description>Apect Ratio</description>
+					<type>button</type>
+					<id>28</id>
+					<label>6004</label>
+				</control>
+				<control>
+					<description>MPEG-2 Video Codecs</description>
+					<type>button</type>
+					<id>24</id>
+					<label>6000</label>
+				</control>
+				<control>
+					<description>H.264 Video Codecs</description>
+					<type>button</type>
+					<id>35</id>
+					<label>6036</label>
+				</control>
+				<control>
+					<description>Audio Codecs</description>
+					<type>button</type>
+					<id>25</id>
+					<label>6001</label>
+				</control>
+				<control>
+					<description>LATM AAC Audio Codecs</description>
+					<type>button</type>
+					<id>36</id>
+					<label>6039</label>
+				</control>
+				<control>
+					<description>Audio Renderer</description>
+					<type>button</type>
+					<id>33</id>
+					<label>6002</label>
+					<ondown>40</ondown>
+				</control>
+				<control>
+					<description>Use button colors for TVGuide</description>
+					<type>checkbutton</type>
+					<id>40</id>
+					<label>1246</label>
+					<onup>33</onup>
+					<ondown>41</ondown>
+					<font>font13</font>
+					<textvalign>middle</textvalign>
+					<selected>#(skin.hassetting('#skin.tvguide.usecolorsforbuttons'))</selected>
+					<onclick>#(skin.togglesetting('#skin.tvguide.usecolorsforbuttons'))</onclick>
+				</control>
+				<control>
+					<description>Use guide colors for genre</description>
+					<type>checkbutton</type>
+					<id>41</id>
+					<label>1247</label>
+					<onup>40</onup>
+					<ondown>42</ondown>
+					<font>font13</font>
+					<textvalign>middle</textvalign>
+					<selected>#(skin.hassetting('#skin.tvguide.usecolorsforgenre'))</selected>
+					<onclick>#(skin.togglesetting('#skin.tvguide.usecolorsforgenre'))</onclick>
+				</control>
+				<control>
+					<description>Use highlight</description>
+					<type>checkbutton</type>
+					<id>42</id>
+					<label>1248</label>
+					<onup>41</onup>
+					<ondown>43</ondown>
+					<font>font13</font>
+					<textvalign>middle</textvalign>
+					<selected>#(skin.hassetting('#skin.tvguide.useborderhighlight'))</selected>
+					<onclick>#(skin.togglesetting('#skin.tvguide.useborderhighlight'))</onclick>
+				</control>
+				<control>
+					<description>Show genre color key</description>
+					<type>checkbutton</type>
+					<id>43</id>
+					<label>1249</label>
+					<onup>42</onup>
+					<ondown>40</ondown>
+					<font>font13</font>
+					<textvalign>middle</textvalign>
+					<selected>#(skin.hassetting('#skin.tvguide.showgenrekey'))</selected>
+					<onclick>#(skin.togglesetting('#skin.tvguide.showgenrekey'))</onclick>
+				</control>
+			</control>
+		</control>
+		
+	</controls>
+</window>
+

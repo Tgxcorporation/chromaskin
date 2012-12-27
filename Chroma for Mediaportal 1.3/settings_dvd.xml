@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>704</id>
+	<defaultcontrol>22</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:50</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>580</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>680</posY>
+				<label>#header.subtitle</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>780</posY>
+
+				<control>
+					<description>Enable Subtitles</description>
+					<type>checkbutton</type>
+					<id>22</id>
+					<label>1196</label>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Enable Closed Caption</description>
+					<type>checkbutton</type>
+					<id>31</id>
+					<label>300079</label>
+				</control>
+				<control>
+					<description>Turn Off DXVA</description>
+					<type>checkbutton</type>
+					<id>23</id>
+					<label>1197</label>
+				</control>
+				<control>
+					<description>Video</description>
+					<type>button</type>
+					<id>24</id>
+					<label>291</label>
+				</control>
+				<control>
+					<description>Audio</description>
+					<type>button</type>
+					<id>25</id>
+					<label>292</label>
+					<ondown>22</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

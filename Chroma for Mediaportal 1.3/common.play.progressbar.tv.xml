@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+
+		<control>
+			<description>channelname</description>
+			<type>fadelabel</type>
+			<id>14</id>
+			<width>1000</width>
+			<posX>190</posX>
+			<posY>964</posY>
+			<font>font14</font>
+			<label>#TV.View.channel - #TV.View.title</label>
+			<wrapString> ·· </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<wrapString> ·· </wrapString>
+		</control>
+		<control>
+			<description>TV Progress Bar</description>
+			<type>tvprogress</type>
+			<id>100</id>
+			<posX>48</posX>
+			<posY>940</posY>
+			<width>1394</width>
+			<height>90</height>
+			<toptexture>-</toptexture>
+			<TextureOffsetY>0</TextureOffsetY>
+			<bottomtexture>-</bottomtexture>
+			<texturetick>-</texturetick>
+			<lefttexture>-</lefttexture>
+			<midtexture>-</midtexture>
+			<righttexture>-</righttexture>
+			<logotexture>-</logotexture>
+			<fillbackgroundtexture>-</fillbackgroundtexture>
+			<fillbgxoff>0</fillbgxoff>
+			<fillbgyoff>0</fillbgyoff>
+			<filltexture1>osd_progress.png</filltexture1>
+			<filltexture2>osd_progress_red.png</filltexture2>
+			<filltexture3>osd_progress_green.png</filltexture3>
+			<markertexture>osd_progress_violet.png</markertexture>
+			<fillheight>90</fillheight>
+			<label>#TV.Record.percent1</label>
+			<label1>#TV.Record.percent2</label1>
+			<label2>#TV.Record.percent3</label2>
+			<labelmarkerstarts>#TV.Record.jumppoints</labelmarkerstarts>
+			<labelmarkerends>#TV.Record.chapters</labelmarkerends>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+
+	</controls>
+</window>

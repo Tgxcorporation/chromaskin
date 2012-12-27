@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>87260</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.title:Trakt  #Trakt.Translation.Friends.Label</define>
+	<define>#header.subtitle:#Trakt.CurrentView / #itemcount #(L(507))</define>
+	<define>#Fanart.1:#Trakt.Friends.Fanart.1</define>
+	<define>#Fanart.2:#Trakt.Friends.Fanart.2</define>
+	<define>#header.background:hover_trakt.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>Trakt.Common.Fanart.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>280</posY>
+				<texture>background_strip_horizontal_listcontrol.png</texture>
+				<width>1920</width>
+				<height>800</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_left.png</texture>
+				<width>50</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1440</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>960</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>Text List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<width>910</width>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<scrollbarXOff>-990</scrollbarXOff>
+					<textXOff>56</textXOff>
+					<keepaspectratio>yes</keepaspectratio>
+					<itemWidth>74</itemWidth>
+					<itemHeight>42</itemHeight>
+					<!-- <textXOff3>140</textXOff3>
+					<textYOff3>5</textYOff3> -->
+					<font3>font12</font3>
+					<textcolor3>#ColorMainSub</textcolor3>
+				</control>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<font>font16</font>
+				<label>#Trakt.User.Username</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>431</posY>
+				<width>380</width>
+				<label>#Trakt.User.FullName</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
+			</control>
+			<control>
+				<description>Protected Value</description>
+				<id>12001</id>
+				<label>#Trakt.Translation.Protected.Label: #Trakt.User.Protected</label>
+				<type>fadelabel</type>
+				<posX>1490</posX>
+				<posY>481</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.User.Protected,)+!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
+			</control>
+			<control>
+				<description>Avatar</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1490</posX>
+				<posY>500</posY>
+				<width>380</width>
+				<height>480</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<valign>bottom</valign>
+				<texture>#selectedthumb</texture>
+				<visible>!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
+			</control>
+			<control>
+				<description>Join Date Value</description>
+				<id>12001</id>
+				<label>#Trakt.Translation.JoinDate.Label: #Trakt.User.JoinDate</label>
+				<type>fadelabel</type>
+				<posX>1010</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.User.JoinDate,)+!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
+			</control>
+			<control>
+				<description>Gender Value</description>
+				<id>12001</id>
+				<label>#Trakt.Translation.Gender.Label: #Trakt.User.Gender</label>
+				<type>fadelabel</type>
+				<posX>1010</posX>
+				<posY>431</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.User.Gender,)+!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
+			</control>
+
+			<control>
+				<description>Location Value</description>
+				<id>12001</id>
+				<label>#Trakt.Translation.Location.Label: #Trakt.User.Location</label>
+				<type>fadelabel</type>
+				<posX>1010</posX>
+				<posY>481</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.User.Location,)+!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>531</posY>
+				<width>390</width>
+				<height>450</height>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>!string.equals(#Trakt.User.About,)+!string.equals(#Trakt.User.About,N/A)+!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
+				<seperator>··</seperator>
+				<label>#Trakt.User.About</label>
+			</control>
+
+			<!-- Trakt Episodes -->
+
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>381</posY>
+				<label>#Trakt.Episode.Seasonx#Trakt.Episode.Number #Trakt.Episode.Title</label>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<width>380</width>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Episode.Season,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+			</control>
+			<control>
+				<label>#Trakt.Show.AirDay</label>
+				<type>fadelabel</type>
+				<posX>1490</posX>
+				<posY>431</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Show.Airday,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+			</control>
+			<control>
+				<label>#Trakt.Show.AirTime     #Trakt.Show.Runtime mins</label>
+				<type>fadelabel</type>
+				<posX>1490</posX>
+				<posY>481</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+			</control>
+			<control>
+				<description>Rating Percent</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>531</posY>
+				<width>380</width>
+				<font>font16</font>
+				<label>#Trakt.Episode.Ratings.Percentage%     #Trakt.Episode.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+				<textcolor>#ColorMain</textcolor>
+				<visible>!string.equals(#Trakt.Episode.Ratings.Percentage,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Translation.FirstAired.Label: #Trakt.Show.FirstAired</label>
+				<type>fadelabel</type>
+				<posX>1490</posX>
+				<posY>581</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Show.FirstAired,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+			</control>
+			<control>
+				<description>Big Episode Thumb</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>550</posY>
+				<width>380</width>
+				<height>430</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<valign>bottom</valign>
+				<texture>#selectedthumb</texture>
+				<visible>string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>381</posY>
+				<label>#Trakt.Show.Title</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<width>380</width>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Episode.Season,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+			</control>
+			
+			<control>
+				<id>0</id>
+				<label>#Trakt.Show.Year  #Trakt.Show.Country</label>
+				<type>fadelabel</type>
+				<posX>1010</posX>
+				<posY>431</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Show.Year,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Show.Network   #Trakt.Show.Certification</label>
+				<type>fadelabel</type>
+				<posX>1010</posX>
+				<posY>481</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Show.Network,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+			</control>
+			
+			
+			
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>631</id>
+				<posX>1010</posX>
+				<posY>531</posY>
+				<width>390</width>
+				<height>450</height>
+				<font>font14</font>
+				<visible>!string.equals(#Trakt.Episode.Overview,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
+				<seperator>··</seperator>
+				<label>#Trakt.Episode.Overview</label>
+			</control>
+
+			<!-- Movies -->
+
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>381</posY>
+				<label>#Trakt.Movie.Title</label>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<width>380</width>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Movie.Title,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>431</posY>
+				<label>#Trakt.Movie.Tagline</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<width>380</width>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Movie.Tagline,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
+			</control>
+			<control>
+				<description>Big Episode Thumb</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>500</posY>
+				<width>380</width>
+				<height>480</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<valign>bottom</valign>
+				<texture>#selectedthumb</texture>
+				<visible>string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
+			</control>
+			
+			<control>
+				<id>0</id>
+				<label>#Trakt.Movie.Year</label>
+				<type>fadelabel</type>
+				<posX>1010</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Movie.Year,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Movie.Certification</label>
+				<type>fadelabel</type>
+				<posX>1010</posX>
+				<posY>431</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Movie.Certification,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
+			</control>
+			<control>
+				<label>#Trakt.Movie.Runtime mins</label>
+				<type>fadelabel</type>
+				<posX>1010</posX>
+				<posY>481</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Movie.Runtime,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Movie.Released</label>
+				<type>fadelabel</type>
+				<posX>1010</posX>
+				<posY>531</posY>
+				<width>380</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>!string.equals(#Trakt.Movie.Released,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
+			</control>
+			<control>
+				<description>Rating Percent</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>581</posY>
+				<width>380</width>
+				<font>font16</font>
+				<label>#Trakt.Movie.Ratings.Percentage%     #Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+				<textcolor>#ColorMain</textcolor>
+				<visible>!string.equals(#Trakt.Movie.Ratings.Percentage,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>631</posY>
+				<width>390</width>
+				<height>365</height>
+				<textcolor>#ColorAlternate</textcolor>
+				<seperator>··</seperator>
+				<font>font14</font>
+				<label>#Trakt.Movie.Overview</label>
+				<visible>!string.equals(#Trakt.Movie.Overview,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
+			</control>
+		</control>
+	</controls>
+</window>
