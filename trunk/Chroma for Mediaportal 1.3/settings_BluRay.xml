@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>1024</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:101024</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>430</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>530</posY>
+				<label>#header.subtitle</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>630</posY>
+				<control>
+					<description>Region</description>
+					<type>button</type>
+					<id>2</id>
+					<label>300218</label>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>AudioType</description>
+					<type>button</type>
+					<id>3</id>
+					<label>300219</label>
+				</control>
+				<control>
+					<description>Video</description>
+					<type>button</type>
+					<id>4</id>
+					<label>2134</label>
+				</control>
+				<control>
+					<description>Audio</description>
+					<type>button</type>
+					<id>5</id>
+					<label>2135</label>
+				</control>
+				<control>
+					<description>Subtitles On/Off</description>
+					<type>checkbutton</type>
+					<id>6</id>
+					<label>1196</label>
+					<ondown>7</ondown>
+				</control>	
+
+			</control>
+			<control>
+				<description>Parental age limit</description>
+				<type>label</type>
+				<id>102</id>
+				<posX>660</posX>
+				<posY>930</posY>
+				<width>577</width>
+				<label>300220</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Age limit value</description>
+				<type>spincontrol</type>
+				<id>7</id>
+				<posX>660</posX>
+				<posY>980</posY>
+				<onleft>7</onleft>
+				<onup>6</onup>
+				<ondown>2</ondown>
+				<align>left</align>
+				<buddycontrolid>102</buddycontrolid>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>35</id>
+	<defaultcontrol>102</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
+	<define>#header.title:MediaPortal</define>
+	<define>#header.subtitle:100035</define>
+	<define>#header.background:background.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>BasicHome_Backdrops.xml</import>
+		<import>common.window.header.xml</import>
+		<import>BasicHome_Buttons.xml</import>
+	</controls>
+</window>

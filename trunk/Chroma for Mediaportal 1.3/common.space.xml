@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>300</posX>
+			<posY>467</posY>
+			<texture>black.png</texture>
+			<width>50</width>
+			<height>50</height>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>840</posY>
+			<texture>black.png</texture>
+			<width>50</width>
+			<height>50</height>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>1030</posY>
+			<texture>black.png</texture>
+			<width>50</width>
+			<height>50</height>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>2020</id>
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:MediaPortal</define>
+	<define>#header.subtitle:927</define>
+	<define>#header.background:-</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>540</posY>
+			<width>1920</width>
+			<height>540</height>
+			<texture>overlay_bottom.png</texture>
+			<colordiffuse>#ColorMainUnfocusedOsd</colordiffuse>
+			<!-- <visible>control.isvisible(157988)</visible> -->
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>![control.isvisible(157988)|control.isvisible(157986)]</visible>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>388</posX>
+			<posY>480</posY>
+			<width>1144</width>
+			<height>1080</height>
+			<texture>background_menu.png</texture>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>Rating label</description>
+			<type>label</type>
+			<id>0</id>
+			<type>fadelabel</type>
+			<posX>510</posX>
+			<posY>580</posY>
+			<label>-</label>
+			<width>900</width>
+			<font>font20</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>1900</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+
+		<control>
+			<id>0</id>
+			<description>dialog line 1</description>
+			<type>textbox</type>
+			<posX>510</posX>
+			<posY>680</posY>
+			<width>900</width>
+			<height>250</height>
+			<textcolor>#ColorAlternate</textcolor>
+			<font>font13</font>
+			<label>#(string.format(1901, #userskin))</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+
+		<control>
+			<id>2</id>
+			<description>Ignore check box</description>
+			<type>checkmark</type>
+			<posX>510</posX>
+			<posY>930</posY>
+			<width>900</width>
+			<label>1902</label>
+			<align>left</align>
+			<ondown>3</ondown>
+			<onup>3</onup>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<id>3</id>
+			<description>Continue button</description>
+			<type>button</type>
+			<posX>460</posX>
+			<posY>980</posY>
+			<label>#(string.format(1903,#countdownseconds))</label>
+			<ondown>2</ondown>
+			<onup>2</onup>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+	</controls>
+</window>

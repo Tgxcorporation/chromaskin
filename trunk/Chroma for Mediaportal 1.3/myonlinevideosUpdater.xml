@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>4757</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.title:Online Videos</define>
+	<define>#header.subtitle:#OnlineVideos.Translation.ManageSites.Label / #itemcount #(L(507))</define>
+	<define>#header.background:hover_OnlineVideos.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>280</posY>
+				<texture>background_strip_horizontal_listcontrol.png</texture>
+				<width>1920</width>
+				<height>800</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_left.png</texture>
+				<width>50</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1440</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>508</onleft>
+					<onright>508</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<textXOff3>900</textXOff3>
+					<textYOff>-1</textYOff>
+					<textYOff3>1</textYOff3>
+				</control>
+			</control>
+
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>1490</posX>
+				<posY>715</posY>
+				<width>380</width>
+				<height>265</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<valign>bottom</valign>
+				<texture>#selectedthumb</texture>
+			</control>
+
+			<control>
+				<type>fadelabel</type>
+				<description>Current title</description>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<label>#selecteditem</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<description>Owner Label</description>
+				<type>label</type>
+				<id>501</id>
+				<posX>1490</posX>
+				<posY>431</posY>
+				<width>380</width>
+				<textcolor>#ColorMain</textcolor>
+				<label>#OnlineVideos.Translation.Creator.Label: #OnlineVideos.owner</label>
+			</control>
+			<control>
+				<description>Description</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>481</posY>
+				<width>390</width>
+				<height>210</height>
+				<font>font13</font>
+				<label>#OnlineVideos.desc</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<seperator>··</seperator>
+			</control>
+
+		</control>
+		<!-- *** HIDDEN MENU *** -->
+
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>[control.hasfocus(503)|control.hasfocus(506)|control.hasfocus(507)|control.hasfocus(504)|control.hasfocus(508)]</visible>
+			<animation effect="fade" time="200">visible</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>508</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>560</buttonX>
+			<buttonY>830</buttonY>
+			<buttonwidth>800</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>800</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(503)|control.hasfocus(506)|control.hasfocus(507)|control.hasfocus(504)|control.hasfocus(508)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="in" time="200" end="0,1080" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="0,600" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>580</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>683</posY>
+				<label>924</label>
+				<width>800</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>780</posY>
+				<control>
+					<type>button</type>
+					<description>automatic update button</description>
+					<id>508</id>
+					<onright>50</onright>
+					<onup>17</onup>          
+					<ondown>503</ondown>
+					<label>#OnlineVideos.Translation.AutomaticUpdate.Label</label>
+				</control>
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button</description>
+					<id>503</id>
+					<onright>50</onright>
+					<onup>508</onup>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.State.Label</label>
+				</control>
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Creator</description>
+					<id>506</id>
+					<onright>50</onright>
+					<onup>503</onup>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Creator.Label</label>
+				</control>
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Language</description>
+					<id>507</id>
+					<onright>50</onright>
+					<onup>506</onup>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Language.Label</label>
+				</control>      
+				<control>
+					<type>selectbutton</type>
+					<description>Order By</description>
+					<id>504</id>
+					<onright>50</onright>
+					<onup>507</onup>
+					<ondown>508</ondown>
+					<label>#OnlineVideos.Translation.SortOptions.Label</label>
+				</control>   
+				
+			</control>
+		</control>
+	</controls>
+</window>
