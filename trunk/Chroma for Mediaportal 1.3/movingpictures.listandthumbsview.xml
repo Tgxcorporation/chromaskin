@@ -22,6 +22,18 @@
 				<centered>no</centered>
 				<texture>#MovingPictures.Coverart</texture>
 			</control>
+			<control>
+				<description>watched</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>watched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>control.isvisible(9)</visible>
+			</control>
 			<!-- <control>
 				<type>fadelabel</type>
 				<description>Current program title</description>
@@ -60,6 +72,18 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1400</posX>
+				<posY>440</posY>
+				<width>380</width>
+				<label>(#MovingPictures.SelectedMovie.score.localized)</label>
+				<textcolor>#ColorAlternateUnfocused</textcolor>
+				<font>font10</font>
+				<align>right</align>
 			</control>
 			<control>
 				<description>Subtitle value</description>

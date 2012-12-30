@@ -5,7 +5,7 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.title:3</define>
-	<define>#header.subtitle:#view</define>
+	<define>#header.subtitle:#(L(206)) / #title</define>
 	<define>#header.background:hover_my videos.png</define>
 	<define>#useSelectedFanart:Yes</define>
 	<controls>
@@ -48,160 +48,250 @@
 			<control>
 				<type>image</type>
 				<id>1</id>
-				<posX>745</posX>
+				<posX>960</posX>
 				<posY>330</posY>
 				<texture>background_strip_horizontal_right.png</texture>
 				<width>480</width>
 				<height>700</height>
 			</control>
 
+
+
 			<control>
-				<description>Title label</description>
-				<id>1</id>
 				<type>fadelabel</type>
-				<posX>1490</posX>
+				<id>1</id>
+				<posX>100</posX>
+				<posY>381</posY>
+				<width>810</width>
+				<textcolor>#ColorMain</textcolor>
+				<label>#Actor.Name</label>
+				<wrapString> ·· </wrapString>
+			</control>
+
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>20</id>
+				<posX>100</posX>
+				<posY>455</posY>
+				<width>810</width>
+				<height>520</height>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font16</font>
+				<label>#Actor.Biography</label>
+				<seperator>··</seperator>
+			</control>
+
+			<control>
+				<description>Actors Movies List</description>
+				<type>listcontrol</type>
+				<id>24</id>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<posY>470</posY>
+				<textvisible2>no</textvisible2>
+				<textvisible3>no</textvisible3>
+				<IconXOff>2010</IconXOff>
+				<textXOff>-15</textXOff>
+				<height>600</height>
+				<width>910</width>
+				<scrollbarXOff>-990</scrollbarXOff>
+			</control>
+
+
+			<control>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1010</posX>
 				<posY>381</posY>
 				<width>380</width>
 				<textcolor>#ColorMain</textcolor>
+				<label>#Actor.DateOfBirth</label>
 				<wrapString> ·· </wrapString>
-				<label>#Actor.Name</label>
+				<visible>!control.isvisible(24)</visible>
 			</control>
-
 			<control>
-				<description>Date of Birth</description>
 				<type>fadelabel</type>
 				<id>1</id>
-				<posX>1490</posX>
+				<posX>1010</posX>
 				<posY>431</posY>
 				<width>380</width>
-				<label>#Actor.DateOfBirth</label>
 				<textcolor>#ColorAlternate</textcolor>
+				<label>#Actor.PlaceOfBirth</label>
 				<wrapString> ·· </wrapString>
+				<visible>!control.isvisible(24)</visible>
 			</control>
-
 			<control>
-				<description>Date of Birth</description>
 				<type>fadelabel</type>
 				<id>1</id>
-				<posX>1490</posX>
+				<posX>1010</posX>
 				<posY>481</posY>
 				<width>380</width>
-				<label>#Actor.PlaceOfBirth</label>
 				<textcolor>#ColorMain</textcolor>
+				<label>#Actor.DateOfDeath</label>
 				<wrapString> ·· </wrapString>
+				<visible>!control.isvisible(24)</visible>
 			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>531</posY>
+				<width>380</width>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#Actor.PlaceOfDeath</label>
+				<wrapString> ·· </wrapString>
+				<visible>!control.isvisible(24)</visible>
+			</control>
+
 			<control>
 				<description>Cover Art</description>
 				<type>image</type>
 				<id>21</id>
 				<posX>1490</posX>
-				<posY>580</posY>
+				<posY>380</posY>
 				<width>380</width>
-				<height>400</height>
-				<valign>bottom</valign>
+				<height>600</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>no</centered>
 				<texture>#thumb</texture>
+				<visible>!control.isvisible(24)</visible>
+			</control>
+			<control>
+				<description>Actor Movie Image</description>
+				<type>image</type>
+				<id>25</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>380</width>
+				<height>600</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>no</centered>
+				<texture>#Actor.MovieImage</texture>
+				<visible>control.isvisible(24)</visible>
 			</control>
 
 			<control>
-				<type>textbox</type>
-				<id>50</id>
-				<onleft>51</onleft>
-				<onright>51</onright>
-				<onup>51</onup>
-				<ondown>51</ondown>
-				<posX>100</posX>
+				<description>Movie Extra Details</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>1010</posX>
 				<posY>381</posY>
-				<width>600</width>
-				<height>610</height>
+				<width>400</width>
+				<height>270</height>
 				<font>font14</font>
-				<seperator>··</seperator>
-				<textcolor>#ColorMain</textcolor>
-				<label>#Actor.Biography</label>
-				<spinPosX>100</spinPosX>
-				<spinPosY>950</spinPosY>
-			</control>
-			<control>
-				<type>textbox</type>
-				<id>51</id>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-				<posX>795</posX>
-				<posY>381</posY>
-				<width>600</width>
-				<height>610</height>
-				<font>font14</font>
-				<seperator>··</seperator>
+				<label>#Actor.MovieExtraDetails</label>
+				<visible>control.isvisible(24)</visible>
 				<textcolor>#ColorAlternate</textcolor>
-				<label>#Actor.Movies</label>
-				<spinPosX>795</spinPosX>
-				<spinPosY>950</spinPosY>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Actor Movie Plot</description>
+				<type>textboxscrollup</type>
+				<id>26</id>
+				<posX>1010</posX>
+				<posY>690</posY>
+				<width>400</width>
+				<height>270</height>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>#Actor.MoviePlot</label>
 			</control>
 		</control>
 
-		<!-- NOT USES -->
 
 		<control>
-			<description>Biography</description>
-			<type>togglebutton</type>
-			<id>3</id>
-			<posY>3500</posY>
-			<label>1011</label>
-			<onleft>50</onleft>
-			<onright>22</onright>
-			<onup>2</onup>
-			<ondown>4</ondown>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>[control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(4755)]</visible>
+			<animation effect="fade" time="200">visible</animation>
 		</control>
 		<control>
-			<description>Movies</description>
-			<type>togglebutton</type>
-			<id>4</id>
-			<posY>3500</posY>
-			<label>342</label>
-			<onleft>50</onleft>
-			<onright>22</onright>
-			<onup>3</onup>
-			<ondown>5</ondown>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>66621</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>560</buttonX>
+			<buttonY>730</buttonY>
+			<buttonwidth>800</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>800</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(4755)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="in" time="200" end="0,1080" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="0,600" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>680</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>780</posY>
+				<label>924</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>880</posY>
+				<control>
+					<description>Biography</description>
+					<type>togglebutton</type>
+					<id>3</id>
+					<label>1011</label>
+					<onup>17</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<description>Movies</description>
+					<type>togglebutton</type>
+					<id>4</id>
+					<label>342</label>
+					<onup>3</onup>
+					<ondown>4755</ondown>
+				</control>
+				<control>
+					<description>IMDb Trailer Button (Online Videos)</description>
+					<type>button</type>
+					<id>4755</id>
+					<label>IMDb Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:IMDb Movie Trailers|search:#(iif(neq(#imdbnumber,''),#imdbnumber,#title))|return:Locked</hyperlinkParameter>
+					<onup>4</onup>
+					<ondown>3</ondown>
+					<onleft>24</onleft>
+					<onright>24</onright>
+					<visible>plugin.isenabled(OnlineVideos)+control.isvisible(24)</visible>
+				</control>
+			</control>
 		</control>
-
-		<control>
-			<description>Biography value</description>
-			<type>textboxscrollup</type>
-			<id>20</id>
-			<posX>100</posX>
-			<posY>3500</posY>
-			<width>1300</width>
-			<height>500</height>
-			<label>#Actor.Biography</label>
-			<font>font14</font>
-			<onleft>3</onleft>
-			<onright>3</onright>
-			<onup>3</onup>
-			<ondown>3</ondown>
-			<seperator>··</seperator>
-			<textcolor>#ColorAlternate</textcolor>
-		</control>
-		<control>
-			<description>textarea</description>
-			<type>textbox</type>
-			<id>22</id>
-			<posX>100</posX>
-			<posY>3500</posY>
-			<width>1300</width>
-			<height>500</height>
-			<onleft>3</onleft>
-			<onright>3</onright>
-			<onup>3</onup>
-			<ondown>3</ondown>
-			<spinPosX>100</spinPosX>
-			<spinPosY>3930</spinPosY>
-			<spinCanFocus>no</spinCanFocus>
-			<label>#Actor.Movies</label>
-		</control>
-
-
 	</controls>
 </window>

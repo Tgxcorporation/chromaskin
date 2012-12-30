@@ -50,12 +50,12 @@
 			<control>
 				<id>0</id>
 				<type>label</type>
-				<posX>560</posX>
+				<posX>660</posX>
 				<posY>655</posY>
 				<label>924</label>
 				<width>800</width>
 				<font>font20</font>
-				<align>center</align>
+				<align>left</align>
 				<textcolor>#ColorAlternate</textcolor>
 			</control>
 			<control>
