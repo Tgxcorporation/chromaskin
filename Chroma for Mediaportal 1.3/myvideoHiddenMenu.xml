@@ -148,6 +148,20 @@
 					<visible>plugin.isenabled(Trakt)</visible>
 				</control>
 			</control>
+			<control>
+				<id>0</id>
+				<description>Last Online Update Value</description>
+				<label>#(L(1279)) #lastupdate</label>
+				<type>fadelabel</type>
+				<font>font10</font>
+				<posX>560</posX>
+				<posY>1050</posY>
+				<wrapString> ·· </wrapString>
+				<width>800</width>
+				<align>center</align>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>control.isvisible(5050)</visible>
+			</control>
 		</control>
 	</controls>
 </window>

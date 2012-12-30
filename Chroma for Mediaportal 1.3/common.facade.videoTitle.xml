@@ -86,6 +86,7 @@
 					<onright>2</onright>
 					<width>910</width>
 					<scrollbarXOff>-990</scrollbarXOff>
+					<textXOff3>2000</textXOff3>
 					<!--<visible>control.isvisible(745381)</visible>
 					<animation effect="fade" time="200">visible</animation>-->
 				</control>

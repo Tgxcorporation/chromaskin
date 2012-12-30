@@ -110,6 +110,18 @@
 				<centered>no</centered>
 				<texture>#MovingPictures.Coverart</texture>
 			</control>
+			<control>
+				<description>watched</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>watched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>control.isvisible(9)</visible>
+			</control>
 
 			<control>
 				<description>Title label</description>
@@ -130,7 +142,7 @@
 				<posX>100</posX>
 				<posY>455</posY>
 				<width>810</width>
-				<height>508</height>
+				<height>520</height>
 				<textcolor>#ColorAlternate</textcolor>
 				<font>font16</font>
 				<label>#MovingPictures.SelectedMovie.summary</label>
@@ -166,6 +178,18 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1400</posX>
+				<posY>440</posY>
+				<width>380</width>
+				<label>(#MovingPictures.SelectedMovie.score.localized)</label>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<font>font10</font>
+				<align>right</align>
 			</control>
 			<control>
 				<description>Subtitle value</description>
@@ -338,7 +362,18 @@
 				<centered>no</centered>
 				<texture>#MovingPictures.Coverart</texture>
 			</control>
-
+			<control>
+				<description>watched</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>watched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>control.isvisible(9)</visible>
+			</control>
 			<control>
 				<description>Title label</description>
 				<id>0</id>
@@ -411,7 +446,7 @@
 				<posX>500</posX>
 				<posY>552</posY>
 				<width>900</width>
-				<label>#MovingPictures.LocalMedia.videoresolution</label>
+				<label>#MovingPictures.LocalMedia.videoresolution     #MovingPictures.LocalMedia.videowidthx#MovingPictures.LocalMedia.videoheight</label>
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
@@ -558,29 +593,6 @@
 				<posX>100</posX>
 				<posY>907</posY>
 				<width>350</width>
-				<label>Url</label>
-				<font>font14</font>
-				<textcolor>#ColorMainSub</textcolor>
-			</control>
-			<control>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>500</posX>
-				<posY>907</posY>
-				<width>900</width>
-				<label>#MovingPictures.SelectedMovie.details_url</label>
-				<font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
-				<wrapString> ·· </wrapString>
-			</control>
-
-
-			<control>
-				<type>label</type>
-				<id>0</id>
-				<posX>100</posX>
-				<posY>952</posY>
-				<width>350</width>
 				<label>Path</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
@@ -589,7 +601,7 @@
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
-				<posY>952</posY>
+				<posY>907</posY>
 				<width>900</width>
 				<label>#MovingPictures.LocalMedia.fullpath</label>
 				<font>font14</font>
