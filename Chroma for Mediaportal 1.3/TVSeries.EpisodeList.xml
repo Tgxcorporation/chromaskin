@@ -11,6 +11,22 @@
 			<visible>control.isvisible(1239)</visible>
 
 			<control>
+				<description>DUMMY BUTTON</description>
+				<type>button</type>
+				<id>52</id>
+				<posX>1640</posX>
+				<posY>0</posY>
+				<width>650</width>
+				<height>1080</height>
+				<onright>50</onright>
+				<onleft>50</onleft>
+				<ondown>2</ondown>
+				<onup>17</onup>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+			</control>
+			
+			<control>
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>1010</posX>
@@ -65,10 +81,40 @@
 
 
 			<control>
+				<description>Big Episode Thumb</description>
+				<type>image</type>
+				<id>67</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>380</width>
+				<height>213</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>no</centered>
+				<texture>#TVSeries.EpisodeImage</texture>
+				<visible>!control.hasfocus(52)</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<zoom>yes</zoom>
+			</control>
+			<control>
+				<description>watched</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>watched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>control.isvisible(1243)+!control.hasfocus(52)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+
+			<control>
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>1490</posX>
-				<posY>381</posY>
+				<posY>631</posY>
 				<width>380</width>
 				<label>#TVSeries.Episode.FilesizeValue</label>
 				<textcolor>#ColorAlternate</textcolor>
@@ -76,7 +122,7 @@
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
-			<control>
+			<!-- <control>
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>1490</posX>
@@ -87,24 +133,24 @@
 				<visible>!control.hasfocus(52)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
-			</control>
+			</control> -->
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>1490</posX>
-				<posY>481</posY>
+				<posY>681</posY>
 				<width>380</width>
 				<label>#TVSeries.Episode.VideoFpsValue</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#ColorMain</textcolor>
 				<visible>!control.hasfocus(52)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
-			<control>
+			<!-- <control>
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>1490</posX>
-				<posY>531</posY>
+				<posY>731</posY>
 				<width>380</width>
 				<font>font14</font>
 				<label>#TVSeries.Episode.VideoFormatValue #TVSeries.Episode.VideoBitrateValue</label>
@@ -117,7 +163,7 @@
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>1490</posX>
-				<posY>581</posY>
+				<posY>781</posY>
 				<width>380</width>
 				<font>font14</font>
 				<label>#TVSeries.Episode.AudioFormatValue #TVSeries.Episode.AudioBitrateValue</label>
@@ -125,53 +171,24 @@
 				<visible>!control.hasfocus(52)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
-			</control>
+			</control> -->
 
 			<control>
-				<description>Big Episode Thumb</description>
-				<type>image</type>
-				<id>67</id>
-				<posX>1490</posX>
-				<posY>767</posY>
-				<width>380</width>
-				<height>213</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<centered>no</centered>
-				<texture>#TVSeries.EpisodeImage</texture>
-				<visible>!control.hasfocus(52)</visible>
-				<animation effect="fade" time="200">visible</animation>
-				<zoom>yes</zoom>
-			</control>
-
-
-			<!-- <control>
 				<type>image</type>
 				<description>Logos</description>
 				<id>66</id>
-				<posX>45</posX>
-				<posY>981</posY>
-				<width>1200</width>
-				<height>75</height>
+				<posX>1490</posX>
+				<posY>930</posY>
+				<width>400</width>
+				<height>50</height>
 				<texture>#TVSeries.Logos</texture>
 				<keepaspectratio>yes</keepaspectratio>
-			</control> -->
-
-
-			<control>
-				<description>DUMMY BUTTON</description>
-				<type>button</type>
-				<id>52</id>
-				<posX>1640</posX>
-				<posY>0</posY>
-				<width>650</width>
-				<height>1080</height>
-				<onright>50</onright>
-				<onleft>50</onleft>
-				<ondown>2</ondown>
-				<onup>17</onup>
-				<textureFocus>-</textureFocus>
-				<textureNoFocus>-</textureNoFocus>
+				<visible>!control.hasfocus(52)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
+
+
+			
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -227,57 +244,7 @@
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
-
-
-
-			<!-- <control>
-				<description>Episode Watched Icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1827</posX>
-				<posY>387</posY>
-				<width>36</width>
-				<height>36</height>
-				<texture>overlaywatched.png</texture>
-				<colordiffuse>#ColorPlayed</colordiffuse>
-				<visible>control.isvisible(1243)+control.isvisible(1244)+!control.hasfocus(52)</visible>
-			</control>
-			<control>
-				<description>Episode Un-Watched Icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1827</posX>
-				<posY>387</posY>
-				<width>36</width>
-				<height>36</height>
-				<texture>overlayunwatched.png</texture>
-				<colordiffuse>#ColorAvailable</colordiffuse>
-				<visible>!control.isvisible(1243)+control.isvisible(1244)+!control.hasfocus(52)</visible>
-			</control>
-			<control>
-				<description>Episode Not Available and Watched Icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1827</posX>
-				<posY>387</posY>
-				<width>36</width>
-				<height>36</height>
-				<texture>overlaywatched.png</texture>
-				<colordiffuse>#ColorUnavailable</colordiffuse>
-				<visible>control.isvisible(1243)+!control.isvisible(1244)+!control.hasfocus(52)</visible>
-			</control>
-			<control>
-				<description>Episode Not Available and Un-Watched Icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1827</posX>
-				<posY>387</posY>
-				<width>36</width>
-				<height>36</height>
-				<texture>overlayunwatched.png</texture>
-				<colordiffuse>#ColorUnavailable</colordiffuse>
-				<visible>!control.isvisible(1243)+!control.isvisible(1244)+!control.hasfocus(52)</visible>
-			</control> -->
+			
 		</control>
 	</controls>
 </window>
