@@ -15,7 +15,7 @@
 				<type>image</type>
 				<id>60</id>
 				<posX>1490</posX>
-				<posY>480</posY>
+				<posY>380</posY>
 				<width>380</width>
 				<height>500</height>
 				<keepaspectratio>yes</keepaspectratio>
@@ -23,6 +23,18 @@
 				<texture>#MovingPictures.Coverart</texture>
 			</control>
 			<control>
+				<description>watched</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>watched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>control.isvisible(9)</visible>
+			</control>
+			<!-- <control>
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
@@ -32,7 +44,7 @@
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
 				<label>#MovingPictures.SelectedMovie.title</label>
-			</control>
+			</control> -->
 			<control>
 				<description>Subtitle value</description>
 				<type>label</type>
@@ -60,6 +72,18 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1400</posX>
+				<posY>440</posY>
+				<width>380</width>
+				<label>(#MovingPictures.SelectedMovie.score.localized)</label>
+				<textcolor>#ColorAlternateUnfocused</textcolor>
+				<font>font10</font>
+				<align>right</align>
 			</control>
 			<control>
 				<description>Subtitle value</description>
@@ -104,118 +128,69 @@
 				<label>#MovingPictures.SelectedMovie.summary</label>
 				<seperator>··</seperator>
 			</control>
-		</control>
 
-		<!-- Media logos [List View] -->
-		<!-- <control>
-			<description>Video Codec</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>45</posX>
-			<posY>1012</posY>
-			<width>133</width>
-			<height>51</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+
+			<!-- Media logos [List View] -->
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Horizontal, true)</layout>
+				<posX>1490</posX>
+				<posY>930</posY>
+				<control>
+					<description>Video Codec</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+				</control>
+				<control>
+					<description>Video Resolution</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+				</control>
+				<control>
+					<description>Video Aspect Ratio</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+				</control>
+				<control>
+					<description>Audio Codec</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+				</control>
+				<control>
+					<description>Audio Channels</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+				</control>
+				<control>
+					<description>Subtitles</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+				</control>
+			</control>
 		</control>
-		<control>
-			<description>Video Resolution</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>127</posX>
-			<posY>1012</posY>
-			<width>133</width>
-			<height>51</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
-		</control>
-		<control>
-			<description>Video Aspect Ratio</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>210</posX>
-			<posY>1012</posY>
-			<width>133</width>
-			<height>51</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
-		</control>
-		<control>
-			<description>Audio Codec</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>292</posX>
-			<posY>1012</posY>
-			<width>133</width>
-			<height>51</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
-		</control>
-		<control>
-			<description>Audio Channels</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>375</posX>
-			<posY>1012</posY>
-			<width>133</width>
-			<height>51</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
-		</control>
-		<control>
-			<description>Video Format</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>457</posX>
-			<posY>1012</posY>
-			<width>133</width>
-			<height>51</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
-		</control>
-		<control>
-			<description>Subtitles</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>540</posX>
-			<posY>1012</posY>
-			<width>133</width>
-			<height>51</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
-		</control>
-		<control>
-			<description>Fps</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>622</posX>
-			<posY>1012</posY>
-			<width>133</width>
-			<height>51</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture>Logos\empty.png</texture>
-		</control>
-		<control>
-			<description>Fps label</description>
-			<id>0</id>
-			<type>label</type>
-			<posX>622</posX>
-			<posY>1029</posY>
-			<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
-			<font>font8</font>
-			<align>center</align>
-			<width>75</width>
-		</control>
-		<control>
-			<description>Fps label</description>
-			<id>0</id>
-			<type>label</type>
-			<posX>622</posX>
-			<posY>1048</posY>
-			<label>fps</label>
-			<font>font7</font>
-			<align>center</align>
-			<width>75</width>
-		</control> -->
 	</controls>
 </window>
