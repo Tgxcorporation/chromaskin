@@ -10,7 +10,7 @@
 			<onup>6</onup>
 			<ondown>6</ondown>
 			<onleft>66621</onleft>
-			<onright>66621</onright>
+			<onright>90001</onright>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<posX>720</posX>
@@ -21,13 +21,46 @@
 		</control>
 
 		<control>
+			<description>dummy tech info</description>		
+			<type>button</type>
+			<id>90001</id>
+			<posX>-3000</posX>
+			<posY>100</posY>
+			<onleft>6</onleft>
+			<onright>6</onright>
+			<onup>90001</onup>
+			<ondown>90001</ondown>
+			<label>-</label>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>
+		<!-- <control>
+			<description>dummy fullfanart</description>
+			<type>button</type>
+			<id>90002</id>
+			<posX>-3000</posX>
+			<onleft>90001</onleft>
+			<onup>90002</onup>
+			<ondown>90002</ondown>
+			<onright>6</onright>
+			<label>-</label>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control> -->
+
+
+		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="0,500" condition="![control.isvisible(50)|control.isvisible(51)]">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" condition="control.hasfocus(6)">visible</animation> -->
 			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-			<animation effect="fade" time="200">visible</animation>
+			<!-- <animation effect="fade" time="200">visible</animation> -->
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -63,20 +96,96 @@
 				<texture>background_strip_horizontal_right.png</texture>
 				<width>480</width>
 				<height>700</height>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 
 			<control>
 				<description>Cover Art</description>
 				<type>image</type>
-				<id>0</id>
+				<id>60</id>
 				<posX>1490</posX>
 				<posY>380</posY>
 				<width>380</width>
-				<height>600</height>
+				<height>500</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>no</centered>
 				<texture>#MovingPictures.Coverart</texture>
 			</control>
+			<control>
+				<description>watched</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>watched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>control.isvisible(9)</visible>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Horizontal, true)</layout>
+				<posX>1490</posX>
+				<posY>930</posY>
+				<control>
+					<description>Video Codec</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+				</control>
+				<control>
+					<description>Video Resolution</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+				</control>
+				<control>
+					<description>Video Aspect Ratio</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+				</control>
+				<control>
+					<description>Audio Codec</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+				</control>
+				<control>
+					<description>Audio Channels</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+				</control>
+				<control>
+					<description>Subtitles</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+				</control>
+			</control>
+
+
 
 			<control>
 				<description>Title label</description>
@@ -88,6 +197,8 @@
 				<textcolor>#ColorMain</textcolor>
 				<wrapString> ·· </wrapString>
 				<label>#MovingPictures.SelectedMovie.title</label>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 
 			<control>
@@ -97,11 +208,13 @@
 				<posX>100</posX>
 				<posY>455</posY>
 				<width>810</width>
-				<height>527</height>
+				<height>520</height>
 				<textcolor>#ColorAlternate</textcolor>
 				<font>font16</font>
 				<label>#MovingPictures.SelectedMovie.summary</label>
 				<seperator>··</seperator>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 
 
@@ -115,6 +228,8 @@
 				<label>#MovingPictures.SelectedMovie.genres</label>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
 				<type>imagelist</type>
@@ -133,6 +248,22 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1400</posX>
+				<posY>440</posY>
+				<width>380</width>
+				<label>(#MovingPictures.SelectedMovie.score.localized)</label>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<font>font10</font>
+				<align>right</align>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
 				<description>Subtitle value</description>
@@ -143,6 +274,8 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.year</label>
 				<textcolor>#ColorAlternate</textcolor>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
 				<description>Subtitle value</description>
@@ -153,6 +286,8 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.runtime.localized.long</label>
 				<textcolor>#ColorMain</textcolor>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
 				<description>Subtitle value</description>
@@ -163,6 +298,8 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.certification</label>
 				<textcolor>#ColorAlternate</textcolor>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
 				<description>Directors</description>
@@ -175,6 +312,8 @@
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
 				<wrapString> ·· </wrapString>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
 				<description>actors</description>
@@ -188,120 +327,295 @@
 				<height>315</height>
 				<textcolor>#ColorAlternate</textcolor>
 				<seperator>··</seperator>
+				<visible>!control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 
-			<!-- Media logos [Details View] -->
-			<!-- <control>
-				<description>Video Codec</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>780</posX>
-				<posY>982</posY>
-				<width>133</width>
-				<height>75</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
-			</control>
+
+
+
+
 			<control>
-				<description>Video Resolution</description>
-				<type>image</type>
+				<description>Title label</description>
 				<id>0</id>
-				<posX>915</posX>
-				<posY>982</posY>
-				<width>133</width>
-				<height>75</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+				<type>fadelabel</type>
+				<posX>100</posX>
+				<posY>381</posY>
+				<width>810</width>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+				<label>1020</label>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
+
 			<control>
-				<description>Video Aspect Ratio</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1050</posX>
-				<posY>982</posY>
-				<width>133</width>
-				<height>75</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
-			</control>
-			<control>
-				<description>Audio Codec</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1185</posX>
-				<posY>982</posY>
-				<width>133</width>
-				<height>75</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
-			</control>
-			<control>
-				<description>Audio Channels</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1320</posX>
-				<posY>982</posY>
-				<width>133</width>
-				<height>75</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
-			</control>
-			<control>
-				<description>Video Format</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1455</posX>
-				<posY>982</posY>
-				<width>133</width>
-				<height>75</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
-			</control>
-			<control>
-				<description>Subtitles</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1590</posX>
-				<posY>982</posY>
-				<width>133</width>
-				<height>75</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
-			</control>
-			<control>
-				<description>Fps</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1725</posX>
-				<posY>982</posY>
-				<width>133</width>
-				<height>75</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\empty.png</texture>
-			</control>
-			<control>
-				<description>Fps label</description>
-				<id>0</id>
 				<type>label</type>
-				<posX>1725</posX>
-				<posY>1014</posY>
-				<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
-				<font>font11</font>
-				<align>center</align>
-				<width>109</width>
+				<id>0</id>
+				<posX>100</posX>
+				<posY>462</posY>
+				<width>350</width>
+				<label>Video Format</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
-				<description>Fps label</description>
+				<type>fadelabel</type>
 				<id>0</id>
+				<posX>500</posX>
+				<posY>462</posY>
+				<width>900</width>
+				<label>#MovingPictures.LocalMedia.videocodec</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+			<control>
 				<type>label</type>
-				<posX>1725</posX>
-				<posY>1035</posY>
-				<label>fps</label>
-				<font>font7</font>
-				<align>center</align>
-				<width>109</width>
-			</control> -->
+				<id>0</id>
+				<posX>100</posX>
+				<posY>507</posY>
+				<width>350</width>
+				<label>Aspect Ratio</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>500</posX>
+				<posY>507</posY>
+				<width>900</width>
+				<label>#MovingPictures.LocalMedia.videoaspectratio</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>100</posX>
+				<posY>552</posY>
+				<width>350</width>
+				<label>Resolution</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>500</posX>
+				<posY>552</posY>
+				<width>900</width>
+				<label>#MovingPictures.LocalMedia.videoresolution     #MovingPictures.LocalMedia.videowidthx#MovingPictures.LocalMedia.videoheight</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>100</posX>
+				<posY>597</posY>
+				<width>350</width>
+				<label>Frame Rate</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>500</posX>
+				<posY>597</posY>
+				<width>900</width>
+				<label>#MovingPictures.LocalMedia.videoframerate fps</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>100</posX>
+				<posY>662</posY>
+				<width>350</width>
+				<label>Audio Format</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>500</posX>
+				<posY>662</posY>
+				<width>900</width>
+				<label>#MovingPictures.LocalMedia.audiocodec</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>100</posX>
+				<posY>707</posY>
+				<width>350</width>
+				<label>Audio Channels</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>500</posX>
+				<posY>707</posY>
+				<width>900</width>
+				<label>#MovingPictures.LocalMedia.audiochannels</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>100</posX>
+				<posY>772</posY>
+				<width>350</width>
+				<label>Date Added</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>500</posX>
+				<posY>772</posY>
+				<width>900</width>
+				<label>#MovingPictures.SelectedMovie.date_added</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<wrapString> ·· </wrapString>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>100</posX>
+				<posY>817</posY>
+				<width>350</width>
+				<label>Media Type</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>500</posX>
+				<posY>817</posY>
+				<width>900</width>
+				<label>#MovingPictures.LocalMedia.videoformat</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>100</posX>
+				<posY>862</posY>
+				<width>350</width>
+				<label>Watched Count</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>500</posX>
+				<posY>862</posY>
+				<width>900</width>
+				<label>#MovingPictures.UserMovieSettings.watched</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>100</posX>
+				<posY>907</posY>
+				<width>350</width>
+				<label>Path</label>
+				<font>font14</font>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>500</posX>
+				<posY>907</posY>
+				<width>900</width>
+				<label>#MovingPictures.LocalMedia.fullpath</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> ·· </wrapString>
+				<visible>control.hasfocus(90001)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+
 		</control>
+
+
 
 		<control>
 			<type>image</type>
@@ -312,7 +626,7 @@
 			<height>1080</height>
 			<texture>white.png</texture>
 			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97270)|control.hasfocus(97261)|control.hasfocus(97262)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="200">visible</animation>
 		</control>
 		<control>
@@ -329,7 +643,7 @@
 			<width>800</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97270)|control.hasfocus(97261)|control.hasfocus(97262)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>

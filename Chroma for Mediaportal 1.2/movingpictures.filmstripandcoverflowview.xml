@@ -21,6 +21,20 @@
 				<align>center</align>
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
+				<visible>!control.isvisible(9)</visible>
+			</control>
+			<control>
+				<description>Info</description>
+				<type>label</type>
+				<id>0</id>
+				<width>1820</width>
+				<posX>50</posX>
+				<posY>937</posY>
+				<label>#MovingPictures.SelectedMovie.title</label>
+				<align>center</align>
+				<font>font16</font>
+				<textcolor>#ColorPlayed</textcolor>
+				<visible>control.isvisible(9)</visible>
 			</control>
 			<control>
 				<description>Info</description>
@@ -34,6 +48,18 @@
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
 			</control>
+<!-- 			<control>
+				<description>watched</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>50</posX>
+				<posY>886</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>watched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>control.isvisible(9)</visible>
+			</control> -->
 			<!-- Media logos [Filmstrip & Coverflow View] -->
 			<!-- <control>
 				<description>Video Codec</description>

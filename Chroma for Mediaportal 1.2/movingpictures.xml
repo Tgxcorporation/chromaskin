@@ -82,6 +82,7 @@
 			<posY>-112</posY>
 			<width>0</width>
 		</control>
+		
 		<!--            :: BACKGROUNDS :: MOVIE BACKDROP :: OVERLAYS ::            -->
 		<import>common.window.background.xml</import>
 		<control>
