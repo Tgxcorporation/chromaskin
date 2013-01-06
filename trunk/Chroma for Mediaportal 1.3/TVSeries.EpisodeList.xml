@@ -117,23 +117,12 @@
 				<posY>631</posY>
 				<width>380</width>
 				<label>#TVSeries.Episode.FilesizeValue</label>
+				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<visible>!control.hasfocus(52)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
-			<!-- <control>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>1490</posX>
-				<posY>431</posY>
-				<width>380</width>
-				<label>#TVSeries.Episode.VideoResolutionValue</label>
-				<textcolor>#ColorMain</textcolor>
-				<visible>!control.hasfocus(52)</visible>
-				<animation effect="fade" time="200">visible</animation>
-				<wrapString> ·· </wrapString>
-			</control> -->
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -141,16 +130,32 @@
 				<posY>681</posY>
 				<width>380</width>
 				<label>#TVSeries.Episode.VideoFpsValue</label>
+				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
 				<visible>!control.hasfocus(52)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
-			<!-- <control>
+			
+			<control>
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>1490</posX>
 				<posY>731</posY>
+				<width>380</width>
+				<label>#TVSeries.Episode.VideoResolutionValue</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>!control.hasfocus(52)</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<wrapString> ·· </wrapString>
+			</control>
+			
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>781</posY>
 				<width>380</width>
 				<font>font14</font>
 				<label>#TVSeries.Episode.VideoFormatValue #TVSeries.Episode.VideoBitrateValue</label>
@@ -163,7 +168,7 @@
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>1490</posX>
-				<posY>781</posY>
+				<posY>831</posY>
 				<width>380</width>
 				<font>font14</font>
 				<label>#TVSeries.Episode.AudioFormatValue #TVSeries.Episode.AudioBitrateValue</label>
@@ -171,7 +176,7 @@
 				<visible>!control.hasfocus(52)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
-			</control> -->
+			</control>
 
 			<control>
 				<type>image</type>
