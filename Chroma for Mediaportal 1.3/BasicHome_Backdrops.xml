@@ -138,7 +138,7 @@
 
 
 
-		<!-- <control>
+		 <control>
 			<description>10000 fanart focused</description>
 			<type>image</type>
 			<id>10000</id>
@@ -149,7 +149,7 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<texture>#latestMediaHandler.music.latest3.fanart1</texture>
+			<texture>#latestMediaHandler.music.latest3.fanart</texture>
 			<visible>!control.isvisible(10001)+!control.isvisible(10002)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Music)+control.hasfocus(100)</visible>
 			<animation effect="fade" time="200" delay="1000">visible</animation>
 			<animation effect="fade" time="200">hidden</animation>
@@ -165,7 +165,7 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<texture>#latestMediaHandler.music.latest2.fanart1</texture>
+			<texture>#latestMediaHandler.music.latest2.fanart</texture>
 			<visible>!control.isvisible(10002)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Music)+control.hasfocus(100)</visible>
 			<animation effect="fade" time="200" delay="3000">visible</animation>
 			<animation effect="fade" time="200">hidden</animation>
@@ -181,7 +181,7 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<texture>#latestMediaHandler.music.latest1.fanart1</texture>
+			<texture>#latestMediaHandler.music.latest1.fanart</texture>
 			<visible>plugin.isenabled(Latest Media Handler)+plugin.isenabled(Music)+control.hasfocus(100)</visible>
 			<animation effect="fade" time="200" delay="5000">visible</animation>
 		</control>
@@ -332,6 +332,6 @@
 			<texture>animations\weather\#WorldWeather.TodayIconNumber.jpg</texture>
 			<visible>plugin.isenabled(Latest Media Handler)+plugin.isenabled(World Weather)+control.hasfocus(104)</visible>
 			<animation effect="fade" time="200" delay="3000">visible</animation>
-		</control> -->
+		</control> 
 	</controls>
 </window>
