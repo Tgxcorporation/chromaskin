@@ -73,6 +73,7 @@
 					<id>50</id>
 					<onleft>2</onleft>
 					<onright>2</onright>
+					<textvisible3>no</textvisible3>
 					<!--<visible>control.isvisible(745381)</visible>
 					<animation effect="fade" time="200">visible</animation>-->
 				</control>
