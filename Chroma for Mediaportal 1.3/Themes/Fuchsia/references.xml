@@ -8,7 +8,7 @@
 		<author>Tgx</author>
 	</skin>
 	<define>#ColorMain:ffff36ef</define>
-	<define>#ColorMainSub:ffee9607</define>
+	<define>#ColorMainSub:ffee08c8</define>
 	<define>#ColorMainFocused:ffff36ef</define>
 	<define>#ColorMainUnfocused:90ff36ef</define>
 	<define>#ColorMainUnfocusedDisabled:40ff36ef</define>
