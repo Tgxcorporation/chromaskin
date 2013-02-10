@@ -4,7 +4,7 @@
 	<id>4755</id>
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
-	<define>#header.title:Online Videos</define>
+	<define>#header.title:#OnlineVideos.HeaderLabel</define>
 	<define>#header.subtitle:-</define>
 	<define>#header.background:hover_OnlineVideos.png</define>
 	<define>#useSelectedFanart:Yes</define>
