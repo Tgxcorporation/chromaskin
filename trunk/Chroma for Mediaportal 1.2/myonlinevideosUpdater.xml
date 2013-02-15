@@ -4,7 +4,7 @@
 	<id>4757</id>
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
-	<define>#header.title:Online Videos</define>
+	<define>#header.title:#OnlineVideos.HeaderLabel</define>
 	<define>#header.subtitle:#OnlineVideos.Translation.ManageSites.Label / #itemcount #(L(507))</define>
 	<define>#header.background:hover_OnlineVideos.png</define>
 	<controls>
