@@ -41,7 +41,7 @@
 				<type>image</type>
 				<id>0</id>
 				<posX>560</posX>
-				<posY>530</posY>
+				<posY>480</posY>
 				<width>800</width>
 				<height>1080</height>
 				<texture>background_menu.png</texture>
@@ -51,7 +51,7 @@
 				<id>0</id>
 				<type>label</type>
 				<posX>660</posX>
-				<posY>655</posY>
+				<posY>580</posY>
 				<label>924</label>
 				<width>800</width>
 				<font>font20</font>
@@ -62,7 +62,7 @@
 				<type>group</type>
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<posX>610</posX>
-				<posY>730</posY>
+				<posY>680</posY>
 				<control>
 					<description>Cycle View</description>
 					<type>button</type>
@@ -109,9 +109,18 @@
 					<id>15</id>
 					<label>#MovingPictures.Translation.ToggleParentalLock.Label</label>
 					<onright>50</onright>
-					<onleft>50</onleft>
 					<onup>14</onup>
+					<ondown>97259</ondown>
+				</control>
+				<control>
+					<description>Importer</description>
+					<type>button</type>
+					<id>97259</id>
+					<label>Importer (#MovingPictures.Importer.NeedInput.Count Pending)</label>
+					<hyperlink>96743</hyperlink>
+					<onup>15</onup>
 					<ondown>66614</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Trakt</description>
@@ -119,10 +128,9 @@
 					<id>66614</id>
 					<label>Trakt</label>
 					<hyperlink>87258</hyperlink>
-					<onup>15</onup>
+					<onup>97259</onup>
 					<ondown>2</ondown>
 					<onright>50</onright>
-					<onleft>50</onleft>
 					<visible>plugin.isenabled(Trakt)</visible>
 				</control>
 			</control>
