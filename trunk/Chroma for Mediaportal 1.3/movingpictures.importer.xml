@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<id>96743</id>
+	<defaultcontrol>310</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:#MovingPictures.Settings.HomeScreenName</define>
+	<define>#header.subtitle:#MovingPictures.Translation.Importer.Label</define>
+	<define>#header.background:hover_moving pictures.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+
+		<control>
+			<description>Movie Backdrop (Fan Art) - Plug-in sets to invisible, if no art.</description>
+			<type>image</type>
+			<id>400</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>#MovingPictures.Backdrop</texture>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Alternate Movie Backdrop - Toggles Load with Component 400 for animations on visibiltiy</description>
+			<type>image</type>
+			<id>401</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>#MovingPictures.Backdrop2</texture>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>540</posY>
+			<width>1920</width>
+			<height>540</height>
+			<texture>overlay_bottom.png</texture>
+			<colordiffuse>#ColorMainUnfocusedOsd</colordiffuse>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+		</control>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="0,1080" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>97</posX>
+				<posY>180</posY>
+				<width>1726</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+			</control>
+
+
+			<control>
+				<description>all files label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#MovingPictures.Translation.AllFiles.Label</label>
+				<posX>255</posX>
+				<posY>280</posY>
+				<width>820</width>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>string.equals(#MovingPictures.Importer.ListMode.Flag,ALL)</visible>
+				<animation effect="fade" time="100">Visible</animation>
+			</control>
+
+			<control>
+				<description>pending files label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#MovingPictures.Translation.FilesNeedingAttention.Label</label>
+				<posX>255</posX>
+				<posY>280</posY>
+				<width>820</width>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>string.equals(#MovingPictures.Importer.ListMode.Flag,PENDING)</visible>
+				<animation effect="fade" time="100">Visible</animation>
+			</control>
+			<control>
+				<description>completed files label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#MovingPictures.Translation.CompletedFiles.Label</label>
+				<posX>255</posX>
+				<posY>280</posY>
+				<width>820</width>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>string.equals(#MovingPictures.Importer.ListMode.Flag,COMPLETED)</visible>
+				<animation effect="fade" time="100">Visible</animation>
+			</control>
+
+
+			<control>
+				<description>all files list</description>
+				<type>listcontrol</type>
+				<id>310</id>
+				<posX>205</posX>
+				<posY>380</posY>
+				<width>1510</width>
+				<height>680</height>
+				<textXOff>-10</textXOff>
+				<textXOff3>4500</textXOff3>
+				<onright>311</onright>
+				<onleft>19</onleft>
+				<ondown>19</ondown>
+				<scrollbarXOff>-3470</scrollbarXOff>
+				<visible allowhiddenfocus="true">string.equals(#MovingPictures.Importer.ListMode.Flag,ALL)</visible>
+			</control>
+			<control>
+				<description>pending List</description>
+				<type>listcontrol</type>
+				<id>311</id>
+				<posX>205</posX>
+				<posY>380</posY>
+				<width>1510</width>
+				<height>680</height>
+				<textXOff>-10</textXOff>
+				<textXOff3>4500</textXOff3>
+				<onright>312</onright>
+				<onleft>310</onleft>
+				<ondown>19</ondown>
+				<scrollbarXOff>-3470</scrollbarXOff>
+				<visible allowhiddenfocus="true">string.equals(#MovingPictures.Importer.ListMode.Flag,PENDING)</visible>
+			</control>
+			<control>
+				<description>complete List</description>
+				<type>listcontrol</type>
+				<id>312</id>
+				<posX>205</posX>
+				<posY>380</posY>
+				<width>1510</width>
+				<height>680</height>
+				<textXOff>-10</textXOff>
+				<textXOff3>4500</textXOff3>
+				<onright>310</onright>
+				<onleft>310</onleft>
+				<ondown>19</ondown>
+				<scrollbarXOff>-3470</scrollbarXOff>
+				<visible allowhiddenfocus="true">string.equals(#MovingPictures.Importer.ListMode.Flag,COMPLETED)</visible>
+			</control>
+
+
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>205</posX>
+				<posY>830</posY>
+				<width>1510</width>
+				<height>50</height>
+				<texture>osd_progress_background.png</texture>
+			</control>
+			<control>
+				<id>0</id>
+				<description>progress control</description>
+				<type>progress</type>
+				<posX>205</posX>
+				<posY>830</posY>
+				<width>1510</width>
+				<height>50</height>
+				<midwidth>1510</midwidth>
+				<midheight>50</midheight>
+				<onlymidtexture>yes</onlymidtexture>
+				<!-- <label>#MovingPictures.Importer.TotalProgressPercent</label> -->
+				<label>#MovingPictures.Importer.CurrentTask.Percentage</label>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>255</posX>
+				<posY>834</posY>
+				<width>1716</width>
+				<label>#MovingPictures.Importer.Status</label>
+				<font>font14</font>
+			</control>
+
+
+			<control>
+				<description>scan for more movies</description>
+				<type>button</type>
+				<id>19</id>
+				<label>#MovingPictures.Translation.ScanForNewMovies.Label</label>
+				<posX>205</posX>
+				<posY>930</posY>
+				<width>1510</width>
+				<onleft>310</onleft>
+				<onright>310</onright>
+				<ondown>20</ondown>
+				<onup>310</onup>
+			</control>
+			<control>
+				<description>restore ignored movies</description>
+				<type>button</type>
+				<id>20</id>
+				<label>#MovingPictures.Translation.RestoreIgnoredFiles.Label</label>
+				<posX>205</posX>
+				<posY>980</posY>
+				<width>1510</width>
+				<onleft>310</onleft>
+				<onright>310</onright>
+				<ondown>310</ondown>
+				<onup>19</onup>
+			</control>
+
+		</control>
+	</controls>
+</window>
+
+
