@@ -15,7 +15,7 @@
 				<type>image</type>
 				<id>60</id>
 				<posX>1490</posX>
-				<posY>380</posY>
+				<posY>480</posY>
 				<width>380</width>
 				<height>500</height>
 				<keepaspectratio>yes</keepaspectratio>
@@ -27,14 +27,14 @@
 				<type>image</type>
 				<id>0</id>
 				<posX>1490</posX>
-				<posY>380</posY>
+				<posY>480</posY>
 				<width>50</width>
 				<height>50</height>
 				<texture>watched.png</texture>
 				<colordiffuse>#ColorPlayed</colordiffuse>
 				<visible>control.isvisible(9)</visible>
 			</control>
-			<!-- <control>
+			<control>
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
@@ -44,7 +44,7 @@
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
 				<label>#MovingPictures.SelectedMovie.title</label>
-			</control> -->
+			</control>
 			<control>
 				<description>Subtitle value</description>
 				<type>label</type>
@@ -131,7 +131,7 @@
 
 
 			<!-- Media logos [List View] -->
-			<control>
+			<!-- <control>
 				<type>group</type>
 				<layout>StackLayout(0, Horizontal, true)</layout>
 				<posX>1490</posX>
@@ -190,7 +190,7 @@
 					<keepaspectratio>yes</keepaspectratio>
 					<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
 				</control>
-			</control>
+			</control> -->
 		</control>
 	</controls>
 </window>
