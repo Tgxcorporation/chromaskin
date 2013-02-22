@@ -55,6 +55,21 @@
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#TVSeries.Episode.Rating</percentage>
 			</control>
+			
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1400</posX>
+				<posY>440</posY>
+				<width>380</width>
+				<label>(#TVSeries.Episode.Rating.0)</label>
+				<textcolor>#ColorAlternateUnfocused</textcolor>
+				<font>font10</font>
+				<align>right</align>
+			</control>
+			
+			
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -95,6 +110,7 @@
 				<animation effect="fade" time="200">visible</animation>
 				<zoom>yes</zoom>
 			</control>
+			
 			<control>
 				<description>watched</description>
 				<type>image</type>

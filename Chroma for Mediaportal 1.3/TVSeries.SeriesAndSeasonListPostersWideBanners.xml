@@ -27,7 +27,7 @@
 				<description>series poster</description>
 				<id>61</id>
 				<posX>1490</posX>
-				<posY>380</posY>
+				<posY>480</posY>
 				<width>380</width>
 				<height>500</height>
 				<keepaspectratio>yes</keepaspectratio>
@@ -36,7 +36,7 @@
 				<visible>control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
-			<!-- <control>
+			<control>
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
@@ -48,7 +48,7 @@
 				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
-			</control> -->
+			</control>
 			<control>
 				<description>Subtitle value</description>
 				<type>label</type>
@@ -80,6 +80,20 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#TVSeries.Series.Rating</percentage>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1400</posX>
+				<posY>440</posY>
+				<width>380</width>
+				<label>(#TVSeries.Series.Rating.0)</label>
+				<textcolor>#ColorAlternateUnfocused</textcolor>
+				<font>font10</font>
+				<align>right</align>
 				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
