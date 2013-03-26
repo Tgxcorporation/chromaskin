@@ -13,7 +13,7 @@
 				<description>season poster</description>
 				<id>62</id>
 				<posX>1490</posX>
-				<posY>380</posY>
+				<posY>480</posY>
 				<width>380</width>
 				<height>500</height>
 				<keepaspectratio>yes</keepaspectratio>
@@ -90,7 +90,7 @@
 				<posX>1400</posX>
 				<posY>440</posY>
 				<width>380</width>
-				<label>(#TVSeries.Series.Rating.0)</label>
+				<label>(#(string.format('{0:f1}', cflt(#TVSeries.Series.Rating))))</label>
 				<textcolor>#ColorAlternateUnfocused</textcolor>
 				<font>font10</font>
 				<align>right</align>
