@@ -63,7 +63,7 @@
 				<posX>1400</posX>
 				<posY>440</posY>
 				<width>380</width>
-				<label>(#TVSeries.Episode.Rating.0)</label>
+				<label>(#(string.format('{0:f1}', cflt(#TVSeries.Episode.Rating))))</label>
 				<textcolor>#ColorAlternateUnfocused</textcolor>
 				<font>font10</font>
 				<align>right</align>
