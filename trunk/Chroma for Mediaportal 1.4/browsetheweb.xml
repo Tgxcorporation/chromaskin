@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>54537688</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<disabletopbar>true</disabletopbar>
+	<define>#header.title:Browse The Web</define>
+	<define>#header.subtitle:-</define>
+	<define>#header.background:hover_BrowseTheWeb.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<description>Placeholder for browser component. If statusvisible=true, then bottom coordinate is decreased by the height of control with id of 545376891</description>
+			<type>image</type>
+			<id>545376890</id>
+			<width>1920</width>
+			<height>1080</height>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>980</posY>
+			<width>1920</width>
+			<height>190</height>
+			<texture>background_strip_horizontal_mini.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>1030</posY>
+			<width>1920</width>
+			<height>50</height>
+			<texture>background_focus.png</texture>
+			<colordiffuse>90ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Status label</description>
+			<type>label</type>
+			<id>545376891</id>
+			<posX>15</posX>
+			<posY>1037</posY>
+			<label>#btWeb.status</label>
+			<font>font12</font>
+			<width>1500</width>
+			<height>50</height>
+			<textcolor>#ColorMain</textcolor>
+			<visible>string.equals(#btWeb.statusvisible, true)</visible>
+		</control>
+		<control>
+			<description>Link id label</description>
+			<type>label</type>
+			<id>9</id>
+			<posX>1905</posX>
+			<posY>1037</posY>
+			<label>#btWeb.linkid</label>
+			<font>font12</font>
+			<align>right</align>
+			<textcolor>#ColorMain</textcolor>
+			<visible>string.equals(#btWeb.statusvisible, true)</visible>
+		</control>
+	</controls>
+</window>

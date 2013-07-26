@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>87273</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:Trakt</define>
+	<define>#header.subtitle:#Trakt.Translation.Plugins.Label</define>
+	<define>#header.background:hover_trakt.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>330</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>433</posY>
+				<label>924</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>530</posY>
+				<control>
+					<description>MP-TVSeries</description>
+					<type>checkbutton</type>
+					<id>2</id>
+					<label>MP-TVSeries</label>
+					<onleft>2</onleft>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>MovingPictures</description>
+					<type>checkbutton</type>
+					<id>3</id>
+					<label>Moving Pictures</label>
+					<onleft>3</onleft>
+				</control>
+				<control>
+					<description>My Videos</description>
+					<type>checkbutton</type>
+					<id>4</id>
+					<label>My Videos</label>
+					<onleft>4</onleft>
+				</control>
+				<control>
+					<description>My Films</description>
+					<type>checkbutton</type>
+					<id>5</id>
+					<label>My Films</label>
+					<onleft>5</onleft>
+				</control>
+				<control>
+					<description>Online Videos</description>
+					<type>checkbutton</type>
+					<id>6</id>
+					<label>Online Videos</label>
+					<onleft>6</onleft>
+				</control>
+				<control>
+					<description>My Anime</description>
+					<type>checkbutton</type>
+					<id>7</id>
+					<label>My Anime</label>
+					<onleft>7</onleft>
+				</control>
+				<control>
+					<description>My Recorded TV</description>
+					<type>checkbutton</type>
+					<id>8</id>
+					<label>My TV Recordings</label>
+					<onleft>8</onleft>
+				</control>
+				<control>
+					<description>4TR Recorded TV</description>
+					<type>checkbutton</type>
+					<id>9</id>
+					<label>4TR TV Recordings</label>
+					<onleft>9</onleft>
+				</control>
+				<control>
+					<description>My Live TV</description>
+					<type>checkbutton</type>
+					<id>10</id>
+					<label>My Live TV</label>
+					<onleft>10</onleft>
+				</control>
+				<control>
+					<description>4TR Live TV</description>
+					<type>checkbutton</type>
+					<id>11</id>
+					<label>4TR Live TV</label>
+					<onleft>11</onleft>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

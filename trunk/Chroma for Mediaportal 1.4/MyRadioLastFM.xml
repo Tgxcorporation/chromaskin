@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7890</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.title:34000</define>
+	<define>#header.subtitle:#Play.Current.Lastfm.CurrentStream</define>
+	<define>#header.background:hover_LastFmRadio.png</define>
+	<define>#selecteditem:#Play.Current.Lastfm.CurrentStream</define>
+	<define>#usePlayFanart:Yes</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.music.play.fanart.xml</import>
+		<import>common.window.header.xml</import>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>280</posY>
+				<texture>background_strip_horizontal_listcontrol.png</texture>
+				<width>1920</width>
+				<height>800</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_left.png</texture>
+				<width>50</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1440</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>960</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+
+
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#Play.Current.Title</label>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>431</posY>
+				<width>380</width>
+				<textcolor>#ColorMain</textcolor>
+				<label>#Play.Current.Artist</label>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>481</posY>
+				<width>380</width>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#Play.Current.Album</label>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<description>album art image</description>
+				<id>112</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>380</width>
+				<height>380</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture>#Play.Current.ArtistThumb</texture>
+				<zoom>yes</zoom>
+			</control>
+
+			<!-- <control>
+				<type>fadelabel</type>
+				<description>Similar Track</description>
+				<id>0</id>
+				<posX>190</posX>
+				<posY>380</posY>
+				<width>795</width>
+				<label>33011</label>
+				<font>font12</font>
+				<visible>control.isvisible(123)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control> -->
+
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<type>listcontrol</type>
+					<description>list of best album tracks</description>
+					<id>123</id>
+					<onright>10</onright>
+					<onleft>10</onleft>
+					<onup>123</onup>
+					<ondown>123</ondown>
+					<width>910</width>
+					<animation effect="fade" time="250">visiblechange</animation>
+				</control>
+			</control>
+
+
+
+			<control>
+				<type>label</type>
+				<description>similar hint</description>
+				<id>443</id>
+				<posX>1010</posX>
+				<posY>800</posY>
+				<label>34039</label>
+				<font>font12</font>
+				<align>left</align>
+				<visible>control.hastext(444)+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>textbox</type>
+				<description>Similar artists box</description>
+				<id>444</id>
+				<posX>1010</posX>
+				<posY>850</posY>
+				<width>390</width>
+				<label>#Play.Current.Lastfm.SimilarArtists</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>#ColorMainSub</textcolor>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<description>tag hint</description>
+				<id>332</id>
+				<posX>1490</posX>
+				<posY>800</posY>
+				<label>34041</label>
+				<font>font12</font>
+				<align>left</align>
+				<visible>control.hastext(333)+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>textbox</type>
+				<description>Track tags box</description>
+				<id>333</id>
+				<posX>1490</posX>
+				<posY>850</posY>
+				<width>390</width>
+				<label>#Play.Current.Lastfm.TrackTags</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>#ColorMainSub</textcolor>
+				<visible>player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)</visible>
+			<animation effect="fade" time="200">visible</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>10</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>560</buttonX>
+			<buttonY>830</buttonY>
+			<buttonwidth>800</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>800</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="in" time="200" end="0,1080" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="0,600" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>430</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>533</posY>
+				<label>924</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>630</posY>
+				<control>
+					<description>start a stream</description>
+					<type>button</type>
+					<id>10</id>
+					<label>34001</label>
+					<onleft>123</onleft>
+					<onright>123</onright>
+					<onup>666</onup>
+					<ondown>15</ondown>
+				</control>
+				<control>
+					<description>choose artist</description>
+					<type>button</type>
+					<id>15</id>
+					<label>Artists</label>
+					<onleft>123</onleft>
+					<onright>123</onright>
+					<onup>10</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>choose tag</description>
+					<type>button</type>
+					<id>20</id>
+					<label>Tags</label>
+					<onleft>123</onleft>
+					<onright>123</onright>
+					<onup>15</onup>
+					<ondown>30</ondown>
+				</control>
+				<control>
+					<description>choose friend</description>
+					<type>button</type>
+					<id>30</id>
+					<label>Friends</label>
+					<onleft>123</onleft>
+					<onright>123</onright>
+					<onup>20</onup>
+					<ondown>35</ondown>
+				</control>
+				<control>
+					<description>toggle submit mode</description>
+					<type>checkbutton</type>
+					<id>35</id>
+					<label>34014</label>
+					<onleft>123</onleft>
+					<onright>123</onright>
+					<onup>30</onup>
+					<ondown>40</ondown>
+					<visible>true</visible>
+				</control>
+				<control>
+					<description>toggle discovery mode</description>
+					<type>checkbutton</type>
+					<id>40</id>
+					<label>34013</label>
+					<onleft>123</onleft>
+					<onright>123</onright>
+					<onup>35</onup>
+					<ondown>13</ondown>
+					<visible>true</visible>
+				</control>
+				<control>
+					<description>My Lyrics</description>
+					<type>button</type>
+					<id>13</id>
+					<label>Lyrics</label>
+					<onright>123</onright>
+					<onleft>123</onleft>
+					<onup>40</onup>
+					<ondown>14</ondown>
+					<hyperlink>90478</hyperlink>
+					<visible>plugin.isenabled(My Lyrics)</visible>
+				</control>
+				<control>
+					<description>Global Search</description>
+					<type>button</type>
+					<id>14</id>
+					<label>Global Search</label>
+					<onright>123</onright>
+					<onleft>123</onleft>
+					<onup>13</onup>
+					<ondown>50</ondown>
+					<hyperlink>30885</hyperlink>
+					<visible>plugin.isenabled(Search music)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

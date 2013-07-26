@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>101</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<controls>
+		<import>common.dialog.xml</import>
+		<control>
+			<id>20</id>
+			<description>progress control</description>
+			<type>progress</type>
+			<posX>460</posX>
+			<posY>880</posY>
+			<width>1000</width>
+			<height>50</height>
+			<midheight>50</midheight>
+			<innerheight>50</innerheight>
+			<midwidth>1000</midwidth>
+			<texturebg>osd_progress_background.png</texturebg>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<id>10</id>
+			<description>Cancel button</description>
+			<type>button</type>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<posX>460</posX>
+			<posY>980</posY>
+			<width>1000</width>
+			<label>222</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+	</controls>
+</window>

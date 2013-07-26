@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>1006</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:101006</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>530</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>630</posY>
+				<label>#header.subtitle</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+
+			<control>
+				<description>Display timeout Section label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>660</posX>
+				<posY>730</posY>
+				<label>300121</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control>
+				<description>DisplayTimeout button</description>
+				<type>button</type>
+				<id>2</id>
+				<label>300129</label>
+				<posX>610</posX>
+				<posY>780</posY>
+				<onup>17</onup>
+				<width>700</width>
+			</control>
+			<control>
+				<description>DisplayTimeout value label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1260</posX>
+				<posY>780</posY>
+				<label>#displayTimeout</label>
+				<align>right</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<!--Zap-->
+			<control>
+				<description>Zap Section label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>660</posX>
+				<posY>880</posY>
+				<label>300130</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control>
+				<description>Zap delay button</description>
+				<type>button</type>
+				<id>3</id>
+				<label>300131</label>
+				<posX>610</posX>
+				<posY>930</posY>
+				<width>700</width>
+			</control>
+			<control>
+				<description>Zap Delay value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1260</posX>
+				<posY>930</posY>
+				<label>#zapDelay</label>
+				<align>right</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>ZapTimeout button</description>
+				<type>button</type>
+				<id>4</id>
+				<label>300132</label>
+				<posX>610</posX>
+				<posY>980</posY>
+				<ondown>2</ondown>
+				<width>700</width>
+			</control>
+			<control>
+				<description>ZapTimeout value label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1260</posX>
+				<posY>980</posY>
+				<label>#zapTimeout</label>
+				<align>right</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>
+
