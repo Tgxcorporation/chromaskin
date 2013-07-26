@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>		
+			<description>Info label</description>		
+			<type>fadelabel</type>		
+			<id>0</id>		
+			<posX>190</posX>
+			<posY>109</posY>
+			<label>1</label>
+			<font>font12</font>
+			<textcolor>#ColorMainUnfocusedHeader</textcolor>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>2</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+			<visible>string.equals(#WorldWeather.View,Image)</visible>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>280</posY>
+				<texture>background_strip_horizontal_listcontrol.png</texture>
+				<width>1920</width>
+				<height>800</height>
+				<visible>string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_left.png</texture>
+				<width>50</width>
+				<height>613</height>
+				<visible>[facadeview.largeicons|string.equals(#WorldWeather.ImageView,Flat)]+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>960</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>613</height>
+				<visible>string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>910</posY>
+				<texture>background_strip_horizontal_text.png</texture>
+				<width>1920</width>
+				<height>153</height>
+				<visible>string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+
+			<control>
+				<type>label</type>
+				<description>Selected item Label</description>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>988</posY>
+				<width>1920</width>
+				<font>font16</font>
+				<align>center</align>
+				<textcolor>#ColorMain</textcolor>
+				<label>#selecteditem</label>
+				<visible>[facadeview.filmstrip|facadeview.coverflow|facadeview.largeicons]+!string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+
+			<!-- *** Image 0*** -->
+			<control>
+				<description>Image 0</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>158</posX>
+				<posY>377</posY>
+				<width>693</width>
+				<height>520</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#WorldWeather.ImageWeather0</texture>
+				<visible>string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<!-- *** Image 1 *** -->
+			<control>
+				<description>Image 1</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>158</posX>
+				<posY>377</posY>
+				<width>693</width>
+				<height>520</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#WorldWeather.ImageWeather1</texture>
+				<visible>control.hasfocus(11)+string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<!-- *** Image 2 *** -->
+			<control>
+				<description>Image 2</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>158</posX>
+				<posY>377</posY>
+				<width>693</width>
+				<height>520</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#WorldWeather.ImageWeather2</texture>
+				<visible>control.hasfocus(12)+string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<!-- *** Image 3 *** -->
+			<control>
+				<description>Image 3</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>158</posX>
+				<posY>377</posY>
+				<width>693</width>
+				<height>520</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#WorldWeather.ImageWeather3</texture>
+				<visible>control.hasfocus(13)+string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+
+			<control>
+				<description>Satellite image 0</description>
+				<type>button</type>
+				<id>10</id>
+				<posX>1094</posX>
+				<posY>377</posY>
+				<width>346</width>
+				<height>260</height>
+				<onup>2</onup>
+				<ondown>12</ondown>
+				<onright>11</onright>
+				<onleft>2</onleft>
+				<keepaspectratio>no</keepaspectratio>
+				<textureFocus>#WorldWeather.ImageWeather0</textureFocus>
+				<textureNoFocus>#WorldWeather.ImageWeather0</textureNoFocus>
+				<animation effect="fade" time="0" start="50" end="50" reversible="false" condition="!control.hasfocus(10)">conditional</animation>
+				<animation effect="fade" time="0" start="100" end="100" reversible="false" condition="control.hasfocus(10)">conditional</animation>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather0Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+			</control>
+			<control>
+				<description>Frame 0</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1094</posX>
+				<posY>377</posY>
+				<width>346</width>
+				<height>260</height>
+				<texture>frame_focus.png</texture>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Flat)+control.hasfocus(10)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>988</posY>
+				<width>1920</width>
+				<font>font16</font>
+				<align>center</align>
+				<textcolor>#ColorMain</textcolor>
+				<label>#WorldWeather.ImageWeather0Description</label>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Flat)+control.hasfocus(10)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<description>Satellite image 1</description>
+				<type>button</type>
+				<id>11</id>
+				<posX>1440</posX>
+				<posY>377</posY>
+				<width>346</width>
+				<height>260</height>
+				<onup>2</onup>
+				<ondown>13</ondown>
+				<onright>2</onright>
+				<onleft>10</onleft>
+				<keepaspectratio>no</keepaspectratio>
+				<textureFocus>#WorldWeather.ImageWeather1</textureFocus>
+				<textureNoFocus>#WorldWeather.ImageWeather1</textureNoFocus>
+				<animation effect="fade" time="0" start="50" end="50" reversible="false" condition="!control.hasfocus(11)">conditional</animation>
+				<animation effect="fade" time="0" start="100" end="100" reversible="false" condition="control.hasfocus(11)">conditional</animation>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather1Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+			</control>
+			<control>
+				<description>Frame 0</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1440</posX>
+				<posY>377</posY>
+				<width>346</width>
+				<height>260</height>
+				<texture>frame_focus.png</texture>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Flat)+control.hasfocus(11)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>988</posY>
+				<width>1920</width>
+				<font>font16</font>
+				<align>center</align>
+				<textcolor>#ColorMain</textcolor>
+				<label>#WorldWeather.ImageWeather1Description</label>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Flat)+control.hasfocus(11)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<description>Satellite image 2</description>
+				<type>button</type>
+				<id>12</id>
+				<posX>1094</posX>
+				<posY>637</posY>
+				<width>346</width>
+				<height>260</height>
+				<onup>10</onup>
+				<ondown>2</ondown>
+				<onright>13</onright>
+				<onleft>2</onleft>
+				<keepaspectratio>no</keepaspectratio>
+				<textureFocus>#WorldWeather.ImageWeather2</textureFocus>
+				<textureNoFocus>#WorldWeather.ImageWeather2</textureNoFocus>
+				<animation effect="fade" time="0" start="50" end="50" reversible="false" condition="!control.hasfocus(12)">conditional</animation>
+				<animation effect="fade" time="0" start="100" end="100" reversible="false" condition="control.hasfocus(12)">conditional</animation>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather2Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+			</control>
+			<control>
+				<description>Frame 0</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1094</posX>
+				<posY>637</posY>
+				<width>346</width>
+				<height>260</height>
+				<texture>frame_focus.png</texture>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Flat)+control.hasfocus(12)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>988</posY>
+				<width>1920</width>
+				<font>font16</font>
+				<align>center</align>
+				<textcolor>#ColorMain</textcolor>
+				<label>#WorldWeather.ImageWeather2Description</label>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Flat)+control.hasfocus(12)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<description>Satellite image 3</description>
+				<type>button</type>
+				<id>13</id>
+				<posX>1440</posX>
+				<posY>637</posY>
+				<width>346</width>
+				<height>260</height>
+				<onup>11</onup>
+				<ondown>2</ondown>
+				<onright>2</onright>
+				<onleft>12</onleft>
+				<keepaspectratio>no</keepaspectratio>
+				<textureFocus>#WorldWeather.ImageWeather3</textureFocus>
+				<textureNoFocus>#WorldWeather.ImageWeather3</textureNoFocus>
+				<animation effect="fade" time="0" start="50" end="50" reversible="false" condition="!control.hasfocus(13)">conditional</animation>
+				<animation effect="fade" time="0" start="100" end="100" reversible="false" condition="control.hasfocus(13)">conditional</animation>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather3Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)+string.equals(#WorldWeather.View,Image)</visible>
+			</control>
+			<control>
+				<description>Frame 0</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1440</posX>
+				<posY>637</posY>
+				<width>346</width>
+				<height>260</height>
+				<texture>frame_focus.png</texture>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Flat)+control.hasfocus(13)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>988</posY>
+				<width>1920</width>
+				<font>font16</font>
+				<align>center</align>
+				<textcolor>#ColorMain</textcolor>
+				<label>#WorldWeather.ImageWeather3Description</label>
+				<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Flat)+control.hasfocus(13)+string.equals(#WorldWeather.View,Image)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+
+
+
+
+
+
+			<!-- *** Image Facade *** -->
+			<control>
+				<description>Weather facade</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<!-- *** Thumbnail *** -->
+				<control>
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<posX>117</posX>
+					<posY>377</posY>
+					<width>1800</width>
+					<height>540</height>
+					<itemWidthBig>347</itemWidthBig>
+					<itemHeightBig>260</itemHeightBig>
+					<thumbWidthBig>347</thumbWidthBig>
+					<thumbHeightBig>260</thumbHeightBig>
+					<textureWidthBig>347</textureWidthBig>
+					<textureHeightBig>260</textureHeightBig>
+					<scrollbarXOff>-1947</scrollbarXOff>
+					<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Thumbnail)+!string.equals(#WorldWeather.ImageSatellite, )+string.equals(#WorldWeather.View,Image)</visible>
+					<animation effect="fade" time="200">visible</animation>
+				</control>
+				<!-- *** Image filmstrip *** -->
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<ondown>2</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<posX>50</posX>
+					<posY>409</posY>
+					<width>1905</width>
+					<height>520</height>
+					<thumbWidth>606</thumbWidth>
+					<thumbHeight>455</thumbHeight>
+					<itemWidth>606</itemWidth>
+					<itemHeight>455</itemHeight>
+					<textureWidth>606</textureWidth>
+					<textureHeight>455</textureHeight>
+					<scrollOffset>3</scrollOffset>
+					<scrollbarYOff>534</scrollbarYOff>
+					<animation effect="fade" time="200">visible</animation>
+					<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Filmstrip)+!string.equals(#WorldWeather.ImageSatellite, )+string.equals(#WorldWeather.View,Image)</visible>
+				</control>
+				<!-- *** Image coverflow *** -->
+				<control>
+					<description>Coverflow view</description>
+					<type>coverflow</type>
+					<id>50</id>
+					<posX>0</posX>
+					<posY>449</posY>
+					<width>1920</width>
+					<height>1080</height>
+					<ondown>2</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<cardWidth>606</cardWidth>
+					<cardHeight>455</cardHeight>
+					<frameWidth>606</frameWidth>
+					<frameHeight>455</frameHeight>
+					<scrollbarYOff>494</scrollbarYOff>
+					<animation effect="fade" time="200">visible</animation>
+					<visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageView,Coverflow)+!string.equals(#WorldWeather.ImageSatellite, )+string.equals(#WorldWeather.View,Image)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

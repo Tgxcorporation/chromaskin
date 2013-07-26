@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<!-- these elements need condition visibility for OSD IS VISIBLE -->
+
+		<control>
+			<description>Movie Name</description>
+			<id>36</id>
+			<type>fadelabel</type>
+			<width>1000</width>
+			<posX>190</posX>
+			<posY>964</posY>
+			<font>font14</font>
+			<label>#Play.Current.Title</label>
+			<wrapString> ·· </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<wrapString> ·· </wrapString>
+		</control>
+
+		<control>
+			<description>progress bar</description>
+			<type>progress</type>
+			<id>1</id>
+			<posX>50</posX>
+			<posY>940</posY>
+			<width>1390</width>
+			<height>90</height>
+			<label>#play.progressbar.percentage</label>
+			<lefttexture>-</lefttexture>
+			<midtexture>osd_progress.png</midtexture>
+			<righttexture>-</righttexture>
+			<onlymidtexture>yes</onlymidtexture>
+			<midheight>90</midheight>
+			<midwidth>1390</midwidth>
+			<midoffsetX>0</midoffsetX>
+			<midoffsetY>0</midoffsetY>
+			<innerheight>90</innerheight>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+
+	</controls>
+</window>

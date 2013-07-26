@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>602</id>
+	<defaultcontrol>13</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#play.progressbar.percentage:#TV.View.Percentage</define>
+	<define>#play.progressbar.currentplaytime:#TV.View.start</define>
+	<define>#play.progressbar.currentremaining:#TV.View.stop</define>
+	<controls>
+		<import>common.play.progressbar.xml</import>
+		<import>common.play.progressbar.tv.xml</import>
+		<import>common.play.volume.xml</import>
+
+		<control>
+			<description>MSGBox</description>
+			<type>button</type>
+			<id>2</id>
+			<posX>0</posX>
+			<posY>2152</posY>
+			<width>1920</width>
+			<height>375</height>
+			<label>-</label>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>MSGBox label 1</description>
+			<type>label</type>
+			<id>3</id>
+			<posX>90</posX>
+			<posY>2212</posY>
+			<width>1732</width>
+			<label>-</label>
+			<align>left</align>
+			<font>dingbats</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>yes</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>MSGBox label 2</description>
+			<type>label</type>
+			<id>4</id>
+			<posX>90</posX>
+			<posY>2287</posY>
+			<width>1732</width>
+			<label>-</label>
+			<align>left</align>
+			<font>dingbats</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>yes</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>MSGBox label 3</description>
+			<type>label</type>
+			<id>5</id>
+			<posX>90</posX>
+			<posY>2362</posY>
+			<width>1732</width>
+			<label>-</label>
+			<align>left</align>
+			<font>dingbats</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>yes</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>MSGBox label 2</description>
+			<type>label</type>
+			<id>6</id>
+			<posX>90</posX>
+			<posY>2437</posY>
+			<width>1732</width>
+			<label>-</label>
+			<align>left</align>
+			<font>dingbats</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>yes</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>280</posY>
+				<texture>background_strip_horizontal_listcontrol.png</texture>
+				<width>1920</width>
+				<height>800</height>
+				<visible>facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_left.png</texture>
+				<width>50</width>
+				<height>700</height>
+				<visible>facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1440</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+				<visible>[facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons]+!control.isvisible(1240)</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>960</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+				<visible>facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>372</posY>
+				<texture>background_strip_horizontal.png</texture>
+				<width>1920</width>
+				<height>706</height>
+				<visible>facadeview.filmstrip|facadeview.coverflow</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>836</posY>
+				<texture>background_strip_horizontal_text.png</texture>
+				<width>1920</width>
+				<height>247</height>
+				<visible>facadeview.filmstrip|facadeview.coverflow</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<type>listcontrol</type>
+					<subtype>album</subtype>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<visible>[control.isvisible(1239)+control.isvisible(50)</visible>
+					<animation effect="fade" time="200">visible</animation>
+				</control>
+				<control>
+					<description>graphical thumbpanel (series and/or seasons if set)</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<!-- up/down buttons & page # -->
+					<onleft>2</onleft>
+					<onright>52</onright>
+					<posX>126</posX>
+					<posY>400</posY>
+					<width>1220</width>
+					<height>620</height>
+					<scrollOffset>1</scrollOffset>
+					<!-- SMALL -->
+					<itemWidth>200</itemWidth>
+					<itemHeight>200</itemHeight>
+					<textureWidth>200</textureWidth>
+					<textureHeight>200</textureHeight>
+					<thumbWidth>200</thumbWidth>
+					<thumbHeight>200</thumbHeight>
+					<!-- LARGE -->
+					<itemWidthBig>758</itemWidthBig>
+					<itemHeightBig>140</itemHeightBig>
+					<thumbWidthBig>758</thumbWidthBig>
+					<thumbHeightBig>140</thumbHeightBig>
+					<textureWidthBig>758</textureWidthBig>
+					<textureHeightBig>140</textureHeightBig>
+					<scrollbarXOff>-1376</scrollbarXOff>
+					<visible>control.isvisible(50)</visible>
+					<animation effect="fade" time="200">visible</animation>
+				</control>
+				<control>
+					<description>Text List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<width>910</width>
+					<onleft>2</onleft>
+					<onright>52</onright>
+					<textYOff>4</textYOff>
+					<textYOff2>51</textYOff2>
+					<textYOff3>51</textYOff3>
+					<textXOff>15</textXOff>
+					<textXOff2>0</textXOff2>
+					<textXOff3>27</textXOff3>
+					<font2>font12</font2>
+					<font3>font12</font3>
+					<textcolor2>#ColorMainSub</textcolor2>
+					<textcolor3>#ColorMainSub</textcolor3>
+					<IconXOff>0</IconXOff>
+					<IconYOff>0</IconYOff>
+					<itemWidth>0</itemWidth>
+					<itemHeight>0</itemHeight>
+					<textureFocus>background_focus2.png</textureFocus>
+					<textureHeight>100</textureHeight>
+					<scrollbarXOff>-990</scrollbarXOff>
+					<visible>[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]+control.isvisible(50)</visible>
+					<animation effect="fade" time="200">visible</animation>
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<ondown>2</ondown>
+					<onup>2</onup>
+					<posX>50</posX>
+					<posY>470</posY>
+					<height>370</height>
+					<thumbWidth>260</thumbWidth>
+					<thumbHeight>370</thumbHeight>
+					<itemWidth>260</itemWidth>
+					<itemHeight>370</itemHeight>
+					<textureWidth>260</textureWidth>
+					<textureHeight>370</textureHeight>
+					<scrollbarYOff>420</scrollbarYOff>
+					<visible>[control.isvisible(1237)|control.isvisible(1238)]+control.isvisible(50)</visible>
+					<animation effect="fade" time="200">visible</animation>
+				</control>
+				<control>
+					<description>Cover Flow view</description>
+					<type>coverflow</type>
+					<colordiffuse>ffffffff</colordiffuse>
+					<dimColor>90ffffff</dimColor>
+					<id>50</id>
+					<ondown>2</ondown>
+					<onup>2</onup>
+					<posY>510</posY>
+					<cardWidth>260</cardWidth>
+					<cardHeight>370</cardHeight>
+					<frameWidth>260</frameWidth>
+					<frameHeight>370</frameHeight>
+					<scrollbarYOff>380</scrollbarYOff>
+					<sideShift>260</sideShift>
+					<visible>[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1240)]+control.isvisible(50)</visible>
+					<animation effect="fade" time="200">visible</animation>
+					<subitems>
+						<subitem>
+							<![CDATA[
+							<controls>
+								<control>
+									<description>background</description>
+									<type>image</type>
+									<posX>0</posX>
+									<posY>0</posY>
+									<width>260</width>
+									<height>370</height>
+									<texture>black.png</texture>
+								</control>
+								<control>
+									<description>Movie Title</description>
+									<type>fadelabel</type>
+									<id>0</id>
+									<posX>25</posX>
+									<posY>25</posY>
+									<width>210</width>
+									<label>#TVSeries.Title</label>
+									<font>font12</font>
+									<textcolor>#ColorMain</textcolor>
+									<wrapString> ·· </wrapString>
+								</control>
+								<control>
+									<type>imagelist</type>
+									<id>1</id>
+									<posX>25</posX>
+									<posY>64</posY>
+									<width>277</width>
+									<height>60</height>
+									<textureWidth>21</textureWidth>
+									<textureHeight>21</textureHeight>
+									<subitems>
+										<subitem>star_nofocus_alternate.png</subitem>
+										<subitem>star_focus_alternate.png</subitem>
+									</subitems>
+									<orientation>horizontal</orientation>
+									<align>left</align>
+									<imagesToDraw>10</imagesToDraw>
+									<percentage>#TVSeries.Series.Rating</percentage>
+								</control>
+								<control>
+									<description>genre</description>
+									<type>fadelabel</type>
+									<posX>25</posX>
+									<posY>93</posY>
+									<width>210</width>
+									<label>#TVSeries.Subtitle</label>
+									<font>font11</font>
+									<textcolor>#ColorMain</textcolor>
+									<wrapString> ·· </wrapString>
+								</control>
+								<control>
+									<description>plot</description>
+									<type>textboxscrollup</type>
+									<posX>25</posX>
+									<posY>129</posY>
+									<width>215</width>
+									<height>113</height>
+									<label>#TVSeries.Series.Summary</label>
+									<font>font9</font>
+									<lineSpacing>2</lineSpacing>
+									<textcolor>#ColorAlternate</textcolor>
+								</control>
+							</controls>
+							]]>
+						</subitem>
+					</subitems>
+				</control>
+			</control>
+			<!--<control>
+				<type>label</type>
+				<description>dummy listcontrol</description>
+				<id>745381</id>
+				<label>-</label>
+				<visible>facadeview.list</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy smallicons</description>
+				<id>745382</id>
+				<label>-</label>
+				<visible>facadeview.smallicons</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy largeicons</description>
+				<id>745383</id>
+				<label>-</label>
+				<visible>facadeview.largeicons</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy filmstrip</description>
+				<id>745384</id>
+				<label>-</label>
+				<visible>facadeview.filmstrip</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy coverflow</description>
+				<id>745385</id>
+				<label>-</label>
+				<visible>facadeview.coverflow</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy playlist</description>
+				<id>745386</id>
+				<label>-</label>
+				<visible>facadeview.playlist</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy album</description>
+				<id>745387</id>
+				<label>-</label>
+				<visible>facadeview.album</visible>
+			</control>-->
+
+		</control>
+	</controls>
+</window>

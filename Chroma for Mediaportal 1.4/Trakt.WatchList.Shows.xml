@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>87268</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.title:Trakt #Trakt.Translation.WatchListShows.Label</define>
+	<define>#header.subtitle:#Trakt.WatchList.CurrentUser / #itemcount #(L(507))</define>
+	<define>#Fanart.1:#Trakt.WatchListShows.Fanart.1</define>
+	<define>#Fanart.2:#Trakt.WatchListShows.Fanart.2</define>
+	<define>#header.background:hover_trakt.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>Trakt.Common.Fanart.xml</import>
+		<import>common.window.header.xml</import>
+		<import>common.facade.videoTitle.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<control>
+				<description>fanart list</description>
+				<type>image</type>
+				<id>500</id>
+				<posX>1490</posX>
+				<posY>500</posY>
+				<width>380</width>
+				<height>480</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<valign>bottom</valign>
+				<texture>#selectedthumb</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<label>#Trakt.Show.Title</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<description>Runtime value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1490</posX>
+				<posY>431</posY>
+				<width>380</width>
+				<label>#Trakt.Show.Runtime mins</label>
+				<textcolor>#ColorMain</textcolor>
+				<visible>!string.equals(#Trakt.Show.Runtime,)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<wrapString> ·· </wrapString>
+			</control>
+
+			<control>
+				<description>Genre value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<textcolor>#ColorMain</textcolor>
+				<label>#Trakt.Show.Genres</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Rating</description>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>431</posY>
+				<width>380</width>
+				<label>#Trakt.Show.Ratings.Percentage%     #Trakt.Show.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+				<visible>!string.equals(#Trakt.Show.Ratings.Percentage,)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<description>Runtime value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>481</posY>
+				<width>380</width>
+				<label>#Trakt.Show.Year     #Trakt.Show.Certification</label>
+				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="fade" time="200">visible</animation>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<description>Plot value</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>533</posY>
+				<width>390</width>
+				<height>455</height>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font14</font>
+				<label>#Trakt.Show.Overview</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<seperator>··</seperator>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<description>Info</description>
+				<type>label</type>
+				<id>0</id>
+				<width>1820</width>
+				<posX>50</posX>
+				<posY>937</posY>
+				<label>#selecteditem</label>
+				<align>center</align>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>facadeview.filmstrip|facadeview.coverflow</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+			<control>
+				<description>Info</description>
+				<type>label</type>
+				<id>0</id>
+				<width>1820</width>
+				<posX>50</posX>
+				<posY>987</posY>
+				<label>#Trakt.Show.Year     #Trakt.Show.Runtime mins     #Trakt.Show.Certification     #Trakt.Show.Genres</label>
+				<align>center</align>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<visible>facadeview.filmstrip|facadeview.coverflow</visible>
+				<animation effect="fade" time="200">visible</animation>
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>[control.hasfocus(2)|control.hasfocus(8)]</visible>
+			<animation effect="fade" time="200">visible</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>560</buttonX>
+			<buttonY>730</buttonY>
+			<buttonwidth>800</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>800</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(8)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="in" time="200" end="0,1080" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="0,600" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>730</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>833</posY>
+				<label>924</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>930</posY>
+				<control>
+					<description>View-As</description>
+					<type>button</type>
+					<id>2</id>
+					<label>-</label>
+					<onright>50</onright>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Sort</description>
+					<type>sortbutton</type>
+					<id>8</id>
+					<label>-</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

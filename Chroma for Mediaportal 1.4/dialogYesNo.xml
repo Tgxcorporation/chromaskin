@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>100</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<controls>
+		<import>common.dialog.xml</import>
+		<control>
+			<description>No button</description>
+			<type>button</type>
+			<id>10</id>
+			<posX>460</posX>
+			<posY>930</posY>
+			<width>1000</width>
+			<label>106</label>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>11</onup>
+			<ondown>11</ondown>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>Yes button</description>
+			<type>button</type>
+			<id>11</id>
+			<posX>460</posX>
+			<posY>980</posY>
+			<width>1000</width>
+			<label>107</label>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
+		</control>
+	</controls>
+</window>

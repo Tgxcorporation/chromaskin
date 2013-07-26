@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>3012</id>
+	<defaultcontrol>99</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.title:200041</define>
+	<define>#header.subtitle:602</define>
+	<define>#header.background:hover_my tv.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>280</posY>
+				<texture>background_strip_horizontal_listcontrol.png</texture>
+				<width>1920</width>
+				<height>800</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_left.png</texture>
+				<width>50</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1440</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>745</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+
+			<control>
+				<id>2</id>
+				<description>Channel name</description>
+				<type>label</type>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>380</width>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>#TV.TuningDetails.ChannelName</label>
+			</control>
+			<control>
+				<id>3</id>
+				<description>Provider name</description>
+				<type>label</type>
+				<posX>1490</posX>
+				<posY>430</posY>
+				<width>380</width>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#TV.TuningDetails.Provider</label>
+			</control>
+
+
+			<control>
+				<id>4</id>
+				<description>RTSP URL</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>380</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>RTSP URL: #TV.TuningDetails.RTSPURL</label>
+			</control>
+			<control>
+				<id>5</id>
+				<description>Band</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>380</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Band: #TV.TuningDetails.Band</label>
+			</control>
+			<control>
+				<id>6</id>
+				<description>Band width</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>430</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Band width: #TV.TuningDetails.BandWidth</label>
+			</control>
+			<control>
+				<id>7</id>
+				<description>Channel type</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>430</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Channel type: #TV.TuningDetails.ChannelType</label>
+			</control>
+			<control>
+				<id>8</id>
+				<description>Country id</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>480</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Country id: #TV.TuningDetails.CountryId</label>
+			</control>
+			<control>
+				<id>9</id>
+				<description>Free to air</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>480</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Free or air?: #TV.TuningDetails.FreeToAir</label>
+			</control>
+			<control>
+				<id>10</id>
+				<description>Frequency</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>530</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Frequency: #TV.TuningDetails.Frequency</label>
+			</control>
+			<control>
+				<id>11</id>
+				<description>InnerFecRate</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>530</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Inner fec rate: #TV.TuningDetails.InnerFecRate</label>
+			</control>
+			<control>
+				<id>12</id>
+				<description>Modulation</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>580</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Modulation: #TV.TuningDetails.Modulation</label>
+			</control>
+			<control>
+				<id>13</id>
+				<description>NetworkId</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>580</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>NetworkId: #TV.TuningDetails.NetworkId</label>
+			</control>
+			<control>
+				<id>14</id>
+				<description>PcrPid</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>630</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>PcrPid: #TV.TuningDetails.PcrPid</label>
+			</control>
+			<control>
+				<id>15</id>
+				<description>PmtPid</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>630</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>PmtPid: #TV.TuningDetails.PmtPid</label>
+			</control>
+			<control>
+				<id>16</id>
+				<description>AudioPid</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>680</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>AudioPid: #TV.TuningDetails.AudioPid</label>
+			</control>
+			<control>
+				<id>17</id>
+				<description>VideoPid</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>680</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>VideoPid: #TV.TuningDetails.VideoPid</label>
+			</control>
+			<control>
+				<id>18</id>
+				<description>Polarisation</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>730</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Polarisation: #TV.TuningDetails.Polarisation</label>
+			</control>
+			<control>
+				<id>19</id>
+				<description>Service id</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>730</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>ServiceId: #TV.TuningDetails.ServiceId</label>
+			</control>
+			<control>
+				<id>20</id>
+				<description>Symbol rate</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>780</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Symbol rate: #TV.TuningDetails.SymbolRate</label>
+			</control>
+			<control>
+				<id>21</id>
+				<description>TransportId</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>780</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>TransportId: #TV.TuningDetails.TransportId</label>
+			</control>
+			<control>
+				<id>22</id>
+				<description>Signal level</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>830</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Signal level: #TV.TuningDetails.SignalLevel</label>
+			</control>
+			<control>
+				<id>24</id>
+				<description>Signal Quality</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>830</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Signal quality: #TV.TuningDetails.SignalQuality</label>
+			</control>
+
+			<control>
+				<id>26</id>
+				<description>Has CI Menu</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>880</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>CI Menu supported: #TV.TuningDetails.HasCiMenuSupport</label>
+			</control>
+
+			<control>
+				<id>28</id>
+				<description>Discontinuities</description>
+				<type>label</type>
+				<posX>795</posX>
+				<posY>880</posY>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Discontinuities: #TV.TuningDetails.Discontinuities</label>
+			</control>
+
+			<control>
+				<id>27</id>
+				<description>TS packets Transferred</description>
+				<type>label</type>
+				<posX>100</posX>
+				<posY>930</posY>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>TS packets Transferred: #TV.TuningDetails.TSPacketsTransferred</label>
+			</control>
+
+
+		</control>
+
+		<!-- NOT USED -->
+
+		<control>
+			<id>99</id>
+			<description>TV preview window</description>
+			<type>videowindow</type>
+			<posX>1490</posX>
+			<posY>767</posY>
+			<width>382</width>
+			<height>213</height>
+			<action>18</action>
+			<textureFocus>background_strip_horizontal_mini_focus.png</textureFocus>
+		</control>
+	</controls>
+</window>

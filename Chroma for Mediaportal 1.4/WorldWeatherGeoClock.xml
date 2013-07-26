@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>		
+			<description>Info label</description>		
+			<type>fadelabel</type>		
+			<id>0</id>		
+			<posX>190</posX>
+			<posY>109</posY>
+			<label>#WorldWeather.TranslationGeoClock</label>
+			<font>font12</font>
+			<textcolor>#ColorMainUnfocusedHeader</textcolor>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>2</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+			<visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+			<animation effect="fade" time="200">visible</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>280</posY>
+				<texture>background_strip_horizontal_listcontrol.png</texture>
+				<width>1920</width>
+				<height>800</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>910</posY>
+				<texture>background_strip_horizontal_text.png</texture>
+				<width>1920</width>
+				<height>153</height>
+			</control>
+			<control>
+				<description>location label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>988</posY>
+				<width>1920</width>
+				<font>font16</font>
+				<align>center</align>
+				<textcolor>#ColorMain</textcolor>
+				<label>#WorldWeather.TranslationGeoClock</label>
+			</control>
+			<control>
+				<description>GeoClock image</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>460</posX>
+				<posY>377</posY>
+				<width>1000</width>
+				<height>520</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#WorldWeather.ImageGeoClock</texture>
+			</control>
+		</control>
+	</controls>
+</window>

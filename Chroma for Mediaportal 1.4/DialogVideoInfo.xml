@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>2003</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.title:3</define>
+	<define>#header.subtitle:#view / #title</define>
+	<define>#header.background:hover_my videos.png</define>
+	<define>#useSelectedFanart:Yes</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.video.fanart.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>280</posY>
+				<texture>background_strip_horizontal_listcontrol.png</texture>
+				<width>1920</width>
+				<height>800</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_left.png</texture>
+				<width>50</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1440</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>960</posX>
+				<posY>330</posY>
+				<texture>background_strip_horizontal_right.png</texture>
+				<width>480</width>
+				<height>700</height>
+			</control>
+			<control>
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>21</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>380</width>
+				<height>500</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>no</centered>
+				<texture>#thumb</texture>
+			</control>
+			<control>
+				<description>watched</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>watched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>string.equals(#iswatched,yes)</visible>
+			</control>
+
+			<control>
+				<description>Actors/Cast Image</description>
+				<type>image</type>
+				<id>25</id>
+				<posX>1490</posX>
+				<posY>380</posY>
+				<width>380</width>
+				<height>500</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>no</centered>
+				<texture>#thumb</texture>
+			</control>
+
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Horizontal, true)</layout>
+				<posX>1490</posX>
+				<posY>930</posY>
+				<control>
+					<description>Video Codec</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#VideoCodec.png</texture>
+				</control>
+				<control>
+					<description>Video Resolution</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#VideoResolution.png</texture>
+				</control>
+				<control>
+					<description>Video Aspect Ratio</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#AspectRatio.png</texture>
+				</control>
+				<control>
+					<description>Audio Codec</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#AudioCodec.png</texture>
+				</control>
+				<control>
+					<description>Audio Channels</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\#AudioChannels.png</texture>
+				</control>
+				<control>
+					<description>Subtitles</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\Subtitles.png</texture>
+					<visible>string.equals(#HasSubtitles,True)</visible>
+				</control>
+				<control>
+					<description>Subtitles</description>
+					<type>image</type>
+					<id>0</id>
+					<width>63</width>
+					<height>50</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<texture>Logos\nosubtitles.png</texture>
+					<visible>string.equals(#HasSubtitles,False)+!string.equals(#VideoCodec,)</visible>
+				</control>
+			</control>
+
+			<control>
+				<description>Title label</description>
+				<id>1</id>
+				<type>fadelabel</type>
+				<posX>100</posX>
+				<posY>381</posY>
+				<width>810</width>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+				<label>#title</label>
+				<visible>!control.isvisible(24)</visible>
+			</control>
+
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>20</id>
+				<posX>100</posX>
+				<posY>455</posY>
+				<width>810</width>
+				<height>527</height>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font16</font>
+				<label>#plot</label>
+				<seperator>··</seperator>
+			</control>
+
+			<control>
+				<description>Review value</description>
+				<type>textboxscrollup</type>
+				<id>23</id>
+				<posX>100</posX>
+				<posY>455</posY>
+				<width>810</width>
+				<height>527</height>
+				<label>#userreview</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font16</font>
+				<seperator>··</seperator>
+			</control>
+
+			<control>
+				<description>OLD CAST</description>
+				<type>textbox</type>
+				<id>22</id>
+				<posX>100</posX>
+				<posY>455</posY>
+				<width>810</width>
+				<height>527</height>
+				<textcolor>#ColorAlternate</textcolor>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<label>#cast</label>
+			</control>
+
+			<control>
+				<description>NEW CAST</description>
+				<type>listcontrol</type>
+				<id>24</id>
+				<width>910</width>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<textvisible2>no</textvisible2>
+				<textvisible3>no</textvisible3>
+				<IconXOff>2010</IconXOff>
+				<textXOff>-15</textXOff>
+				<scrollbarXOff>-990</scrollbarXOff>
+			</control>
+
+			<control>
+				<description>Subtitle value</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>381</posY>
+				<width>380</width>
+				<label>#genre</label>
+				<wrapString> ·· </wrapString>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+
+
+			<control>
+				<type>imagelist</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>438</posY>
+				<width>453</width>
+				<height>60</height>
+				<textureWidth>29</textureWidth>
+				<textureHeight>29</textureHeight>
+				<subitems>
+					<subitem>star_nofocus_main.png</subitem>
+					<subitem>star_focus_main.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#rating</percentage>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1400</posX>
+				<posY>440</posY>
+				<width>380</width>
+				<label>(#strrating)</label>
+				<textcolor>#ColorMainUnfocused</textcolor>
+				<font>font10</font>
+				<align>right</align>
+			</control>
+
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>481</posY>
+				<width>380</width>
+				<label>#year</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>531</posY>
+				<width>380</width>
+				<label>#runtime</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>581</posY>
+				<width>380</width>
+				<label>#mpaarating</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Directors</description>
+				<type>fadelabel</type>
+				<label>#(L(199)) #director</label>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>631</posY>
+				<width>380</width>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+			</control>
+			<control>
+				<description>Rating value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1010</posX>
+				<posY>681</posY>
+				<width>380</width>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#country</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Directors</description>
+				<type>fadelabel</type>
+				<label>#studios</label>
+				<id>0</id>
+				<posX>1010</posX>
+				<posY>731</posY>
+				<width>380</width>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> ·· </wrapString>
+			</control>
+
+			<control>
+				<description>image title:</description>
+				<type>label</type>
+				<id>30</id>
+				<posX>1010</posX>
+				<posY>800</posY>
+				<label>734</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>#ColorAlternateUnfocused</textcolor>
+			</control>
+			<control>
+				<description>spin control</description>
+				<type>spincontrol</type>
+				<id>10</id>
+				<posX>1012</posX>
+				<posY>830</posY>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<onleft>2</onleft>
+				<onright>2</onright>
+			</control>
+			<control>
+				<description>disc:</description>
+				<type>label</type>
+				<id>100</id>
+				<posX>1010</posX>
+				<posY>900</posY>
+				<label>427</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternateUnfocused</textcolor>
+			</control>
+			<control>
+				<description>disc select</description>
+				<type>spincontrol</type>
+				<id>11</id>
+				<posX>1012</posX>
+				<posY>930</posY>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<onleft>2</onleft>
+				<onright>23</onright>
+				<buddycontrolid>100</buddycontrolid>
+				<align>left</align>
+				<showrange>no</showrange>
+			</control>
+		</control>
+		
+		
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>-100</posX>
+			<posY>-100</posY>
+			<width>0</width>
+			<height>0</height>
+			<onright>10</onright>
+			<onleft>2</onleft>
+			<ondown>22</ondown>
+			<label>-</label>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(26)|control.hasfocus(97270)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]</visible>
+			<animation effect="fade" time="200">visible</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>66621</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>560</buttonX>
+			<buttonY>730</buttonY>
+			<buttonwidth>800</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>800</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(26)|control.hasfocus(97270)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="in" time="200" end="0,1080" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="0,600" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>280</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>380</posY>
+				<label>924</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>480</posY>
+				<control>
+					<description>Play Button</description>
+					<type>button</type>
+					<id>2</id>
+					<label>208</label>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Plot</description>
+					<type>checkbutton</type>
+					<id>3</id>
+					<label>207</label>
+					<onup>2</onup>
+					<ondown>7</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>User review</description>
+					<type>checkbutton</type>
+					<id>7</id>
+					<label>183</label>
+					<onup>3</onup>
+					<ondown>4</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Cast</description>
+					<type>checkbutton</type>
+					<id>4</id>
+					<label>206</label>
+					<onup>7</onup>
+					<ondown>5</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Refresh</description>
+					<type>button</type>
+					<id>5</id>
+					<label>184</label>
+					<onup>4</onup>
+					<ondown>26</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Rename Title Button</description>
+					<type>button</type>
+					<id>26</id>
+					<label>118</label>
+					<onup>5</onup>
+					<ondown>6</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Watched</description>
+					<type>checkbutton</type>
+					<id>6</id>
+					<label>1010</label>
+					<onup>26</onup>
+					<ondown>66621</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66621</id>
+					<type>button</type>
+					<label>IMDb Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<!-- <hyperlinkParameter>site:IMDb Movie Trailers|search:#title|return:Locked</hyperlinkParameter> -->
+					<hyperlinkParameter>site:IMDb Movie Trailers|search:#(iif(neq(#imdbnumber,''),#imdbnumber,#title))|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>6</onup>
+					<ondown>66622</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66622</id>
+					<type>button</type>
+					<label>iTunes Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:iTunes Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>66621</onup>
+					<ondown>66623</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66623</id>
+					<type>button</type>
+					<label>Youtube</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:YouTube|search:#title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>66622</onup>
+					<ondown>97270</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<type>button</type>
+					<id>97270</id>
+					<label>Trakt...</label>
+					<onup>66623</onup>
+					<ondown>2</ondown>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+			</control>
+		</control>
+
+
+
+
+		<!-- NOT USED -->
+
+
+	</controls>
+</window>

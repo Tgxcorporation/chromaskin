@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<!-- these elements need condition visibility for OSD IS VISIBLE -->
+		<control>
+			<description>dummy Fullscreen visible</description>
+			<type>image</type>
+			<id>157988</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>0</width>
+			<height>0</height>
+			<texture>-</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<id>157987</id>
+			<posX>0</posX>
+			<posY>540</posY>
+			<width>1920</width>
+			<height>540</height>
+			<texture>overlay_bottom.png</texture>
+			<colordiffuse>#ColorMainUnfocusedOsd</colordiffuse>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>300</id>
+			<width>1920</width>
+			<height>190</height>
+			<posX>0</posX>
+			<posY>890</posY>
+			<texture>background_strip_horizontal_mini.png</texture>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<id>99900</id>
+			<width>50</width>
+			<height>90</height>
+			<posX>0</posX>
+			<posY>940</posY>
+			<texture>background_strip_horizontal_mini_left.png</texture>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>99913</id>
+			<width>480</width>
+			<height>90</height>
+			<posX>1440</posX>
+			<posY>940</posY>
+			<texture>background_strip_horizontal_mini_right.png</texture>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>Start Time Info</description>
+			<type>label</type>
+			<id>99901</id>
+			<posX>1660</posX>
+			<posY>964</posY>
+			<label>#play.progressbar.currentplaytime</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>End Time Info</description>
+			<type>label</type>
+			<id>99902</id>
+			<posX>1700</posX>
+			<posY>964</posY>
+			<label>#play.progressbar.currentremaining</label>
+			<align>left</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>Separator</description>
+			<type>label</type>
+			<id>99903</id>
+			<posX>1672</posX>
+			<posY>964</posY>
+			<label>/</label>
+			<align>left</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<id>99921</id>
+			<posX>1360</posX>
+			<posY>964</posY>
+			<label>#time</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding]+![control.isvisible(10)|control.isvisible(11)|control.isvisible(17)|control.isvisible(18)|control.isvisible(19)|control.isvisible(20)|control.isvisible(21)|control.isvisible(23)|control.isvisible(24)|control.isvisible(25)|control.isvisible(25)|control.isvisible(26)|control.isvisible(27)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>time logo</description>
+			<type>image</type>
+			<id>99922</id>
+			<posX>1360</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>time.png</texture>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding]+![control.isvisible(10)|control.isvisible(11)|control.isvisible(17)|control.isvisible(18)|control.isvisible(19)|control.isvisible(20)|control.isvisible(21)|control.isvisible(23)|control.isvisible(24)|control.isvisible(25)|control.isvisible(25)|control.isvisible(26)|control.isvisible(27)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		
+		
+		
+		<control>
+			<description>row 1 label</description>
+			<type>label</type>
+			<id>10</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>-</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<align>right</align>
+			<visible>no</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>row 2 label</description>
+			<type>label</type>
+			<id>11</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>-</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<align>right</align>
+			<visible>no</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>row 3 label</description>
+			<type>label</type>
+			<id>12</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>-</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<align>right</align>
+			<visible>no</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		
+		<control>
+			<type>image</type>
+			<id>502</id>
+			<posX>1360</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>video.action.forbidden.png</texture>
+			<colordiffuse>ffff0000</colordiffuse>
+			<visible>no</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		
+		
+		<control>
+			<description>pause image</description>
+			<type>image</type>
+			<id>16</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_pause.png</texture>
+			<visible>window.ispauseosdvisible+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>2x image</description>
+			<type>image</type>
+			<id>17</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_forward.png</texture>
+			<visible>player.forwarding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>4x image</description>
+			<type>image</type>
+			<id>18</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_forward.png</texture>
+			<visible>player.forwarding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>8x image</description>
+			<type>image</type>
+			<id>19</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_forward.png</texture>
+			<visible>player.forwarding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>16x image</description>
+			<type>image</type>
+			<id>20</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_forward.png</texture>
+			<visible>player.forwarding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>32x image</description>
+			<type>image</type>
+			<id>21</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_forward.png</texture>
+			<visible>player.forwarding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 2x image</description>
+			<type>image</type>
+			<id>23</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_rew.png</texture>
+			<visible>player.rewinding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 4x image</description>
+			<type>image</type>
+			<id>24</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_rew.png</texture>
+			<visible>player.rewinding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 8x image</description>
+			<type>image</type>
+			<id>25</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_rew.png</texture>
+			<visible>player.rewinding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 16x image</description>
+			<type>image</type>
+			<id>26</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_rew.png</texture>
+			<visible>player.rewinding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 32x image</description>
+			<type>image</type>
+			<id>27</id>
+			<posX>100</posX>
+			<posY>960</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>osd_rew.png</texture>
+			<visible>player.rewinding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>label</type>
+			<id>99923</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>FFW 2x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.forwarding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<id>99924</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>FFW 4x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.forwarding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<id>99925</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>FFW 8x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.forwarding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<id>99926</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>FFW 16x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.forwarding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<id>99927</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>FFW 32x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.forwarding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		
+		
+		<control>
+			<type>label</type>
+			<id>99928</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>REW 2x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.rewinding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<id>99929</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>REW 4x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.rewinding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<id>99930</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>REW 8x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.rewinding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<id>99931</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>REW 16x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.rewinding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<id>99932</id>
+			<posX>1397</posX>
+			<posY>964</posY>
+			<label>REW 32x</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>player.rewinding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(502)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+	</controls>
+</window>

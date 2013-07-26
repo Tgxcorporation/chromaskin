@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7977</id>
+	<defaultcontrol>5050</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.title:World Weather</define>
+	<define>#header.subtitle:-</define>
+	<define>#header.background:hover_worldweather.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>animations\weather\#WorldWeather.TodayIconNumber.jpg</texture>
+			<visible>plugin.isenabled(World Weather)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
+			<animation effect="fade" time="1">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<import>common.window.header.xml</import>
+		<import>WorldWeatherNormalCondition.xml</import>
+		<import>WorldWeatherHourCondition.xml</import>
+		<import>WorldWeatherGraphicCondition.xml</import>
+		<import>WorldWeatherGeoClock.xml</import>
+		<import>WorldWeatherHolidays.xml</import>
+		<import>WorldWeatherImage.xml</import>
+		<import>WorldWeatherAstronomy.xml</import>
+
+
+		<!-- HIDDEN MENU -->
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(9)]</visible>
+			<animation effect="fade" time="200">visible</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>560</buttonX>
+			<buttonY>830</buttonY>
+			<buttonwidth>800</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>800</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(9)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="in" time="200" end="0,1080" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="0,600" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,1080" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>580</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>683</posY>
+				<label>924</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>780</posY>
+				<control>
+					<description>Display</description>
+					<type>button</type>
+					<id>2</id>
+					<onup>17</onup>
+					<ondown>5</ondown>
+					<onright>10</onright>
+					<onleft>5050</onleft>
+					<label>-</label>
+				</control>
+				<control>
+					<description>View</description>
+					<type>button</type>
+					<id>5</id>
+					<onright>10</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+					<label>-</label>
+				</control>
+				<control>
+					<description>Location</description>
+					<type>button</type>
+					<id>3</id>
+					<onright>10</onright>
+					<onup>5</onup>
+					<ondown>4</ondown>
+					<label>-</label>
+				</control>
+				<control>
+					<description>Browser Map</description>
+					<type>button</type>
+					<id>4</id>
+					<onup>3</onup>
+					<ondown>9</ondown>
+					<onright>10</onright>
+					<label>-</label>
+				</control>
+				<control>
+					<description>Refresh</description>
+					<type>button</type>
+					<id>9</id>
+					<onright>10</onright>
+					<ondown>10</ondown>
+					<onup>4</onup>
+					<label>-</label>
+				</control>
+			</control>
+		</control>
+
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>5050</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>400</width>
+			<height>1080</height>
+			<onright>2</onright>
+			<onleft>50</onleft>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <visible>!string.equals(#WorldWeather.View,Image)</visible> -->
+		</control>
+
+	</controls>
+</window>

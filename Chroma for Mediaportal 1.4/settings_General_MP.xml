@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>1018</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:300080</define>
+	<define>#header.title:5</define>
+	<define>#header.subtitle:300080</define>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.header.xml</import>
+		<control>
+			<type>image</type>
+			<id>157986</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>white.png</texture>
+			<colordiffuse>#ColorMainUnfocusedMenu</colordiffuse>
+			<animation effect="fade" time="200">windowopen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>560</posX>
+				<posY>480</posY>
+				<width>800</width>
+				<height>1080</height>
+				<texture>background_menu.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>660</posX>
+				<posY>583</posY>
+				<label>#header.subtitle</label>
+				<width>600</width>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>610</posX>
+				<posY>680</posY>
+				<control>
+					<description>Log</description>
+					<type>button</type>
+					<id>2</id>
+					<label>300090</label>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Process priority</description>
+					<type>button</type>
+					<id>3</id>
+					<label>300091</label>
+				</control>
+				<control>
+					<description>Watchdog</description>
+					<type>checkbutton</type>
+					<id>4</id>
+					<label>300092</label>
+					<align>right</align>
+				</control>
+				<control>
+					<description>Autorestart</description>
+					<type>checkbutton</type>
+					<id>5</id>
+					<label>300093</label>
+					<onright>6</onright>
+					<align>right</align>
+				</control>
+			</control>
+			<control>
+				<description>Seconds label</description>
+				<type>label</type>
+				<id>100</id>
+				<posX>660</posX>
+				<posY>930</posY>
+				<width>562</width>
+				<label>300094</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>control.isvisible(6)</visible>
+			</control>
+			<control>
+				<description>Seconds</description>
+				<type>spincontrol</type>
+				<id>6</id>
+				<posX>660</posX>
+				<posY>980</posY>
+				<onup>5</onup>
+				<onleft>5</onleft>
+				<ondown>99</ondown>
+				<align>left</align>
+				<buddycontrolid>100</buddycontrolid>
+			</control>
+		</control>
+	</controls>
+</window>
+
