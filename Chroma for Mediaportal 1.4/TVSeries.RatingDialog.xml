@@ -9,151 +9,131 @@
 		<!-- Star controls -->
 		<control>
 			<description>1 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>100</id>
 			<posX>660</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>2 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>101</id>
 			<posX>720</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>3 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>102</id>
 			<posX>780</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>4 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>103</id>
 			<posX>840</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>5 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>104</id>
 			<posX>900</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>6 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>105</id>
 			<posX>960</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>7 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>106</id>
 			<posX>1020</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>8 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>107</id>
 			<posX>1080</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>9 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>108</id>
 			<posX>1140</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>10 Star</description>
-			<type>checkbutton</type>
+			<type>checkmark</type>
 			<id>109</id>
 			<posX>1200</posX>
 			<posY>880</posY>
 			<width>48</width>
 			<height>48</height>
-			<textureFocus>star_focus_alternate.png</textureFocus>
-			<textureNoFocus>star_focus_alternate.png</textureNoFocus>
-			<AltTextureFocus>star_nofocus_alternate.png</AltTextureFocus>
-			<AltTextureNoFocus>star_nofocus_alternate.png</AltTextureNoFocus>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
@@ -166,6 +146,8 @@
 			<width>300</width>
 			<align>right</align>
 			<textcolor>#ColorMain</textcolor>
+			<textureCheckmark>star_focus_alternate.png</textureCheckmark>
+			<textureCheckmarkNoFocus>star_nofocus_main.png</textureCheckmarkNoFocus>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,600" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,600" reversible="false">WindowClose</animation>
 		</control>
