@@ -5,7 +5,7 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.title:1300</define>
-	<define>#header.subtitle:#TVSeries.SimpleCurrentView / #itemcount #(L(507))</define>
+	<define>#header.subtitle:#TVSeries.SimpleCurrentView / #TVSeries.Series.Pretty_Name / #itemcount #(L(507))</define>
 	<define>#header.background:hover_my tv.png</define>
 	<controls>
 		<import>TVSeries.dummy.xml</import>
@@ -49,6 +49,24 @@
 		<import>TVSeries.SeriesAndSeasonFilmstrip.xml</import>
 		<import>TVSeries.EpisodeList.xml</import>
 		<import>TVSeries.HiddenMenu.xml</import>
+
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>53</id>
+			<posX>1640</posX>
+			<posY>0</posY>
+			<width>650</width>
+			<height>1080</height>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<ondown>50</ondown>
+			<onup>17</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<visible>!control.isvisible(1240)</visible>
+		</control>
+
 		<!-- IMPORT PROCESS ANIMATION -->
 		<control>
 			<description>Import Animation</description>

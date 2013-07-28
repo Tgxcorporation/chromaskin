@@ -16,7 +16,7 @@
 				<texture>background_strip_horizontal_listcontrol.png</texture>
 				<width>1920</width>
 				<height>800</height>
-				<visible>facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons</visible>
+				<visible>[facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons]+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
@@ -27,7 +27,7 @@
 				<texture>background_strip_horizontal_left.png</texture>
 				<width>50</width>
 				<height>700</height>
-				<visible>facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons</visible>
+				<visible>[facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons]+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
@@ -38,7 +38,7 @@
 				<texture>background_strip_horizontal_right.png</texture>
 				<width>480</width>
 				<height>700</height>
-				<visible>[facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons]+!control.isvisible(1240)</visible>
+				<visible>[facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons]+!control.isvisible(1240)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
@@ -49,7 +49,7 @@
 				<texture>background_strip_horizontal_right.png</texture>
 				<width>480</width>
 				<height>700</height>
-				<visible>facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons</visible>
+				<visible>[facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons]+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
@@ -60,7 +60,7 @@
 				<texture>background_strip_horizontal.png</texture>
 				<width>1920</width>
 				<height>706</height>
-				<visible>facadeview.filmstrip|facadeview.coverflow</visible>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
@@ -71,7 +71,7 @@
 				<texture>background_strip_horizontal_text.png</texture>
 				<width>1920</width>
 				<height>247</height>
-				<visible>facadeview.filmstrip|facadeview.coverflow</visible>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
@@ -84,7 +84,7 @@
 					<id>50</id>
 					<onleft>2</onleft>
 					<onright>2</onright>
-					<visible>[control.isvisible(1239)+control.isvisible(50)</visible>
+					<visible>control.isvisible(1239)+control.isvisible(50)</visible>
 					<animation effect="fade" time="200">visible</animation>
 				</control>
 				<control>
@@ -114,7 +114,7 @@
 					<textureWidthBig>758</textureWidthBig>
 					<textureHeightBig>140</textureHeightBig>
 					<scrollbarXOff>-1376</scrollbarXOff>
-					<visible>control.isvisible(50)</visible>
+					<visible>control.isvisible(50)+!control.hasfocus(53)</visible>
 					<animation effect="fade" time="200">visible</animation>
 				</control>
 				<control>
@@ -141,14 +141,14 @@
 					<textureFocus>background_focus2.png</textureFocus>
 					<textureHeight>100</textureHeight>
 					<scrollbarXOff>-990</scrollbarXOff>
-					<visible>[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]+control.isvisible(50)</visible>
+					<visible>[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]+control.isvisible(50)+!control.hasfocus(53)</visible>
 					<animation effect="fade" time="200">visible</animation>
 				</control>
 				<control>
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
 					<id>50</id>
-					<ondown>2</ondown>
+					<ondown>53</ondown>
 					<onup>2</onup>
 					<posX>50</posX>
 					<posY>470</posY>
@@ -160,7 +160,7 @@
 					<textureWidth>260</textureWidth>
 					<textureHeight>370</textureHeight>
 					<scrollbarYOff>420</scrollbarYOff>
-					<visible>[control.isvisible(1237)|control.isvisible(1238)]+control.isvisible(50)</visible>
+					<visible>[control.isvisible(1237)|control.isvisible(1238)]+control.isvisible(50)+!control.hasfocus(53)</visible>
 					<animation effect="fade" time="200">visible</animation>
 				</control>
 				<control>
@@ -169,7 +169,7 @@
 					<colordiffuse>ffffffff</colordiffuse>
 					<dimColor>90ffffff</dimColor>
 					<id>50</id>
-					<ondown>2</ondown>
+					<ondown>53</ondown>
 					<onup>2</onup>
 					<posY>510</posY>
 					<cardWidth>260</cardWidth>
@@ -178,7 +178,7 @@
 					<frameHeight>370</frameHeight>
 					<scrollbarYOff>380</scrollbarYOff>
 					<sideShift>260</sideShift>
-					<visible>[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1240)]+control.isvisible(50)</visible>
+					<visible>[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1240)]+control.isvisible(50)+!control.hasfocus(53)</visible>
 					<animation effect="fade" time="200">visible</animation>
 					<subitems>
 						<subitem>
