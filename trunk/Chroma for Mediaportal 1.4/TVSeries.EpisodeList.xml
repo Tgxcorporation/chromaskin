@@ -18,14 +18,15 @@
 				<posY>0</posY>
 				<width>650</width>
 				<height>1080</height>
-				<onright>50</onright>
+				<onright>53</onright>
 				<onleft>50</onleft>
 				<ondown>2</ondown>
 				<onup>17</onup>
 				<textureFocus>-</textureFocus>
 				<textureNoFocus>-</textureNoFocus>
 			</control>
-			
+
+
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -35,6 +36,8 @@
 				<label>#TVSeries.Series.Pretty_Name</label>
 				<textcolor>#ColorMain</textcolor>
 				<wrapString> ·· </wrapString>
+				<visible>!control.hasfocus(53)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 
 			<control>
@@ -54,8 +57,10 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#TVSeries.Episode.Rating</percentage>
+				<visible>!control.hasfocus(53)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
-			
+
 			<control>
 				<description>Subtitle value</description>
 				<type>label</type>
@@ -67,9 +72,11 @@
 				<textcolor>#ColorAlternateUnfocused</textcolor>
 				<font>font10</font>
 				<align>right</align>
+				<visible>!control.hasfocus(53)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
-			
-			
+
+
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -79,6 +86,8 @@
 				<label>#TVSeries.Title</label>
 				<textcolor>#ColorMain</textcolor>
 				<wrapString> ·· </wrapString>
+				<visible>!control.hasfocus(53)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 			<control>
 				<type>textboxscrollup</type>
@@ -92,6 +101,8 @@
 				<font>font14</font>
 				<seperator>··</seperator>
 				<label>#TVSeries.Description</label>
+				<visible>!control.hasfocus(53)</visible>
+				<animation effect="fade" time="200">visible</animation>
 			</control>
 
 
@@ -106,11 +117,11 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>no</centered>
 				<texture>#TVSeries.EpisodeImage</texture>
-				<visible>!control.hasfocus(52)</visible>
+				<visible>!control.hasfocus(52)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<zoom>yes</zoom>
 			</control>
-			
+
 			<control>
 				<description>watched</description>
 				<type>image</type>
@@ -121,7 +132,7 @@
 				<height>50</height>
 				<texture>watched.png</texture>
 				<colordiffuse>#ColorPlayed</colordiffuse>
-				<visible>control.isvisible(1243)+!control.hasfocus(52)</visible>
+				<visible>control.isvisible(1243)+!control.hasfocus(52)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
 
@@ -135,7 +146,7 @@
 				<label>#TVSeries.Episode.FilesizeValue</label>
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>!control.hasfocus(52)</visible>
+				<visible>!control.hasfocus(52)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
@@ -148,11 +159,11 @@
 				<label>#TVSeries.Episode.VideoFpsValue</label>
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
-				<visible>!control.hasfocus(52)</visible>
+				<visible>!control.hasfocus(52)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
-			
+
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -162,11 +173,11 @@
 				<label>#TVSeries.Episode.VideoResolutionValue</label>
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>!control.hasfocus(52)</visible>
+				<visible>!control.hasfocus(52)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
-			
+
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -176,7 +187,7 @@
 				<font>font14</font>
 				<label>#TVSeries.Episode.VideoFormatValue #TVSeries.Episode.VideoBitrateValue</label>
 				<textcolor>#ColorMain</textcolor>
-				<visible>!control.hasfocus(52)</visible>
+				<visible>!control.hasfocus(52)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
@@ -189,7 +200,7 @@
 				<font>font14</font>
 				<label>#TVSeries.Episode.AudioFormatValue #TVSeries.Episode.AudioBitrateValue</label>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>!control.hasfocus(52)</visible>
+				<visible>!control.hasfocus(52)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
@@ -204,12 +215,12 @@
 				<height>50</height>
 				<texture>#TVSeries.Logos</texture>
 				<keepaspectratio>yes</keepaspectratio>
-				<visible>!control.hasfocus(52)</visible>
+				<visible>!control.hasfocus(52)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 			</control>
 
 
-			
+
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -219,7 +230,7 @@
 				<label>#TVSeries.Episode.DirectorKey #TVSeries.Episode.DirectorValue</label>
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>control.hasfocus(52)+!string.equals(#TVSeries.Episode.DirectorValue,)</visible>
+				<visible>control.hasfocus(52)+!string.equals(#TVSeries.Episode.DirectorValue,)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
@@ -233,7 +244,7 @@
 				<label>#TVSeries.Episode.WriterKey #TVSeries.Episode.WriterValue</label>
 				<font>font13</font>
 				<textcolor>#ColorMain</textcolor>
-				<visible>control.hasfocus(52)+!string.equals(#TVSeries.Episode.WriterValue,)</visible>
+				<visible>control.hasfocus(52)+!string.equals(#TVSeries.Episode.WriterValue,)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
@@ -247,7 +258,7 @@
 				<label>#TVSeries.Episode.ActorsKey #TVSeries.Episode.ActorsValue</label>
 				<font>font13</font>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>control.hasfocus(52)+!string.equals(#TVSeries.Episode.ActorsValue,)</visible>
+				<visible>control.hasfocus(52)+!string.equals(#TVSeries.Episode.ActorsValue,)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
@@ -261,11 +272,11 @@
 				<label>#TVSeries.Episode.GueststarKey #TVSeries.Episode.GueststarValue</label>
 				<font>font13</font>
 				<textcolor>#ColorMain</textcolor>
-				<visible>control.hasfocus(52)+!string.equals(#TVSeries.Episode.GueststarValue,)</visible>
+				<visible>control.hasfocus(52)+!string.equals(#TVSeries.Episode.GueststarValue,)+!control.hasfocus(53)</visible>
 				<animation effect="fade" time="200">visible</animation>
 				<wrapString> ·· </wrapString>
 			</control>
-			
+
 		</control>
 	</controls>
 </window>
