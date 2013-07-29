@@ -5,7 +5,8 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.title:1300</define>
-	<define>#header.subtitle:#TVSeries.SimpleCurrentView / #TVSeries.Series.Pretty_Name / #itemcount #(L(507))</define>
+	<!-- <define>#header.subtitle:#TVSeries.SimpleCurrentView / #TVSeries.Series.Pretty_Name/ #itemcount #(L(507))</define> -->
+	<define>#header.subtitle:#(switch(eq(#TVSeries.Series.Pretty_Name,' '),'#TVSeries.SimpleCurrentView / #itemcount #(L(507))',neq(#TVSeries.Series.Pretty_Name,''),'#TVSeries.SimpleCurrentView / #TVSeries.Series.Pretty_Name / #itemcount #(L(507))'))</define>
 	<define>#header.background:hover_my tv.png</define>
 	<controls>
 		<import>TVSeries.dummy.xml</import>
@@ -61,7 +62,7 @@
 			<onright>50</onright>
 			<onleft>50</onleft>
 			<ondown>50</ondown>
-			<onup>17</onup>
+			<onup>50</onup>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<visible>!control.isvisible(1240)</visible>
