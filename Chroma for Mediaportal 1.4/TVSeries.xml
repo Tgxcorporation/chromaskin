@@ -9,6 +9,22 @@
 	<define>#header.subtitle:#(switch(eq(#TVSeries.Series.Pretty_Name,' '),'#TVSeries.SimpleCurrentView / #itemcount #(L(507))',neq(#TVSeries.Series.Pretty_Name,''),'#TVSeries.SimpleCurrentView / #TVSeries.Series.Pretty_Name / #itemcount #(L(507))'))</define>
 	<define>#header.background:hover_my tv.png</define>
 	<controls>
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>53</id>
+			<posX>1640</posX>
+			<posY>0</posY>
+			<width>650</width>
+			<height>1080</height>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<visible>!control.isvisible(1240)</visible>
+		</control>
 		<import>TVSeries.dummy.xml</import>
 		<import>common.window.background.xml</import>
 		<control>
@@ -51,22 +67,7 @@
 		<import>TVSeries.EpisodeList.xml</import>
 		<import>TVSeries.HiddenMenu.xml</import>
 
-		<control>
-			<description>DUMMY BUTTON FOR FANART</description>
-			<type>button</type>
-			<id>53</id>
-			<posX>1640</posX>
-			<posY>0</posY>
-			<width>650</width>
-			<height>1080</height>
-			<onright>50</onright>
-			<onleft>50</onleft>
-			<ondown>50</ondown>
-			<onup>50</onup>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<visible>!control.isvisible(1240)</visible>
-		</control>
+		
 
 		<!-- IMPORT PROCESS ANIMATION -->
 		<control>

@@ -25,12 +25,15 @@
     <entry name="genre6">00000000,00000000</entry>
   </section>
   <section name="theme">
-    <entry name="name">Fuchsia</entry>
+    <entry name="name">Skin default</entry>
   </section>
   <section name="booleansettings">
     <entry name="#skin.tvguide.usecolorsforbuttons">False</entry>
     <entry name="#skin.tvguide.usecolorsforgenre">False</entry>
     <entry name="#skin.tvguide.useborderhighlight">False</entry>
     <entry name="#skin.tvguide.showgenrekey">False</entry>
+  </section>
+  <section name="stringsettings">
+    <entry name="#dash"> /</entry>
   </section>
 </profile>
