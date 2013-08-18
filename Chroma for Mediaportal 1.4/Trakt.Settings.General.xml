@@ -9,8 +9,6 @@
 	<define>#header.background:hover_trakt.png</define>
 	<controls>
 		<import>common.window.background.xml</import>
-		<import>common.window.overlay.xml</import>
-		<import>common.window.time.xml</import>
 		<import>common.window.background.xml</import>
 		<import>common.window.header.xml</import>
 		<control>

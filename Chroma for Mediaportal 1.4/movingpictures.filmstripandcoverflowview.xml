@@ -8,9 +8,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
-			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
-			<animation effect="fade" time="200">visible</animation>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -21,9 +19,9 @@
 				<align>center</align>
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>!control.isvisible(9)</visible>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)+!control.hasfocus(53)]+!control.isvisible(9)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -34,9 +32,9 @@
 				<align>center</align>
 				<font>font16</font>
 				<textcolor>#ColorPlayed</textcolor>
-				<visible>control.isvisible(9)</visible>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)+!control.hasfocus(53)]+control.isvisible(9)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -47,8 +45,9 @@
 				<align>center</align>
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)+!control.hasfocus(53)]</visible>
 			</control>
-<!-- 			<control>
+			<!-- 			<control>
 				<description>watched</description>
 				<type>image</type>
 				<id>0</id>

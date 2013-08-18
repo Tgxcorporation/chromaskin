@@ -17,7 +17,7 @@
 	<define>#ColorMainUnfocusedOsd:ffffffff</define>
 	<define>#ColorAlternate:ffffffff</define>
 	<define>#ColorAlternateUnfocused:90ffffff</define>
-	<define>#ColorPlayed:ffb1f435</define>
+	<define>#ColorPlayed:ff35c5f4</define>
 	<define>#ColorOffline:ffFFF090</define>
 	<define>#ColorUnavailable:ffFF9090</define>
 	<define>#ColorAvailable:ffFFFFFF</define>
@@ -870,4 +870,21 @@
 		<textureFocus>background_focus.png</textureFocus>
 		<textureNoFocus>-</textureNoFocus>
 	</control>
+
+	<!-- STYLES -->
+
+	<style Name="FanartDisplayAnimation">
+		<animation effect="slide" tween="circle" easing="out" time="200" start="0,700" reversible="false" condition="!control.hasfocus(53)">conditional</animation>
+		<animation effect="slide" tween="circle" easing="out" time="200" end="0,700" reversible="false" condition="control.hasfocus(53)">conditional</animation>
+		<animation effect="fade" time="150">visiblechange</animation>
+	</style>
+	<style Name="FanartDisplayAnimationMovingPictures">
+		<animation effect="slide" tween="circle" easing="out" time="200" start="0,700" reversible="false" condition="!control.hasfocus(53)">conditional</animation>
+		<animation effect="slide" tween="circle" easing="out" time="200" end="0,700" reversible="false" condition="control.hasfocus(53)">conditional</animation>
+		<animation effect="fade" time="150">visiblechange</animation>
+		<animation effect="slide" tween="circle" easing="out" time="200" start="0,700" reversible="false" condition="!control.hasfocus(51)">conditional</animation>
+		<animation effect="slide" tween="circle" easing="out" time="200" end="0,700" reversible="false" condition="control.hasfocus(51)">conditional</animation>
+	</style>
+
+
 </controls>

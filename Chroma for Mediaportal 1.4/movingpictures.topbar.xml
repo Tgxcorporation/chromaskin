@@ -26,7 +26,7 @@
 			<shadowDistance>2</shadowDistance>
 			<shadowColor>FF000000</shadowColor>
 			<label>#MovingPictures.CurrentNode.name / #MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
-			<visible>!control.isvisible(16)+!control.isvisible(17)+![control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
+			<visible>!control.isvisible(16)+!control.isvisible(17)+![control.hasfocus(53)|control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="150">visiblechange</animation>
 		</control>
 		<control>
@@ -41,7 +41,7 @@
 			<shadowDistance>2</shadowDistance>
 			<shadowColor>FF000000</shadowColor>
 			<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name / #MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
-			<visible>!control.isvisible(16)+control.isvisible(17)+![control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
+			<visible>!control.isvisible(16)+control.isvisible(17)+![control.hasfocus(53)|control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="150">visiblechange</animation>
 		</control>
 		<control>
@@ -56,7 +56,7 @@
 			<shadowDistance>2</shadowDistance>
 			<shadowColor>FF000000</shadowColor>
 			<label>#MovingPictures.CurrentNode.name / #MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
-			<visible>control.isvisible(16)+!control.isvisible(17)+![control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
+			<visible>control.isvisible(16)+!control.isvisible(17)+![control.hasfocus(53)|control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="150">visiblechange</animation>
 		</control>
 		<control>
@@ -71,7 +71,7 @@
 			<shadowDistance>2</shadowDistance>
 			<shadowColor>FF000000</shadowColor>
 			<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name / #MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
-			<visible>control.isvisible(16)+control.isvisible(17)+![control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
+			<visible>control.isvisible(16)+control.isvisible(17)+![control.hasfocus(53)|control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="150">visiblechange</animation>
 		</control>
 		<control>
@@ -86,7 +86,7 @@
 			<shadowDistance>2</shadowDistance>
 			<shadowColor>FF000000</shadowColor>
 			<label>#MovingPictures.SelectedMovie.title / #MovingPictures.SelectedMovie.year / #MovingPictures.SelectedMovie.genres</label>
-			<visible>control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)</visible>
+			<visible>control.hasfocus(53)|control.hasfocus(90001)|control.hasfocus(90002)|control.hasfocus(6)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97270)</visible>
 			<animation effect="fade" time="150">visiblechange</animation>
 		</control>
 	</controls>
