@@ -43,6 +43,21 @@
 	<controls>
 		<!--            :: DUMMY controlS ::             -->
 		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>53</id>
+			<posX>1640</posX>
+			<posY>0</posY>
+			<width>650</width>
+			<height>1080</height>
+			<onright>50</onright>
+			<onleft>6</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+		<control>
 			<description>Visibile when filtering by watched flag. Only unwatched movies are listed.</description>
 			<type>label</type>
 			<id>8</id>
@@ -98,7 +113,8 @@
 			<animation effect="fade" time="250" delay="250">hidden</animation>
 			<animation effect="fade" time="1">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
-			<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above 
+			<animation effect="fade" time="250" reversible="false" condition="control.isvisible(51)">conditional</animation>
+				<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above 
 			   defines for conditional visibility if you dont want to use fan-art only specific views. -->
 		</control>
 		<control>
@@ -114,7 +130,8 @@
 			<animation effect="fade" time="250" delay="250">hidden</animation>
 			<animation effect="fade" time="1">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
-			<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above 
+			<animation effect="fade" time="250" reversible="false" condition="control.isvisible(51)">conditional</animation>
+				<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above 
 			   defines for conditional visibility if you dont want to use fan-art only specific views. -->
 		</control>
 		<import>common.window.header.xml</import>

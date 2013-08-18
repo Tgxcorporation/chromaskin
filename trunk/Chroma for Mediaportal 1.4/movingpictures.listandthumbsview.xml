@@ -8,9 +8,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
-			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)</visible>
-			<animation effect="fade" time="200">visible</animation>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Cover Art</description>
 				<type>image</type>
 				<id>60</id>
@@ -21,8 +19,9 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>no</centered>
 				<texture>#MovingPictures.Coverart</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>watched</description>
 				<type>image</type>
 				<id>0</id>
@@ -32,9 +31,9 @@
 				<height>50</height>
 				<texture>watched.png</texture>
 				<colordiffuse>#ColorPlayed</colordiffuse>
-				<visible>control.isvisible(9)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)+control.isvisible(9)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
@@ -44,8 +43,9 @@
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
 				<label>#MovingPictures.SelectedMovie.title</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -54,8 +54,9 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.genres</label>
 				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>imagelist</type>
 				<id>1</id>
 				<posX>1010</posX>
@@ -72,8 +73,9 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -84,8 +86,9 @@
 				<textcolor>#ColorAlternateUnfocused</textcolor>
 				<font>font10</font>
 				<align>right</align>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -94,8 +97,9 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.year</label>
 				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -104,8 +108,9 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.runtime.localized.long</label>
 				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -114,8 +119,9 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.certification</label>
 				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Summary</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -127,6 +133,7 @@
 				<font>font14</font>
 				<label>#MovingPictures.SelectedMovie.summary</label>
 				<seperator>··</seperator>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.isvisible(50)+!control.hasfocus(53)</visible>
 			</control>
 
 

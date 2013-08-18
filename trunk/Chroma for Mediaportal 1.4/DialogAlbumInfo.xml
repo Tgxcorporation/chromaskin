@@ -11,8 +11,7 @@
   <controls>
     <import>common.window.background.xml</import>
     <import>common.window.music.fanart.xml</import>
-    <import>common.window.overlay.xml</import>
-    <import>common.window.time.basic.xml</import>
+     <import>common.window.time.basic.xml</import>
     <control>
       <type>group</type>
       <dimColor>ffffffff</dimColor>

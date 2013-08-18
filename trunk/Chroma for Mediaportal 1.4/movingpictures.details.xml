@@ -27,7 +27,7 @@
 			<posX>-3000</posX>
 			<posY>100</posY>
 			<onleft>6</onleft>
-			<onright>6</onright>
+			<onright>53</onright>
 			<onup>90001</onup>
 			<ondown>90001</ondown>
 			<label>-</label>
@@ -57,11 +57,8 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
-			<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="0,500" condition="![control.isvisible(50)|control.isvisible(51)]">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" condition="control.hasfocus(6)">visible</animation> -->
-			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-			<!-- <animation effect="fade" time="200">visible</animation> -->
-			<control>
+			
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>image</type>
 				<id>0</id>
 				<posX>0</posX>
@@ -69,8 +66,9 @@
 				<texture>background_strip_horizontal_listcontrol.png</texture>
 				<width>1920</width>
 				<height>800</height>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>image</type>
 				<id>0</id>
 				<posX>0</posX>
@@ -78,8 +76,9 @@
 				<texture>background_strip_horizontal_left.png</texture>
 				<width>50</width>
 				<height>700</height>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>image</type>
 				<id>0</id>
 				<posX>1440</posX>
@@ -87,8 +86,9 @@
 				<texture>background_strip_horizontal_right.png</texture>
 				<width>480</width>
 				<height>700</height>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>image</type>
 				<id>0</id>
 				<posX>960</posX>
@@ -96,11 +96,10 @@
 				<texture>background_strip_horizontal_right.png</texture>
 				<width>480</width>
 				<height>700</height>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(53)+!control.hasfocus(90001)</visible>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Cover Art</description>
 				<type>image</type>
 				<id>60</id>
@@ -111,8 +110,9 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>no</centered>
 				<texture>#MovingPictures.Coverart</texture>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>watched</description>
 				<type>image</type>
 				<id>0</id>
@@ -122,13 +122,14 @@
 				<height>50</height>
 				<texture>watched.png</texture>
 				<colordiffuse>#ColorPlayed</colordiffuse>
-				<visible>control.isvisible(9)</visible>
+				<visible>control.isvisible(9)+!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>group</type>
 				<layout>StackLayout(0, Horizontal, true)</layout>
 				<posX>1490</posX>
 				<posY>930</posY>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(53)</visible>
 				<control>
 					<description>Video Codec</description>
 					<type>image</type>
@@ -187,7 +188,7 @@
 
 
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Title label</description>
 				<id>0</id>
 				<type>fadelabel</type>
@@ -197,11 +198,10 @@
 				<textcolor>#ColorMain</textcolor>
 				<wrapString> ·· </wrapString>
 				<label>#MovingPictures.SelectedMovie.title</label>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Summary</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -213,12 +213,11 @@
 				<font>font16</font>
 				<label>#MovingPictures.SelectedMovie.summary</label>
 				<seperator>··</seperator>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
 
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -228,10 +227,9 @@
 				<label>#MovingPictures.SelectedMovie.genres</label>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>imagelist</type>
 				<id>1</id>
 				<posX>1010</posX>
@@ -248,10 +246,9 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -262,10 +259,9 @@
 				<textcolor>#ColorMainUnfocused</textcolor>
 				<font>font10</font>
 				<align>right</align>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -274,10 +270,9 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.year</label>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -286,10 +281,9 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.runtime.localized.long</label>
 				<textcolor>#ColorMain</textcolor>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -298,10 +292,9 @@
 				<width>380</width>
 				<label>#MovingPictures.SelectedMovie.certification</label>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Directors</description>
 				<type>fadelabel</type>
 				<label>#MovingPictures.Translation.Director.Label: #MovingPictures.SelectedMovie.directors</label>
@@ -312,10 +305,9 @@
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>actors</description>
 				<type>textboxscrollup</type>
 				<label>#MovingPictures.Translation.Actors.Label: #MovingPictures.SelectedMovie.actors</label>
@@ -327,15 +319,14 @@
 				<height>315</height>
 				<textcolor>#ColorAlternate</textcolor>
 				<seperator>··</seperator>
-				<visible>!control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)+!control.hasfocus(53)</visible>
 			</control>
 
 
 
 
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Title label</description>
 				<id>0</id>
 				<type>fadelabel</type>
@@ -345,11 +336,10 @@
 				<textcolor>#ColorMain</textcolor>
 				<wrapString> ·· </wrapString>
 				<label>1020</label>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -358,10 +348,9 @@
 				<label>Video Format</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -371,11 +360,10 @@
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -384,10 +372,9 @@
 				<label>Aspect Ratio</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -397,11 +384,10 @@
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -410,10 +396,9 @@
 				<label>Resolution</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -423,11 +408,10 @@
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -436,10 +420,9 @@
 				<label>Frame Rate</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -449,12 +432,11 @@
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -463,10 +445,9 @@
 				<label>Audio Format</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -476,11 +457,10 @@
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -489,10 +469,9 @@
 				<label>Audio Channels</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -502,12 +481,11 @@
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -516,10 +494,9 @@
 				<label>Date Added</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -528,12 +505,11 @@
 				<label>#MovingPictures.SelectedMovie.date_added</label>
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 				<wrapString> ·· </wrapString>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -542,10 +518,9 @@
 				<label>Media Type</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -555,11 +530,10 @@
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -568,10 +542,9 @@
 				<label>Watched Count</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -581,12 +554,11 @@
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
 
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>label</type>
 				<id>0</id>
 				<posX>100</posX>
@@ -595,10 +567,9 @@
 				<label>Path</label>
 				<font>font14</font>
 				<textcolor>#ColorMainSub</textcolor>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>500</posX>
@@ -608,8 +579,7 @@
 				<font>font14</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
-				<visible>control.hasfocus(90001)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 
 

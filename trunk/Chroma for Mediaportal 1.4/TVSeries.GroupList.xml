@@ -8,8 +8,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false" condition="!control.hasfocus(53)">conditional</animation>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Shows in this Group</description>
 				<type>textboxscrollup</type>
 				<id>631</id>
@@ -21,8 +20,7 @@
 				<seperator>··</seperator>
 				<textcolor>#ColorAlternate</textcolor>
 				<label>#TVSeries.Description</label>
-				<visible>control.isvisible(1240)</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>control.isvisible(1240)+!control.hasfocus(53)</visible>
 			</control>
 		</control>
 	</controls>
