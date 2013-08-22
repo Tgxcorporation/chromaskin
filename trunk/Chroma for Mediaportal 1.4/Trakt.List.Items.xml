@@ -20,7 +20,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>fanart list</description>
 				<type>image</type>
 				<id>500</id>
@@ -31,15 +31,13 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<valign>bottom</valign>
 				<texture>#selectedthumb</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+!control.hasfocus(53)</visible>
 			</control>
 			<!-- MOVIES -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>group</type>
 				<dimColor>ffffffff</dimColor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#Trakt.List.ItemType,movie)</visible>
-				<animation effect="fade" time="250" delay="0">visible</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#Trakt.List.ItemType,movie)+!control.hasfocus(53)</visible>
 				<control>
 					<type>fadelabel</type>
 					<description>Current program title</description>
@@ -111,11 +109,10 @@
 					<seperator>··</seperator>
 				</control>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>group</type>
 				<dimColor>ffffffff</dimColor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#Trakt.List.ItemType,show)|string.equals(#Trakt.List.ItemType,season)]</visible>
-				<animation effect="fade" time="250" delay="0">visible</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#Trakt.List.ItemType,show)|string.equals(#Trakt.List.ItemType,season)]+!control.hasfocus(53)</visible>
 				<control>
 					<type>fadelabel</type>
 					<description>Current program title</description>
@@ -192,11 +189,10 @@
 					<label>#Trakt.Episode.Overview</label>
 				</control>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>group</type>
 				<dimColor>ffffffff</dimColor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#Trakt.List.ItemType,episode)</visible>
-				<animation effect="fade" time="250" delay="0">visible</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#Trakt.List.ItemType,episode)+!control.hasfocus(53)</visible>
 				<control>
 					<type>fadelabel</type>
 					<description>Current program title</description>
@@ -265,7 +261,7 @@
 					<label>#Trakt.Episode.Overview</label>
 				</control>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -276,10 +272,9 @@
 				<align>center</align>
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
-				<animation effect="fade" time="250" delay="0">visible</animation>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -290,10 +285,9 @@
 				<align>center</align>
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
-				<visible>[facadeview.filmstrip|facadeview.coverflow]+[string.equals(#Trakt.List.ItemType,movie)]</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+[string.equals(#Trakt.List.ItemType,movie)]+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -304,8 +298,7 @@
 				<align>center</align>
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
-				<visible>[facadeview.filmstrip|facadeview.coverflow]+[string.equals(#Trakt.List.ItemType,episode)|string.equals(#Trakt.List.ItemType,season)|string.equals(#Trakt.List.ItemType,show)]</visible>
-				<animation effect="fade" time="250" delay="0">visible</animation>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+[string.equals(#Trakt.List.ItemType,episode)|string.equals(#Trakt.List.ItemType,season)|string.equals(#Trakt.List.ItemType,show)]+!control.hasfocus(53)</visible>
 			</control>
 		</control>
 		<control>

@@ -70,8 +70,6 @@
 					<onleft>2</onleft>
 					<onright>53</onright>
 					<visible>control.isvisible(50)+!control.hasfocus(53)</visible>
-					<!--<visible>control.isvisible(745381)</visible>
-					<animation effect="fade" time="200">visible</animation>-->
 				</control>
 				<control Style="FanartDisplayAnimation">
 					<description>album view listcontrol</description>
@@ -95,8 +93,6 @@
 					<textureFocus>background_focus2.png</textureFocus>
 					<textureHeight>100</textureHeight>
 					<visible>!control.hasfocus(53)</visible>
-					<!--<visible>control.isvisible(745387)</visible>
-					<animation effect="fade" time="200">visible</animation>-->
 				</control>
 				<control Style="FanartDisplayAnimation">
 					<description>Thumbnail Panel</description>
@@ -124,8 +120,6 @@
 					<textureWidthBig>533</textureWidthBig>
 					<textureHeightBig>300</textureHeightBig>
 					<visible>control.isvisible(50)+!control.hasfocus(53)</visible>
-					<!--<visible>control.isvisible(745382)|control.isvisible(745383)</visible>
-					<animation effect="fade" time="200">visible</animation>-->
 					<scrollbarXOff>-1520</scrollbarXOff>
 				</control>
 				<control Style="FanartDisplayAnimation">
@@ -145,8 +139,6 @@
 					<textureHeight>204</textureHeight>
 					<scrollbarYOff>254</scrollbarYOff>
 					<visible>control.isvisible(50)+!control.hasfocus(53)</visible>
-					<!--<visible>control.isvisible(745384)</visible>
-					<animation effect="fade" time="200">visible</animation>-->
 				</control>
 
 				<control Style="FanartDisplayAnimation">
@@ -163,8 +155,6 @@
 					<scrollbarYOff>214</scrollbarYOff>
 					<keepaspectratio>yes</keepaspectratio>
 					<visible>control.isvisible(50)+!control.hasfocus(53)</visible>
-					<!--<visible>control.isvisible(745385)</visible>
-					<animation effect="fade" time="200">visible</animation>-->
 					<subitems>
 						<subitem>
 							<![CDATA[
@@ -218,59 +208,9 @@
 					<onleft>2</onleft>
 					<onright>53</onright>
 					<visible>control.isvisible(50)+!control.hasfocus(53)</visible>
-					<!--<visible>control.isvisible(745386)</visible>
-					<animation effect="fade" time="200" condition="!control.hasfocus(50)">visible</animation>-->
 				</control>
 			</control>
-			<!--<control>
-				<type>label</type>
-				<description>dummy listcontrol</description>
-				<id>745381</id>
-				<label>-</label>
-				<visible>facadeview.list</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy smallicons</description>
-				<id>745382</id>
-				<label>-</label>
-				<visible>facadeview.smallicons</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy largeicons</description>
-				<id>745383</id>
-				<label>-</label>
-				<visible>facadeview.largeicons</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy filmstrip</description>
-				<id>745384</id>
-				<label>-</label>
-				<visible>facadeview.filmstrip</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy coverflow</description>
-				<id>745385</id>
-				<label>-</label>
-				<visible>facadeview.coverflow</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy playlist</description>
-				<id>745386</id>
-				<label>-</label>
-				<visible>facadeview.playlist</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy album</description>
-				<id>745387</id>
-				<label>-</label>
-				<visible>facadeview.album</visible>
-			</control>-->
+
 
 		</control>
 		<control>
