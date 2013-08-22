@@ -21,7 +21,7 @@
 			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
 
 
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<description>artist art image</description>
 				<id>1000</id>
@@ -32,10 +32,9 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<texture>#selectedthumb</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>[facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons]+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
@@ -44,11 +43,10 @@
 				<width>380</width>
 				<label>#selecteditem</label>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>[facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons]+!control.hasfocus(53)</visible>
 				<wrapString> ·· </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program</description>
 				<id>0</id>
@@ -58,11 +56,10 @@
 				<font>font16</font>
 				<label>#selecteditem2</label>
 				<textcolor>#ColorMain</textcolor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>[facadeview.list|facadeview.album|facadeview.playlist|facadeview.smallicons|facadeview.largeicons]+!control.hasfocus(53)</visible>
 				<wrapString> ·· </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -73,10 +70,9 @@
 				<align>center</align>
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>facadeview.filmstrip|facadeview.coverflow</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -87,8 +83,7 @@
 				<align>center</align>
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
-				<visible>facadeview.filmstrip|facadeview.coverflow</visible>
-				<animation effect="fade" time="200">visible</animation>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+!control.hasfocus(53)</visible>
 			</control>
 		</control>
 		<control>
@@ -168,7 +163,7 @@
 					<description>Switch View</description>
 					<type>menubutton</type>
 					<id>5</id>
-					<label></label>
+					<label/>
 					<onright>50</onright>
 					<onup>2</onup>
 					<ondown>3</ondown>

@@ -23,9 +23,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
-			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)</visible>
-			<animation effect="fade" time="200">visible</animation>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
@@ -35,8 +33,9 @@
 				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> ·· </wrapString>
 				<label>#selecteditem</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Cover Art</description>
 				<type>image</type>
 				<id>500</id>
@@ -47,8 +46,9 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>no</centered>
 				<texture>#selectedthumb</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>watched</description>
 				<type>image</type>
 				<id>0</id>
@@ -58,9 +58,9 @@
 				<height>50</height>
 				<texture>watched.png</texture>
 				<colordiffuse>#ColorPlayed</colordiffuse>
-				<visible>string.equals(#iswatched,yes)</visible>
+				<visible>string.equals(#iswatched,yes)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Genre value</description>
 				<type>fadelabel</type>
 				<id>1</id>
@@ -69,9 +69,10 @@
 				<width>380</width>
 				<textcolor>#ColorMain</textcolor>
 				<label>#genre</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 				<wrapString> ·· </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>imagelist</type>
 				<id>1</id>
 				<posX>1010</posX>
@@ -88,8 +89,9 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#rating</percentage>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>label</type>
 				<id>1</id>
 				<posX>1400</posX>
@@ -99,8 +101,9 @@
 				<textcolor>#ColorAlternateUnfocused</textcolor>
 				<font>font10</font>
 				<align>right</align>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Runtime value</description>
 				<type>fadelabel</type>
 				<id>1</id>
@@ -110,8 +113,9 @@
 				<label>#year</label>
 				<textcolor>#ColorMain</textcolor>
 				<wrapString> ·· </wrapString>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -120,8 +124,9 @@
 				<width>380</width>
 				<label>#runtime</label>
 				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
@@ -130,8 +135,9 @@
 				<width>380</width>
 				<label>#mpaarating</label>
 				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Summary</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -143,6 +149,7 @@
 				<font>font14</font>
 				<label>#plot</label>
 				<seperator>··</seperator>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
 
 			<!-- <control>
@@ -216,17 +223,9 @@
 					<visible>string.equals(#HasSubtitles,False)</visible>
 				</control>
 			</control> -->
-		</control>
 
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
-			<visible>[facadeview.filmstrip|facadeview.coverflow]+string.equals(#hideinfo, false)</visible>
-			<animation effect="fade" time="200">visible</animation>
-			<control>
+
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -237,9 +236,9 @@
 				<align>center</align>
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
-				<visible>!string.equals(#iswatched,yes)</visible>
+				<visible>!string.equals(#iswatched,yes)+[facadeview.filmstrip|facadeview.coverflow]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -250,9 +249,9 @@
 				<align>center</align>
 				<font>font16</font>
 				<textcolor>#ColorPlayed</textcolor>
-				<visible>string.equals(#iswatched,yes)</visible>
+				<visible>string.equals(#iswatched,yes)+[facadeview.filmstrip|facadeview.coverflow]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -263,6 +262,7 @@
 				<align>center</align>
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+string.equals(#hideinfo, false)+!control.hasfocus(53)</visible>
 			</control>
 		</control>
 
@@ -275,9 +275,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
-			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)</visible>
-			<animation effect="fade" time="200">visible</animation>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Cover Art</description>
 				<type>image</type>
 				<id>501</id>
@@ -288,8 +286,9 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>no</centered>
 				<texture>#selectedthumb</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<id>1</id>
 				<posX>1010</posX>
@@ -298,8 +297,9 @@
 				<textcolor>#ColorMain</textcolor>
 				<label>#Actor.DateOfBirth</label>
 				<wrapString> ·· </wrapString>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<id>1</id>
 				<posX>1010</posX>
@@ -308,8 +308,9 @@
 				<textcolor>#ColorAlternate</textcolor>
 				<label>#Actor.PlaceOfBirth</label>
 				<wrapString> ·· </wrapString>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<id>1</id>
 				<posX>1010</posX>
@@ -318,8 +319,9 @@
 				<textcolor>#ColorMain</textcolor>
 				<label>#Actor.DateOfDeath</label>
 				<wrapString> ·· </wrapString>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<id>1</id>
 				<posX>1010</posX>
@@ -328,9 +330,10 @@
 				<textcolor>#ColorAlternate</textcolor>
 				<label>#Actor.PlaceOfDeath</label>
 				<wrapString> ·· </wrapString>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)+!control.hasfocus(53)</visible>
 			</control>
 
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Summary</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -342,18 +345,10 @@
 				<font>font14</font>
 				<label>#groupmovielist</label>
 				<seperator>··</seperator>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)+!control.hasfocus(53)</visible>
 			</control>
-		</control>
 
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="0,500" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="0,500" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="0,-70" condition="player.hasmedia">conditional</animation>
-			<visible>[facadeview.filmstrip|facadeview.coverflow]+string.equals(#hideActorinfo, false)</visible>
-			<animation effect="fade" time="200">visible</animation>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -364,8 +359,9 @@
 				<align>center</align>
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+string.equals(#hideActorinfo, False)+!control.hasfocus(53)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Info</description>
 				<type>label</type>
 				<id>0</id>
@@ -376,6 +372,7 @@
 				<align>center</align>
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+string.equals(#hideActorinfo, False)+!control.hasfocus(53)</visible>
 			</control>
 		</control>
 
